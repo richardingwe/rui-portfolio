@@ -1,16 +1,41 @@
-html,
+/* @import url("https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css"); */
+/* @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"); */
+/* @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Mulish&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&display=swap');
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-family: 'Karla', sans-serif;
+	font-style: 400;
+}
+.cursive {
+	font-family: 'Amatic SC', cursive;
+	font-weight: 700;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+/* customized the scroll bar here */
 
+/* Works on Firefox */
 * {
-  box-sizing: border-box;
+	scrollbar-width: thin;
+	scrollbar-color: #1f2937 white;
+	/* scrollbar-color: #e45447 white; */
+	/* scrollbar-color: #1f2937 white; */
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+	background: rgb(255, 255, 255);
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #1f2937;
+	/* background-color: #e45447; */
+	border-radius: 20px;
+	border: 3px solid #ffffff;
 }

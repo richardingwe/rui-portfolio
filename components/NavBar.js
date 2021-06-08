@@ -5,10 +5,10 @@ import Link from 'next/link';
 // import { useLocation } from 'react-router-dom';
 import { useRouter } from 'next/router';
 // import Logo from "../images/Rui.svg";
-import hamburger from '../images/hamburger.svg';
-import hamburgerClose from '../images/hamburgerClose.svg';
+// import hamburger from '../images/hamburger.svg';
+// import hamburgerClose from '../images/hamburgerClose.svg';
 import { debounce } from '../utilities/helpers';
-import '../css/NavBar.css';
+import styles from '../styles/NavBar.module.css';
 
 const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 	const [rotate, setRotate] = useState(false);
@@ -63,10 +63,10 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 
 	return (
 		<header
-			className='NavBar'
+			className={styles.NavBar}
 			style={{
 				transform: `${visible ? 'translateY(0)' : 'translateY(-20vh)'}`,
-				backgroundColor: `${navOpen || location.pathname === '/'
+				backgroundColor: `${navOpen || location.pathname === '/hello'
 					? 'transparent'
 					: 'rgba(17, 22, 31, 0.759)'
 					}`,
@@ -76,18 +76,10 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 					}`,
 			}}
 		>
-			<div className='Nav'>
-				<nav className='nav-items'>
-					<Link href='/' exact activeClassName='text-white' className=''>
-						{/* <motion.img
-                            onClick={handleLogoClick}
-                            initial={{ x: "-10vw", opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ delay: 0.5 }}
-                            src={Logo}
-                            alt="rui logo" /> */}
-
-						<motion.svg
+			<div className={styles.Nav}>
+				<nav className={styles.navItems}>
+					<Link href='/'>
+						<motion.svg className={styles.svg}
 							onClick={handleLogoClick}
 							initial={{ x: '-10vw', opacity: 0 }}
 							animate={{ x: 0, opacity: 1 }}
@@ -100,7 +92,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 							viewBox='0 0 1000 1000'
 						>
 							<motion.path
-								className='st0'
+								className={styles.st0}
 								d='M961.2,305.2c-25.2-59.6-61.3-113.1-107.3-159.1c-46-46-99.5-82.1-159.1-107.3C633.1,12.7,567.6-0.5,500-0.5
                                 c-67.6,0-133.1,13.2-194.8,39.3C245.6,64,192.1,100.1,146.1,146.1c-46,46-82.1,99.5-107.3,159.1C12.7,366.9-0.5,432.4-0.5,500
                                 c0,67.6,13.2,133.1,39.3,194.8c25.2,59.6,61.3,113.1,107.3,159.1c46,46,99.5,82.1,159.1,107.3c61.7,26.1,127.3,39.3,194.8,39.3
@@ -113,7 +105,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 									initial='hidden'
 									animate='visible'
 									transition={{ delay: 2, duration: 0.5 }}
-									className='st1'
+									className={styles.st1}
 									d='M566,431.9c-6.7,3.2-14.2,5-22.1,5h-47.8l93.6,94c17.9-5.7,34.4-14.6,48.8-26.2c9.3-7.5,17.8-16.1,25.1-25.5
                                     c9.8-12.6,17.7-26.9,23.1-42.2c5.7-16,8.8-33.2,8.8-51.2s-3.1-35.2-8.8-51.2c-20.9-58.9-77-101-142.9-101H293.4l100.7,101H544
                                     c28.2,0,51.1,22.9,51.1,51.2c0,7.2-1.5,14.1-4.2,20.3C586,417.3,577.1,426.6,566,431.9z'
@@ -124,7 +116,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 										initial='hidden'
 										animate='visible'
 										transition={{ delay: 2, duration: 0.5 }}
-										className='st1'
+										className={styles.st1}
 										points='772.4,814.7 630,814.7 227.6,410.9 370,410.9 711.5,753.6 		'
 									/>
 								</g>
@@ -135,51 +127,41 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 						initial={{ x: '10vw', opacity: 0 }}
 						transition={{ delay: 0.5 }}
 						animate={{ x: 0, opacity: 1 }}
-						className='NavLinks'
+						className={styles.NavLinks}
 					>
 						<Link
 							href='/about'
 							activeClassName='navActive'
-							className='inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 text-bold hover:text-blue-400'
 						>
-							About Me.
+							<a className='inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 text-bold hover:text-blue-400'>
+								About Me.
+							</a>
 						</Link>
 						<Link
 							href='/projects'
 							activeClassName='navActive'
-							className='inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-blue-400 projects'
 						>
-							Projects.
-							<div className='projects-dropdown'>
-								<NavLink href='/projects/design'>Design Projects.</NavLink>
-								<NavLink href='/projects/code'>Code Projects.</NavLink>
+							<a className='inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-blue-400 projects'>
+								Projects.
+							</a>
+							{/* <div className='projects-dropdown'>
+								<Link href='/projects/design'>Design Projects.</Link>
+								<Link href='/projects/code'>Code Projects.</Link>
 								<i className='fas fa-caret-up arrow'></i>
-							</div>
+							</div> */}
 						</Link>
 						<Link
 							href='/blog'
 							activeClassName='navActive'
-							className='inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-blue-400'
 						>
-							Blog.
+							<a className='inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-blue-400'>
+								Blog.
+							</a>
 						</Link>
 					</motion.div>
-					<div
-						className={`hamburger ${rotate ? 'rotate' : ' '}`}
-						onClick={handleNavClick}
-					>
-						<motion.img
-							initial={{ x: '10vw', opacity: 0 }}
-							transition={{ delay: 1.5 }}
-							animate={{ x: 0, opacity: 1 }}
-							src={navOpen ? hamburgerClose : hamburger}
-							className={rotate ? 'rotate' : ' '}
-							alt='hamburger'
-						/>
-					</div>
 				</nav>
 			</div>
-		</header>
+		</header >
 	);
 };
 
