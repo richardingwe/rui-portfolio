@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import styles from '../styles/Layout.module.css';
-// import Footer from './Footer';
+import Footer from './Footer';
 import Navbar from './Navbar';
 // import Showcase from './Showcase';
 
@@ -25,7 +25,7 @@ const Layout = ({ title, keywords, description, children }) => {
             <div>
                 {children}
             </div>
-            {/* <Footer /> */}
+            <Footer />
         </div>
     );
 };
