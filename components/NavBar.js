@@ -66,7 +66,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 			className={styles.NavBar}
 			style={{
 				transform: `${visible ? 'translateY(0)' : 'translateY(-20vh)'}`,
-				backgroundColor: `${navOpen || location.pathname === '/hello'
+				backgroundColor: `${navOpen || location.pathname === '/'
 					? 'transparent'
 					: 'rgba(17, 22, 31, 0.759)'
 					}`,

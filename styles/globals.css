@@ -39,3 +39,7 @@ body {
 	border-radius: 20px;
 	border: 3px solid #ffffff;
 }
+span.carousel-control-prev-icon,
+span.carousel-control-next-icon {
+	display: none !important;
+}
