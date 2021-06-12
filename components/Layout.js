@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import styles from '../styles/Layout.module.css';
 import Footer from './Footer';
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
 import MiniNavBar from './MiniNavBar';
 import WhatsApp from './WhatsApp';
 
@@ -25,11 +25,11 @@ const Layout = ({ title, keywords, description, children }) => {
                 ></script>
             </Head>
 
-            <Navbar
+            {/* <Navbar
                 handleClick={handleClick}
                 navOpen={navOpen}
                 setNavOpen={setNavOpen}
-            />
+            /> */}
             {navOpen && <MiniNavBar handleClick={handleClick} />}
             <WhatsApp />
             <div>
