@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import image from 'next/image';
+import Image from 'next/image';
 import sanityClient from '../client.js';
 import imageUrlBuilder from '@sanity/image-url';
 import Link from 'next/link';
@@ -11,26 +11,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styles from '../styles/About.module.css';
 import Layout from '../components/Layout.js';
-// import jsImg from '../images/js.jpg';
-// import reactImg from '../images/react.jpg';
-// import vueImg from '../images/vue.jpg';
-// import gitImg from '../images/git.jpg';
-// import sassImg from '../images/sass.jpg';
-// import nodeImg from '../images/node.jpg';
-// import firebaseImg from '../images/firebase.jpg';
-// import bsImg from '../images/bs.jpg';
-// import pwaImg from '../images/pwa.jpg';
-// import mongoImg from '../images/mongo.jpg';
-// import awsImg from '../images/aws.jpg';
-// import reduxImg from '../images/redux.jpg';
-// import nextImg from '../images/next.jpg';
-// import sanityImg from '../images/sanity.jpg';
-// import mysqlImg from '../images/mysql.jpg';
-// import aiImg from '../images/ai.jpg';
-// import psImg from '../images/ps.jpg';
-// import xdImg from '../images/xd.jpg';
-// import idImg from '../images/id.jpg';
-// import aeImg from '../images/ae.jpg';
+
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -62,12 +43,6 @@ const About = () => {
             .then((data) => setAuthor(data[0]))
             .catch(console.error);
     }, []);
-
-    // useEffect(() => {
-    //     document.title = 'Rui - About';
-    //     document.getElementsByTagName('META')[3].content =
-    //         'I am a Software Developer and a Graphic Designer, I am very passionate about bringing ideas to reality through Codes and Graphic designs. For now, I build powerful, beautiful, and swift web applications that help businesses / brands keep potential customers and compete globally. I am obsessed with technology and I plan on working with technologies like Artificial Intelligence, Virtual Reality, Augmented Reality, and Mixed Reality in the future. I am currently the lead developer / designer of Rui Creative and I am also available for partnerships.';
-    // }, []);
 
     if (!author)
         return (
@@ -113,7 +88,7 @@ const About = () => {
                                     animate={{ y: 0, opacity: 1 }}
                                     className={`col-lg-6 about-left`}
                                 >
-                                    <img
+                                    <Image width='810' height='1080'
                                         className='img-fluid'
                                         src={urlFor(author.authorImage).url()}
                                         alt='Richard Ingwe'
@@ -210,7 +185,7 @@ const About = () => {
                                     data-wow-delay='100ms'
                                 >
                                     <div className={styles.memberThumb}>
-                                        <img src='/images/js.jpg' alt='javascript' />
+                                        <Image width='500' height='500' src='/images/js.jpg' alt='javascript' />
                                     </div>
                                     <h5>Javascript</h5>
                                 </div>
@@ -227,7 +202,7 @@ const About = () => {
                                     data-wow-delay='300ms'
                                 >
                                     <div className={styles.memberThumb}>
-                                        <img src='/images/react.jpg' alt='react.js' />
+                                        <Image width='500' height='500' src='/images/react.jpg' alt='react.js' />
                                     </div>
                                     <h5>React.js</h5>
                                 </div>
@@ -244,7 +219,7 @@ const About = () => {
                                     data-wow-delay='300ms'
                                 >
                                     <div className={styles.memberThumb}>
-                                        <img src='/images/next.jpg' alt='next.js' />
+                                        <Image width='500' height='500' src='/images/next.jpg' alt='next.js' />
                                     </div>
                                     <h5>Next.js</h5>
                                 </div>
@@ -261,7 +236,7 @@ const About = () => {
                                     data-wow-delay='500ms'
                                 >
                                     <div className={styles.memberThumb}>
-                                        <img src='/images/vue.jpg' alt='vue.js' />
+                                        <Image width='500' height='500' src='/images/vue.jpg' alt='vue.js' />
                                     </div>
                                     <h5>Vue.js</h5>
                                 </div>
@@ -277,7 +252,7 @@ const About = () => {
                                     data-wow-delay='500ms'
                                 >
                                     <div className={styles.memberThumb}>
-                                        <img src='/images/pwa.jpg' alt='pwa' />
+                                        <Image width='500' height='500' src='/images/pwa.jpg' alt='pwa' />
                                     </div>
                                     <h5>PWA</h5>
                                 </div>
@@ -293,7 +268,7 @@ const About = () => {
                                     data-wow-delay='500ms'
                                 >
                                     <div className={styles.memberThumb}>
-                                        <img src='/images/bs.jpg' alt='bootstrap' />
+                                        <Image width='500' height='500' src='/images/bs.jpg' alt='bootstrap' />
                                     </div>
                                     <h5>Bootstrap</h5>
                                 </div>
@@ -309,7 +284,7 @@ const About = () => {
                                     data-wow-delay='700ms'
                                 >
                                     <div className={styles.memberThumb}>
-                                        <img src='/images/git.jpg' alt='git' />
+                                        <Image width='500' height='500' src='/images/git.jpg' alt='git' />
                                     </div>
                                     <h5>Git</h5>
                                 </div>
@@ -325,7 +300,7 @@ const About = () => {
                                     data-wow-delay='700ms'
                                 >
                                     <div className={styles.memberThumb}>
-                                        <img src='/images/sass.jpg' alt='sass' />
+                                        <Image width='500' height='500' src='/images/sass.jpg' alt='sass' />
                                     </div>
                                     <h5>Sass</h5>
                                 </div>
@@ -341,7 +316,7 @@ const About = () => {
                                     data-wow-delay='700ms'
                                 >
                                     <div className={styles.memberThumb}>
-                                        <img src='/images/node.jpg' alt='node.js' />
+                                        <Image width='500' height='500' src='/images/node.jpg' alt='node.js' />
                                     </div>
                                     <h5>Node.js</h5>
                                 </div>
@@ -357,7 +332,7 @@ const About = () => {
                                     data-wow-delay='700ms'
                                 >
                                     <div className={styles.memberThumb}>
-                                        <img src='/images/mongo.jpg' alt='mongoDB' />
+                                        <Image width='500' height='500' src='/images/mongo.jpg' alt='mongoDB' />
                                     </div>
                                     <h5>MongoDB</h5>
                                 </div>
@@ -373,7 +348,7 @@ const About = () => {
                                     data-wow-delay='700ms'
                                 >
                                     <div className={styles.memberThumb}>
-                                        <img src='/images/mysql.jpg' alt='mysql' />
+                                        <Image width='500' height='500' src='/images/mysql.jpg' alt='mysql' />
                                     </div>
                                     <h5>MySql</h5>
                                 </div>
@@ -389,7 +364,7 @@ const About = () => {
                                     data-wow-delay='700ms'
                                 >
                                     <div className={styles.memberThumb}>
-                                        <img src='/images/firebase.jpg' alt='firebase' />
+                                        <Image width='500' height='500' src='/images/firebase.jpg' alt='firebase' />
                                     </div>
                                     <h5>Firebase</h5>
                                 </div>
@@ -405,7 +380,7 @@ const About = () => {
                                     data-wow-delay='700ms'
                                 >
                                     <div className={styles.memberThumb}>
-                                        <img src='/images/aws.jpg' alt='aws' />
+                                        <Image width='500' height='500' src='/images/aws.jpg' alt='aws' />
                                     </div>
                                     <h5>AWS</h5>
                                 </div>
@@ -421,7 +396,7 @@ const About = () => {
                                     data-wow-delay='700ms'
                                 >
                                     <div className={styles.memberThumb}>
-                                        <img src='/images/redux.jpg' alt='redux' />
+                                        <Image width='500' height='500' src='/images/redux.jpg' alt='redux' />
                                     </div>
                                     <h5>Redux</h5>
                                 </div>
@@ -437,7 +412,7 @@ const About = () => {
                                     data-wow-delay='700ms'
                                 >
                                     <div className={styles.memberThumb}>
-                                        <img src='/images/sanity.jpg' alt='sanity' />
+                                        <Image width='500' height='500' src='/images/sanity.jpg' alt='sanity' />
                                     </div>
                                     <h5>Sanity</h5>
                                 </div>
@@ -453,7 +428,7 @@ const About = () => {
                                     data-wow-delay='700ms'
                                 >
                                     <div className={styles.memberThumb}>
-                                        <img src='/images/ai.jpg' alt='adobe illustrator' />
+                                        <Image width='500' height='500' src='/images/ai.jpg' alt='adobe illustrator' />
                                     </div>
                                     <h5>Illustrator</h5>
                                 </div>
@@ -469,7 +444,7 @@ const About = () => {
                                     data-wow-delay='700ms'
                                 >
                                     <div className={styles.memberThumb}>
-                                        <img src='/images/ps.jpg' alt='adobe photoshop' />
+                                        <Image width='500' height='500' src='/images/ps.jpg' alt='adobe photoshop' />
                                     </div>
                                     <h5>Photoshop</h5>
                                 </div>
@@ -485,7 +460,7 @@ const About = () => {
                                     data-wow-delay='700ms'
                                 >
                                     <div className={styles.memberThumb}>
-                                        <img src='/images/xd.jpg' alt='adobe xd' />
+                                        <Image width='500' height='500' src='/images/xd.jpg' alt='adobe xd' />
                                     </div>
                                     <h5>XD</h5>
                                 </div>
@@ -501,7 +476,7 @@ const About = () => {
                                     data-wow-delay='700ms'
                                 >
                                     <div className={styles.memberThumb}>
-                                        <img src='/images/id.jpg' alt='adobe indesign' />
+                                        <Image width='500' height='500' src='/images/id.jpg' alt='adobe indesign' />
                                     </div>
                                     <h5>InDesign</h5>
                                 </div>
@@ -517,7 +492,7 @@ const About = () => {
                                     data-wow-delay='700ms'
                                 >
                                     <div className={styles.memberThumb}>
-                                        <img src='/images/ae.jpg' alt='adobe after effects' />
+                                        <Image width='500' height='500' src='/images/ae.jpg' alt='adobe after effects' />
                                     </div>
                                     <h5>AfterEffects</h5>
                                 </div>

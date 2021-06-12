@@ -1,6 +1,6 @@
 module.exports = {
     images: {
-        domains: ['res.cloudinary.com']
+        domains: ['cdn.sanity.io']
     },
     env: {
         PROJECT_ID: 'y0xdnwwh',
