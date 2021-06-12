@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import styles from '../styles/Layout.module.css';
 import Footer from './Footer';
-// import Navbar from './Navbar';
+import Navbar from './NavBar';
 import MiniNavBar from './MiniNavBar';
 import WhatsApp from './WhatsApp';
 
