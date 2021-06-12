@@ -16,6 +16,9 @@ body {
 * {
 	scrollbar-width: thin;
 	scrollbar-color: #1f2937 white;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 	/* scrollbar-color: #e45447 white; */
 	/* scrollbar-color: #1f2937 white; */
 }
@@ -38,4 +41,64 @@ body {
 span.carousel-control-prev-icon,
 span.carousel-control-next-icon {
 	display: none !important;
+}
+
+a {
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+::-moz-selection {
+	/* Code for Firefox */
+	background-color: #e45447;
+	color: #fff;
+}
+
+::selection {
+	background-color: #e45447;
+	color: #fff;
+}
+
+::-webkit-input-placeholder {
+	/* WebKit, Blink, Edge */
+	color: #777777;
+	font-weight: 300;
+}
+
+:-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	color: #777777;
+	opacity: 1;
+	font-weight: 300;
+}
+
+::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	color: #777777;
+	opacity: 1;
+	font-weight: 300;
+}
+
+:-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	color: #777777;
+	font-weight: 300;
+}
+
+::-ms-input-placeholder {
+	/* Microsoft Edge */
+	color: #777777;
+	font-weight: 300;
+}
+
+iframe {
+	border: 0;
+}
+
+a,
+a:focus,
+a:hover {
+	text-decoration: none;
+	outline: 0;
 }
