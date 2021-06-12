@@ -1,10 +1,16 @@
 import Head from 'next/head';
+import { useState } from 'react';
 import styles from '../styles/Layout.module.css';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import WhatsApp from './WhatsApp';
 
 const Layout = ({ title, keywords, description, children }) => {
+    const [navOpen, setNavOpen] = useState(false);
+
+    const handleClick = () => {
+        setNavOpen(!navOpen);
+    };
     return (
         <div className={styles.Layout}>
             <Head>
@@ -18,7 +24,11 @@ const Layout = ({ title, keywords, description, children }) => {
                 ></script>
             </Head>
 
-            <Navbar />
+            <Navbar
+                handleClick={handleClick}
+                navOpen={navOpen}
+                setNavOpen={setNavOpen}
+            />
             <WhatsApp />
             <div>
                 {children}

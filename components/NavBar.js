@@ -1,13 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-// import { NavLink } from 'react-router-dom';
 import Link from 'next/link';
-// import { useLocation } from 'react-router-dom';
 import { useRouter } from 'next/router';
 import NavLink from './NavLink';
-// import Logo from "../images/Rui.svg";
-// import hamburger from '../images/hamburger.svg';
-// import hamburgerClose from '../images/hamburgerClose.svg';
 import { debounce } from '../utilities/helpers';
 import styles from '../styles/NavBar.module.css';
 
@@ -15,7 +10,6 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 	const [rotate, setRotate] = useState(false);
 	const [prevScrollPos, setPrevScrollPos] = useState(0);
 	const [visible, setVisible] = useState(true);
-	// const location = useLocation();
 	const location = useRouter();
 
 
@@ -160,6 +154,19 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 							</a>
 						</NavLink>
 					</motion.div>
+					<div
+						className={`${styles.hamburger} ${rotate ? `${styles.rotate}` : ' '}`}
+						onClick={handleNavClick}
+					>
+						<motion.img
+							initial={{ x: '10vw', opacity: 0 }}
+							transition={{ delay: 1.5 }}
+							animate={{ x: 0, opacity: 1 }}
+							src={navOpen ? '/images/hamburgerClose.svg' : '/images/hamburger.svg'}
+							className={`${styles.svg}`}
+							alt='hamburger'
+						/>
+					</div>
 				</nav>
 			</div>
 		</header >
