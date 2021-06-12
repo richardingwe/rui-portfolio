@@ -48,13 +48,10 @@ const Project = () => {
                             </motion.div>
                         </div> */}
 
-                        <motion.div
-                            initial={{ y: '10vh', opacity: 0 }}
-                            transition={{ type: 'spring', stiffness: 300, delay: 1.8 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            className='row'
-                        >
-                            <div className={`col-md-6 ${styles.card}`}>
+                        <div className='row'>
+                            <motion.div className={`col-md-6 ${styles.card}`} initial={{ y: '10vh', opacity: 0 }}
+                                transition={{ type: 'spring', stiffness: 300, delay: 1.8 }}
+                                animate={{ y: 0, opacity: 1 }}>
                                 <Link href='/projects/design'>
                                     <div
                                         className={styles.cardDetails}
@@ -100,23 +97,25 @@ const Project = () => {
                                         </motion.div>
                                     </div>
                                 </Link>
-                            </div>
+                            </motion.div>
 
-                            <div className={`col-md-6 ${styles.card}`}>
+                            <motion.div className={`col-md-6 ${styles.card}`} initial={{ y: '10vh', opacity: 0 }}
+                                transition={{ type: 'spring', stiffness: 300, delay: 2 }}
+                                animate={{ y: 0, opacity: 1 }}>
                                 <Link href='/projects/code'>
                                     <div
                                         className={styles.cardDetails}
                                     >
                                         <motion.h1
                                             initial={{ y: '10vh', opacity: 0 }}
-                                            transition={{ type: 'spring', stiffness: 300, delay: 2 }}
+                                            transition={{ type: 'spring', stiffness: 300, delay: 2.2 }}
                                             animate={{ y: 0, opacity: 1 }}
                                         >
                                             I Code & <br /> Build Stuff.
                                         </motion.h1>
                                         <motion.div
                                             initial={{ y: '10vh', opacity: 0 }}
-                                            transition={{ type: 'spring', stiffness: 200, delay: 2.3 }}
+                                            transition={{ type: 'spring', stiffness: 200, delay: 2.5 }}
                                             animate={{ y: 0, opacity: 1 }}
                                             className='action about-area'
                                         >
@@ -146,8 +145,8 @@ const Project = () => {
                                         </motion.div>
                                     </div>
                                 </Link>
-                            </div>
-                        </motion.div>
+                            </motion.div>
+                        </div>
                     </div>
                 </section>
             </main>
