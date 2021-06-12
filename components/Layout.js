@@ -16,7 +16,7 @@ const Layout = ({ title, keywords, description, children }) => {
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></link>
                 <script
                     src="https://kit.fontawesome.com/ad240720a8.js"
-                    crossorigin="anonymous"
+                    crossOrigin="anonymous"
                 ></script>
             </Head>
 

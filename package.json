@@ -8,6 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@sanity/block-content-to-react": "^3.0.0",
+    "@sanity/client": "^2.10.5",
+    "@sanity/image-url": "^0.140.22",
     "@svgr/webpack": "^5.5.0",
     "aos": "^2.3.4",
     "framer-motion": "^4.1.17",
