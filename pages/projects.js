@@ -32,22 +32,6 @@ const Project = () => {
                 {/*  design/code area start  */}
                 <section className='why-choose-us-area bg-gray section-padding-80-0 clearfix'>
                     <div className='container'>
-                        {/* <div className='row'>
-                            <motion.div
-                                initial={{ y: '10vh', opacity: 0 }}
-                                transition={{ type: 'spring', stiffness: 300, delay: 1.5 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                className='col-12'
-                            >
-                                <div
-                                    className='section-heading text-white text-center wow fadeInUp'
-                                    data-wow-delay='100ms'
-                                >
-                                    <h2>Design Or Code??</h2>
-                                </div>
-                            </motion.div>
-                        </div> */}
-
                         <div className='row'>
                             <motion.div className={`col-md-6 ${styles.card}`} initial={{ y: '10vh', opacity: 0 }}
                                 transition={{ type: 'spring', stiffness: 300, delay: 1.8 }}
