@@ -1,0 +1,79 @@
+.MiniNavBar {
+	background-color: #fff;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 9;
+	background: rgb(115 115 115 / 30%);
+	background: linear-gradient(
+		135deg,
+		rgba(255, 255, 255, 0.3) 0%,
+		rgb(120 120 120 / 30%) 42%,
+		rgb(51 51 51 / 30%) 100%
+	);
+	backdrop-filter: blur(15px);
+	border: 1px solid rgb(122 122 122 / 30%);
+}
+
+.MiniNavBar .Nav {
+	width: 100%;
+	height: 100%;
+}
+
+.MiniNavBar .navItems {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	color: white;
+	align-items: center;
+}
+
+.MiniNavBar .NavLinks {
+	width: 100%;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.MiniNavBar .NavLinks a {
+	width: 70%;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+	color: #fff;
+}
+.navActive {
+	position: relative;
+	color: #e45447 !important;
+}
+
+.navActive::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 1.5rem;
+	width: 100%;
+	height: 2px;
+	transition: 300ms;
+	border-bottom: 2px solid white;
+}
+@media (max-width: 322.98px) {
+	.MiniNavBar .NavLinks a {
+		font-size: 1.5rem;
+	}
+	.MiniNavBar {
+		background-color: rgba(0, 0, 0, 0.548);
+		backdrop-filter: blur(15px);
+		border: 1px solid rgb(122 122 122 / 30%);
+	}
+}
+
+.MiniNavBar .NavLinks a:nth-child(3) {
+	border-bottom: none;
+}
