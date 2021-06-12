@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 // import { useLocation } from 'react-router-dom';
 import { useRouter } from 'next/router';
+import NavLink from './NavLink';
 // import Logo from "../images/Rui.svg";
 // import hamburger from '../images/hamburger.svg';
 // import hamburgerClose from '../images/hamburgerClose.svg';
@@ -129,19 +130,19 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 						animate={{ x: 0, opacity: 1 }}
 						className={styles.NavLinks}
 					>
-						<Link
+						<NavLink
 							href='/about'
-							activeClassName='navActive'
+							activeClassName={styles.navActive}
 						>
-							<a className='inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 text-bold hover:text-blue-400'>
+							<a className='inline-flex items-center'>
 								About Me.
 							</a>
-						</Link>
-						<Link
+						</NavLink>
+						<NavLink
 							href='/projects'
 							activeClassName='navActive'
 						>
-							<a className='inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-blue-400 projects'>
+							<a className='inline-flex items-center projects'>
 								Projects.
 							</a>
 							{/* <div className='projects-dropdown'>
@@ -149,15 +150,15 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 								<Link href='/projects/code'>Code Projects.</Link>
 								<i className='fas fa-caret-up arrow'></i>
 							</div> */}
-						</Link>
-						<Link
+						</NavLink>
+						<NavLink
 							href='/blog'
 							activeClassName='navActive'
 						>
-							<a className='inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-blue-400'>
+							<a className='inline-flex items-center'>
 								Blog.
 							</a>
-						</Link>
+						</NavLink>
 					</motion.div>
 				</nav>
 			</div>
