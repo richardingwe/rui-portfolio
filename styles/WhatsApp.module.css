@@ -1,0 +1,55 @@
+.WhatsApp {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: rgb(13, 153, 72);
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	z-index: 100000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@media (max-width: 991px) {
+	.WhatsApp {
+		bottom: 1rem;
+		right: 1rem;
+		width: 50px;
+		height: 50px;
+	}
+	.WhatsApp a {
+		margin-top: 3px;
+	}
+}
+@media (max-width: 991px) {
+	.WhatsApp {
+		bottom: 1rem;
+		right: 1rem;
+		width: 50px;
+		height: 50px;
+	}
+	.WhatsApp a {
+		margin-top: 3px;
+	}
+}
+
+.WhatsApp a {
+	margin-top: 5px;
+}
+@media (max-width: 991px) {
+	.WhatsApp {
+		bottom: 1rem;
+		right: 1rem;
+		width: 50px;
+		height: 50px;
+	}
+	.WhatsApp a {
+		margin-top: 3px;
+	}
+}
+.WhatsApp i {
+	color: rgb(255, 255, 255);
+	font-size: 2rem;
+	width: 100%;
+}
