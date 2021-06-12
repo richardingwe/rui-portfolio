@@ -25,11 +25,11 @@ const Layout = ({ title, keywords, description, children }) => {
                 ></script>
             </Head>
 
-            {/* <Navbar
+            <Navbar
                 handleClick={handleClick}
                 navOpen={navOpen}
                 setNavOpen={setNavOpen}
-            /> */}
+            />
             {navOpen && <MiniNavBar handleClick={handleClick} />}
             <WhatsApp />
             <div>
