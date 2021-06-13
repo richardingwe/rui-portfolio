@@ -124,19 +124,18 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 						animate={{ x: 0, opacity: 1 }}
 						className={styles.NavLinks}
 					>
-						<NavLink
+						<Link
 							href='/about'
-							activeClassName={styles.navActive}
+							className={`${location.pathname == '/about' ? `${styles.navActive}` : ''}`}
 						>
-							<a className='inline-flex items-center'>
+							<a className={`inline-flex items-center ${location.pathname == '/about' ? `${styles.navActive}` : ''}`}>
 								About Me.
 							</a>
-						</NavLink>
-						<NavLink
+						</Link>
+						<Link
 							href='/projects'
-							activeClassName='navActive'
 						>
-							<a className='inline-flex items-center projects'>
+							<a className={`inline-flex items-center ${location.pathname == '/projects' ? `${styles.navActive}` : ''}`}>
 								Projects.
 							</a>
 							{/* <div className='projects-dropdown'>
@@ -144,15 +143,14 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 								<Link href='/projects/code'>Code Projects.</Link>
 								<i className='fas fa-caret-up arrow'></i>
 							</div> */}
-						</NavLink>
-						<NavLink
+						</Link>
+						<Link
 							href='/blog'
-							activeClassName='navActive'
 						>
-							<a className='inline-flex items-center'>
+							<a className={`inline-flex items-center ${location.pathname == '/blog' ? `${styles.navActive}` : ''}`}>
 								Blog.
 							</a>
-						</NavLink>
+						</Link>
 					</motion.div>
 					<div
 						className={`${styles.hamburger} ${rotate ? `${styles.rotate}` : ' '}`}
