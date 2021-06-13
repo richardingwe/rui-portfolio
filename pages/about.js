@@ -18,8 +18,8 @@ function urlFor(source) {
     return builder.image(source);
 }
 
-const About = () => {
-    const [author, setAuthor] = useState(null);
+const About = ({ author }) => {
+    // const [author, setAuthor] = useState(null);
     // const [downloadUrl, setDownloadUrl] = useState('/');
 
     // const download = () => {
@@ -31,30 +31,17 @@ const About = () => {
         AOS.refresh();
     }, []);
 
-    useEffect(() => {
-        sanityClient
-            .fetch(
-                `*[_type == "author"]{
-            name,
-            bio,
-            "authorImage": image.asset->url
-        }`
-            )
-            .then((data) => setAuthor(data[0]))
-            .catch(console.error);
-    }, []);
-
-    if (!author)
-        return (
-            <div>
-                <div className='preloader-area'>
-                    <div className='loader-box'>
-                        {/* <LoaderTwo /> */}
-                        {/* <div className='loader'></div> */}
-                    </div>
-                </div>
-            </div>
-        );
+    // if (!author)
+    //     return (
+    //         <div>
+    //             <div className='preloader-area'>
+    //                 <div className='loader-box'>
+    //                     {/* <LoaderTwo /> */}
+    //                     {/* <div className='loader'></div> */}
+    //                 </div>
+    //             </div>
+    //         </div>
+    //     );
     return (
         <Layout title='Rui - About' description='I am a Software Developer and a Graphic Designer, I am very passionate about bringing ideas to reality through Codes and Graphic designs. For now, I build powerful, beautiful, and swift web applications that help businesses / brands keep potential customers and compete globally. I am obsessed with technology and I plan on working with technologies like Artificial Intelligence, Virtual Reality, Augmented Reality, and Mixed Reality in the future. I am currently the lead developer / designer of Rui Creative and I am also available for partnerships.'>
             <main className={`${styles.main}`}>
@@ -506,3 +493,25 @@ const About = () => {
 };
 
 export default About;
+
+
+
+export async function getServerSideProps() {
+    try {
+        const data = await sanityClient.fetch(
+            `*[_type == "author"]{
+            name,
+            bio,
+            "authorImage": image.asset->url
+        }`
+        );
+        return {
+            props: {
+                author: data[0]
+            },
+        };
+    } catch (error) {
+        console.log(error);
+    }
+
+}
