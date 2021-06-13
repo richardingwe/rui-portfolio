@@ -82,9 +82,10 @@
 }
 
 .arrow {
+	width: 18px;
 	position: absolute;
 	top: -19px;
-	font-size: 1.8rem;
+	/* font-size: 1.8rem; */
 	color: white;
 }
 

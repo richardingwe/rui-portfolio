@@ -18,9 +18,6 @@
 		width: 50px;
 		height: 50px;
 	}
-	.WhatsApp a {
-		margin-top: 3px;
-	}
 }
 @media (max-width: 991px) {
 	.WhatsApp {
@@ -28,15 +25,9 @@
 		right: 1rem;
 		width: 50px;
 		height: 50px;
-	}
-	.WhatsApp a {
-		margin-top: 3px;
 	}
 }
 
-.WhatsApp a {
-	margin-top: 5px;
-}
 @media (max-width: 991px) {
 	.WhatsApp {
 		bottom: 1rem;
@@ -44,12 +35,10 @@
 		width: 50px;
 		height: 50px;
 	}
-	.WhatsApp a {
-		margin-top: 3px;
-	}
 }
-.WhatsApp i {
+.WhatsApp svg {
+	width: 28px !important;
 	color: rgb(255, 255, 255);
-	font-size: 2rem;
+	/* font-size: 2rem; */
 	width: 100%;
 }
