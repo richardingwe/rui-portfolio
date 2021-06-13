@@ -8,9 +8,7 @@ import styles from '@/styles/Design.module.css';
 import Layout from '@/components/Layout';
 // import LoaderTwo from './LoaderTwo';
 
-const Design = () => {
-    const [designData, setDesignData] = useState(null);
-
+const Design = ({ designData }) => {
     useEffect(() => {
         AOS.init({
             delay: 200,
@@ -19,41 +17,17 @@ const Design = () => {
         AOS.refresh();
     }, []);
 
-    useEffect(() => {
-        sanityClient
-            .fetch(
-                `*[_type == "DesignProject"]{
-            title,
-            date,
-            place,
-            description,
-            projectType,
-            link,
-            tags,
-            projectImage{
-            asset->{
-                _id,
-                url
-            },
-            alt
-        }
-        }`
-            )
-            .then((data) => setDesignData(data))
-            .catch(console.error);
-    }, []);
-
-    if (!designData)
-        return (
-            <div>
-                <div className='preloader-area'>
-                    <div className='loader-box'>
-                        {/* <LoaderTwo /> */}
-                        {/* <div className='loader'></div> */}
-                    </div>
-                </div>
-            </div>
-        );
+    // if (!designData)
+    //     return (
+    //         <div>
+    //             <div className='preloader-area'>
+    //                 <div className='loader-box'>
+    //                     {/* <LoaderTwo /> */}
+    //                     {/* <div className='loader'></div> */}
+    //                 </div>
+    //             </div>
+    //         </div>
+    //     );
 
     return (
         <Layout title='Rui - Design Projects'>
@@ -119,3 +93,36 @@ const Design = () => {
     );
 };
 export default Design;
+
+
+export async function getServerSideProps() {
+    try {
+        const data = await sanityClient
+            .fetch(
+                `*[_type == "DesignProject"]{
+                title,
+                date,
+                place,
+                description,
+                projectType,
+                link,
+                tags,
+                projectImage{
+                asset->{
+                    _id,
+                    url
+                },
+                alt
+            }
+            }`
+            );
+        return {
+            props: {
+                designData: data
+            },
+        };
+    } catch (error) {
+        console.log(error);
+    }
+
+}
