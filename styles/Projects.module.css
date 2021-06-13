@@ -13,7 +13,6 @@
 
 .aboutContent {
 	margin-top: 190px;
-	/* margin-bottom: 112px; */
 	text-align: center;
 }
 .aboutContent h1 {
@@ -84,9 +83,6 @@
 	.aboutArea .sectionTitle {
 		margin-top: 1rem;
 	}
-	/* .aboutArea .about-left {
-		display: none;
-	} */
 }
 .aboutArea .primaryBtn.white {
 	margin-right: 1rem;
