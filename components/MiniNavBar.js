@@ -17,28 +17,22 @@ const MiniNavBar = ({ handleClick }) => {
                     <div className={styles.NavLinks} onClick={() => handleClick()}>
                         <NavLink
                             href='/about'
-                            activeClassName={styles.navActive}
-                            className='inline-flex items-center'
                         >
-                            <a>
+                            <a className={`inline-flex items-center ${location.pathname.includes('/about') ? `${styles.navActive}` : ''}`}>
                                 About Me.
                             </a>
                         </NavLink>
                         <Link
                             href='/projects'
-                            activeClassName={styles.navActive}
-                            className='inline-flex items-center'
                         >
-                            <a>
+                            <a className={`inline-flex items-center ${location.pathname.includes('/projects') ? `${styles.navActive}` : ''}`}>
                                 Projects.
                             </a>
                         </Link>
                         <NavLink
                             href='/blog'
-                            activeClassName={styles.navActive}
-                            className='inline-flex items-center'
                         >
-                            <a>
+                            <a className={`inline-flex items-center ${location.pathname.includes('/blog') ? `${styles.navActive}` : ''}`}>
                                 Blog.
                             </a>
                         </NavLink>

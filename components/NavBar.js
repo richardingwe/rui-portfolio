@@ -125,7 +125,6 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 					>
 						<Link
 							href='/about'
-							className={`${location.pathname == '/about' ? `${styles.navActive}` : ''}`}
 						>
 							<a className={`inline-flex items-center ${location.pathname.includes('/about') ? `${styles.navActive}` : ''}`}>
 								About Me.
