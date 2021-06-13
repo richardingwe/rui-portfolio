@@ -37,12 +37,12 @@
 .projects {
 	position: relative;
 }
-.projects:hover .projects-dropdown {
-	display: flex;
+.projects:hover .projectsDropdown {
+	display: flex !important;
 	-webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 	animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-.projects-dropdown {
+.projectsDropdown {
 	width: 150px;
 	height: 100px;
 	background-color: #25252554;
@@ -51,7 +51,7 @@
 	align-items: center;
 	justify-content: center;
 	position: absolute;
-	top: 55px;
+	top: 50px;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
@@ -88,7 +88,7 @@
 	color: white;
 }
 
-.projects-dropdown a {
+.projectsDropdown a {
 	width: 100%;
 	text-align: center;
 	color: #f0f0f0;

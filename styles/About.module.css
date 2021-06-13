@@ -1,6 +1,7 @@
 .main {
 	/* background-color: rgb(11, 13, 20); */
 	background-color: #11161f;
+	min-height: 100vh;
 	/* background-color: #1f2937; */
 }
 

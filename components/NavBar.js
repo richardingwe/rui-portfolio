@@ -127,26 +127,31 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 							href='/about'
 							className={`${location.pathname == '/about' ? `${styles.navActive}` : ''}`}
 						>
-							<a className={`inline-flex items-center ${location.pathname == '/about' ? `${styles.navActive}` : ''}`}>
+							<a className={`inline-flex items-center ${location.pathname.includes('/about') ? `${styles.navActive}` : ''}`}>
 								About Me.
 							</a>
 						</Link>
 						<Link
 							href='/projects'
+							className='projects'
 						>
-							<a className={`inline-flex items-center ${location.pathname == '/projects' ? `${styles.navActive}` : ''}`}>
+							<a className={`inline-flex items-center ${styles.projects} ${location.pathname.includes('/projects') ? `${styles.navActive}` : ''}`}>
 								Projects.
+								<div className={`${styles.projectsDropdown} dropdown`}>
+									<Link href='/projects/design'>
+										Design Projects.
+									</Link>
+									<Link href='/projects/code'>
+										Code Projects.
+									</Link>
+									<i className={`fas fa-caret-up ${styles.arrow}`}></i>
+								</div>
 							</a>
-							{/* <div className='projects-dropdown'>
-								<Link href='/projects/design'>Design Projects.</Link>
-								<Link href='/projects/code'>Code Projects.</Link>
-								<i className='fas fa-caret-up arrow'></i>
-							</div> */}
 						</Link>
 						<Link
 							href='/blog'
 						>
-							<a className={`inline-flex items-center ${location.pathname == '/blog' ? `${styles.navActive}` : ''}`}>
+							<a className={`inline-flex items-center ${location.pathname.includes('/blog') ? `${styles.navActive}` : ''}`}>
 								Blog.
 							</a>
 						</Link>
