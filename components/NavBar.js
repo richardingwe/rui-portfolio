@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import NavLink from './NavLink';
 import { debounce } from '../utilities/helpers';
 import styles from '../styles/NavBar.module.css';
 
