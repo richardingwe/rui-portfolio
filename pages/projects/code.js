@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import sanityClient from '@/sanity/client.js';
 import { motion } from 'framer-motion';
 import Layout from '@/components/Layout';
@@ -64,7 +65,7 @@ const Code = ({ codeData }) => {
                                         data-aos-delay='200'
                                         className='col-lg-6'
                                     >
-                                        <img
+                                        <Image width='1044' height='587'
                                             className='img-fluid'
                                             src={
                                                 code.projectImage
