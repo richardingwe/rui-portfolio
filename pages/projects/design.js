@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import sanityClient from '../../client';
 import { motion } from 'framer-motion';
@@ -72,7 +73,7 @@ const Design = ({ designData }) => {
                                                 rel='noopener noreferrer'
                                             >
                                                 <div className={styles.thumb}>
-                                                    <img
+                                                    <Image width='1000' height='1000'
                                                         className='img-fluid'
                                                         src={design.projectImage.asset.url}
                                                         alt={design.alt}
