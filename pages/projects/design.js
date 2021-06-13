@@ -58,8 +58,8 @@ const Design = ({ designData }) => {
                 <section className={`${styles.categoryPage} ${styles.areaPadding}`}>
                     <div className='container'>
                         <div className='row'>
-                            {designData &&
-                                designData.map((design) => (
+                            {
+                                designData?.map((design) => (
                                     <div
                                         key={design.projectImage.asset._id}
                                         data-aos='fade-up'
