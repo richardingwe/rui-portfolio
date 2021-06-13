@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import sanityClient from '../client.js';
+import sanityClient from '@/sanity/client.js';
 import imageUrlBuilder from '@sanity/image-url';
 import Link from 'next/link';
 import BlockContent from '@sanity/block-content-to-react';
