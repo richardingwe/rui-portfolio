@@ -19,10 +19,6 @@ const Design = () => {
         AOS.refresh();
     }, []);
 
-    // useEffect(() => {
-    //     document.title = 'Rui - Design Projects';
-    // }, []);
-
     useEffect(() => {
         sanityClient
             .fetch(
