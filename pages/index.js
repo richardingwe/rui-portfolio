@@ -173,6 +173,7 @@ export default function Home() {
                   focusable="false"
                   data-prefix="fab"
                   data-icon="facebook-f"
+                  className={styles.facebook}
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 320 512">
@@ -207,7 +208,6 @@ export default function Home() {
                   focusable="false"
                   data-prefix="fab"
                   data-icon="instagram"
-                  class="svg-inline--fa fa-instagram fa-w-14"
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512">
@@ -381,6 +381,7 @@ export default function Home() {
                   focusable="false"
                   data-prefix="fab"
                   data-icon="facebook-f"
+                  className={styles.facebook}
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 320 512">
@@ -415,7 +416,6 @@ export default function Home() {
                   focusable="false"
                   data-prefix="fab"
                   data-icon="instagram"
-                  class="svg-inline--fa fa-instagram fa-w-14"
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512">
