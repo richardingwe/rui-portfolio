@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -5,8 +6,26 @@ import { motion } from 'framer-motion';
 import Carousel from 'react-bootstrap/Carousel';
 import Layout from '../components/Layout';
 import styles from '../styles/Home.module.css';
+import Loader from '@/components/Loader';
 
 export default function Home() {
+  const [load, setLoad] = useState(true);
+
+  const showContents = () => {
+    setTimeout(() => {
+      setLoad(false);
+    }, 3800);
+  };
+
+  useEffect(() => {
+    showContents();
+  }, []);
+
+  if (load)
+    return (
+      <Loader />
+    );
+
   return (
     <Layout title='Rui - Richard Unimke Ingwe' description='I Create Beautiful Experiences, That Could Keep Potential Customers Glued && Loyal To Your Businesses, Brands And Websites.'>
 
