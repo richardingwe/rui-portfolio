@@ -153,6 +153,9 @@
 	height: 100px;
 	border-left: 1px solid white;
 }
+.facebook {
+	height: 22px;
+}
 @media (max-width: 991px) {
 	.homeName {
 		font-size: 4.5rem;

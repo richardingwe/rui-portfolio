@@ -1,0 +1,160 @@
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { motion } from "framer-motion";
+import sanityClient from "@/sanity/client.js";
+import imageUrlBuilder from "@sanity/image-url";
+import BlockContent from "@sanity/block-content-to-react";
+import { DiscussionEmbed } from 'disqus-react';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import styles from "@/styles/SingleBlog.module.css";
+import Layout from '@/components/Layout';
+// import LoaderTwo from './LoaderTwo.js';
+
+const builder = imageUrlBuilder(sanityClient);
+function urlFor(source) {
+    return builder.image(source);
+}
+
+const SingleBlog = ({ singleBlog }) => {
+
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
+
+
+    // if (!singleBlog) return (
+    //     <div>
+    //         <div className="preloader-area">
+    //             <div className="loader-box">
+    //                 <LoaderTwo />
+    //                 {/* <div className="loader"></div> */}
+    //             </div>
+    //         </div>
+    //     </div>
+    // );
+
+    let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+    return (
+        <Layout
+            title={`Rui - Blog ${singleBlog ? `- ${singleBlog.title}` : " "}`}
+            description={`${singleBlog ? `${singleBlog.subtitle}` : " "}`}
+        >
+            <main className={styles.main}>
+                <section className={`${styles.bannerArea} ${styles.relative}`}>
+                    <div className="container">
+                        <div className="row d-flex align-items-center justify-content-center">
+                            <motion.div
+                                initial={{ y: "10vh", opacity: 0 }}
+                                transition={{ type: "spring", stiffness: 300, delay: 1.2 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                className={`${styles.aboutContent} col-lg-12`}>
+                                <h1 className="text-white">
+                                    Blog Details
+                                </h1>
+                                <p className={styles.linkNav}>
+                                    <span className={styles.box}>
+                                        <Link href="/">Home </Link>
+                                        <Link href="/blog">Blog</Link>
+                                        <Link href='javascript:void(0)'>Blog Details</Link>
+                                    </span>
+                                </p>
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
+                {singleBlog &&
+                    <section className={`${styles.postContentArea} ${styles.sectionGap}`}>
+                        <div className="container">
+                            <div className="">
+                                <div className="posts-list">
+                                    <div className={`${styles.singlePost} row text-white`}>
+                                        <div className="col-lg-12">
+                                            <div data-aos="fade-up" data-aos-delay="300" className={styles.subtitle}>
+                                                <p >{singleBlog.subtitle}</p>
+                                            </div>
+                                            <div data-aos="fade-up" data-aos-delay="200" className={styles.featureImg} style={{ backgroundImage: `url(${singleBlog.mainImage.asset.url})` }}>
+                                                {/* <img className="img-fluid" src={singleBlog.mainImage.asset.url} alt={singleBlog.title} /> */}
+                                            </div>
+                                        </div>
+                                        <div className={`col-lg-3  col-md-3 ${styles.metaDetails}`}>
+                                            <div data-aos="fade-up" data-aos-delay="300" className="user-details row mt-2 justify-content-center align-items-center">
+                                                <p className={`${styles.userName} col-lg-12 col-md-12 col-6`}>
+                                                    <Link href="/about">
+                                                        <a>
+                                                            {singleBlog.name}
+                                                            <img className={styles.authorImg} src={urlFor(singleBlog.authorImage).url()} alt=" ">
+                                                            </img>
+                                                        </a>
+                                                    </Link>
+                                                </p>
+                                                <p className={`${styles.date} col-lg-12 col-md-12 col-6`}>{new Date(singleBlog.publishedAt).getDate()} {months[new Date(singleBlog.publishedAt).getMonth()]},  {new Date(singleBlog.publishedAt).getFullYear()}</p>
+                                            </div>
+                                        </div>
+                                        <div data-aos="fade-up" data-aos-delay="300" className="col-lg-9 col-md-9">
+                                            <h3 className={`mt-5 mb-1 ${styles.blogTitle}`}>{singleBlog && singleBlog.title}</h3>
+                                            <div className={styles.excert}>
+                                                <BlockContent blocks={singleBlog.body} projectId="y0xdnwwh" dataset="production" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="mb-2">
+                                <h3 className={styles.leaveComment}>
+                                    Please leave a comment
+                                </h3>
+                            </div>
+                            <DiscussionEmbed
+                                shortname='Rui'
+                                config={
+                                    {
+                                        url: `https://ruingwe.com/blog/${singleBlog.slug}`,
+                                        identifier: singleBlog._id,
+                                        title: singleBlog.title,
+                                        language: 'en' //e.g. for Traditional Chinese (Taiwan)	
+                                    }
+                                }
+                            />
+                        </div>
+                    </section>
+                }
+            </main>
+        </Layout>
+    );
+};
+
+export default SingleBlog;
+
+
+export async function getServerSideProps({ query: { slug } }) {
+    try {
+        const data = await sanityClient.fetch(
+            `*[slug.current == "${slug}"]{
+            title,
+            subtitle,
+            _id,
+            slug,
+        publishedAt,
+            mainImage {
+                asset-> {
+                    _id,
+                    url
+                }
+            },
+            body,
+            "name": author->name,
+            "authorImage": author->image
+        }`);
+        return {
+            props: {
+                singleBlog: data[0]
+            },
+        };
+    } catch (error) {
+        console.log(error);
+    }
+
+}
