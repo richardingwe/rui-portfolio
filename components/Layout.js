@@ -4,8 +4,13 @@ import styles from '../styles/Layout.module.css';
 import Footer from './Footer';
 import Navbar from './NavBar';
 import MiniNavBar from './MiniNavBar';
-import AnimatedCursor from 'react-animated-cursor';
 import WhatsApp from './WhatsApp';
+
+import dynamic from 'next/dynamic';
+
+const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
+    ssr: false
+});
 
 const Layout = ({ title, keywords, description, children }) => {
     const [navOpen, setNavOpen] = useState(false);
