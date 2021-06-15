@@ -1,24 +1,25 @@
 {
-  "name": "rui-portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "@sanity/block-content-to-react": "^3.0.0",
-    "@sanity/client": "^2.10.5",
-    "@sanity/image-url": "^0.140.22",
-    "@svgr/webpack": "^5.5.0",
-    "animate.css": "^4.1.1",
-    "aos": "^2.3.4",
-    "disqus-react": "^1.0.11",
-    "framer-motion": "^4.1.17",
-    "next": "10.2.3",
-    "react": "17.0.2",
-    "react-bootstrap": "^1.6.1",
-    "react-dom": "17.0.2"
-  }
+	"name": "rui-portfolio",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"export": "next build && next export"
+	},
+	"dependencies": {
+		"@sanity/block-content-to-react": "^3.0.0",
+		"@sanity/client": "^2.10.5",
+		"@sanity/image-url": "^0.140.22",
+		"@svgr/webpack": "^5.5.0",
+		"animate.css": "^4.1.1",
+		"aos": "^2.3.4",
+		"disqus-react": "^1.0.11",
+		"framer-motion": "^4.1.17",
+		"next": "10.2.3",
+		"react": "17.0.2",
+		"react-bootstrap": "^1.6.1",
+		"react-dom": "17.0.2"
+	}
 }
