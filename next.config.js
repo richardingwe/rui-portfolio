@@ -5,4 +5,5 @@ module.exports = {
     env: {
         PROJECT_ID: 'y0xdnwwh',
     },
+    target: 'serverless',
 }
