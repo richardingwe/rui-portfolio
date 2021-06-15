@@ -24,7 +24,7 @@ class MyDocument extends Document {
                     <meta property="og:image" content='/logo512.png' />
                     <meta property="og:image:alt" content='Rui logo' />
                     <meta property="og:locale" content="en_US" />
-                    <meta name="fb:app_id" content="richard.ingwejr"></meta>
+                    <meta property="fb:app_id" content="richard.ingwejr"></meta>
                     <meta name="twitter:card" content="summary" />
                     <meta name="twitter:site" content="@richardingwe"></meta>
                     <meta name="twitter:creator" content="@richardingwe"></meta>
