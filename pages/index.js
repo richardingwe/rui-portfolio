@@ -28,7 +28,9 @@ export default function Home() {
 
   return (
     <Layout title='Rui - Software Developer & Brand Identity Designer' description='Richard Unimke Ingwe Creates Beautiful Experiences, That Could Keep Potential Customers Glued and Loyal To Your Businesses, Brands And Websites.'>
-
+      <Head>
+        <meta name="google-site-verification" content="w31_gCqMJnNbzIL-ENdtt90gIVc75fMw8T0LJ4mOvKk" />
+      </Head>
       <Carousel pause={false} interval={7000}>
         <Carousel.Item>
           <main className={styles.Main}>

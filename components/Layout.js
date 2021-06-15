@@ -30,7 +30,6 @@ const Layout = ({ title, keywords, description, children, currentUrl }) => {
                 <meta name="twitter:url" content={currentUrl} />
                 <meta property="og:description" content={description} />
                 <meta property="twitter:description" content={description} />
-
             </Head>
             <AnimatedCursor
                 innerSize={13}
