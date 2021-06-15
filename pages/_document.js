@@ -13,7 +13,7 @@ class MyDocument extends Document {
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
                     <meta name="theme-color" content="#1f2937" />
                     <link rel="apple-touch-icon" href="/logo192.png" />
-                    {/* <meta name='description' content='Richard Unimke Ingwe Creates Beautiful Experiences, That Could Keep Potential Customers Glued & Loyal To Your Businesses, Brands & Websites.' /> */}
+                    <meta name='description' content='Richard Unimke Ingwe Creates Beautiful Experiences, That Could Keep Potential Customers Glued & Loyal To Your Businesses, Brands & Websites.' />
                     <link rel="manifest" href="/manifest.json" />
                     <title>Rui - Software Developer & Brand Identity Designer</title>
                     <meta name="author" content="Richard Ingwe" />
