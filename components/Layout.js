@@ -50,9 +50,9 @@ const Layout = ({ title, keywords, description, children }) => {
 
 
 Layout.defaultProps = {
-    title: 'Rui',
-    description: 'Richard Unimke Ingwe - RUI Portfolio',
-    keywords: 'rui, web developer, brand identiy designer, richard ingwe'
+    title: 'Rui - Software Developer & Brand Identity Designer',
+    description: 'Richard Unimke Ingwe Creates Beautiful Experiences, That Could Keep Potential Customers Glued & Loyal To Your Businesses, Brands & Websites.',
+    keywords: 'rui, frontend developer, web developer, brand identiy designer, graphic designer, richard ingwe'
 };
 
 export default Layout;

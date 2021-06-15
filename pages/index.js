@@ -27,7 +27,7 @@ export default function Home() {
     );
 
   return (
-    <Layout title='Rui - Richard Unimke Ingwe' description='I Create Beautiful Experiences, That Could Keep Potential Customers Glued && Loyal To Your Businesses, Brands And Websites.'>
+    <Layout title='Rui - Software Developer & Brand Identity Designer' description='Richard Unimke Ingwe Creates Beautiful Experiences, That Could Keep Potential Customers Glued and Loyal To Your Businesses, Brands And Websites.'>
 
       <Carousel pause={false} interval={7000}>
         <Carousel.Item>
