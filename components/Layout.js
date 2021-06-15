@@ -24,11 +24,6 @@ const Layout = ({ title, keywords, description, children }) => {
                 <title>{title}</title>
                 <meta name='description' content={description} />
                 <meta name='keywords' content={keywords} />
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></link>
-                <script
-                    src="https://kit.fontawesome.com/ad240720a8.js"
-                    crossOrigin="anonymous"
-                ></script>
             </Head>
             <AnimatedCursor
                 innerSize={13}
