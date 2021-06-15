@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { motion } from "framer-motion";
 import sanityClient from "@/sanity/client";
 import AOS from "aos";
+import { useRouter } from 'next/router';
 import "aos/dist/aos.css";
 import styles from "@/styles/Blog.module.css";
 import Layout from '@/components/Layout';
@@ -18,6 +19,7 @@ const Post = ({ blogData }) => {
 
     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
+    const location = useRouter();
 
     // if (!blogData) return (
     //     <div>
@@ -30,7 +32,7 @@ const Post = ({ blogData }) => {
     //     </div>
     // );
     return (
-        <Layout title='Rui - Blog'>
+        <Layout title='Rui - Blog' currentUrl={`https://ruingwe.com${location.asPath}`}>
             <main className={styles.main}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
                     <div className="container">

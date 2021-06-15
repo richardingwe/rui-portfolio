@@ -12,7 +12,7 @@ const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
     ssr: false
 });
 
-const Layout = ({ title, keywords, description, children }) => {
+const Layout = ({ title, keywords, description, children, currentUrl }) => {
     const [navOpen, setNavOpen] = useState(false);
 
     const handleClick = () => {
@@ -24,6 +24,13 @@ const Layout = ({ title, keywords, description, children }) => {
                 <title>{title}</title>
                 <meta name='description' content={description} />
                 <meta name='keywords' content={keywords} />
+                <meta property="og:url" content={currentUrl} />
+                <meta property="og:title" content={title} />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:url" content={currentUrl} />
+                <meta property="og:description" content={description} />
+                <meta property="twitter:description" content={description} />
+
             </Head>
             <AnimatedCursor
                 innerSize={13}
@@ -51,6 +58,7 @@ const Layout = ({ title, keywords, description, children }) => {
 
 Layout.defaultProps = {
     title: 'Rui - Software Developer & Brand Identity Designer',
+    currentUrl: 'https://ruingwe.com',
     description: 'Richard Unimke Ingwe Creates Beautiful Experiences, That Could Keep Potential Customers Glued & Loyal To Your Businesses, Brands & Websites.',
     keywords: 'rui, frontend developer, web developer, brand identiy designer, graphic designer, richard ingwe'
 };

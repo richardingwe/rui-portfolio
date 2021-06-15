@@ -6,6 +6,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 import { DiscussionEmbed } from 'disqus-react';
 import AOS from "aos";
+import { useRouter } from 'next/router';
 import "aos/dist/aos.css";
 import styles from "@/styles/SingleBlog.module.css";
 import Layout from '@/components/Layout';
@@ -17,6 +18,9 @@ function urlFor(source) {
 }
 
 const SingleBlog = ({ singleBlog }) => {
+
+    const location = useRouter();
+
 
     useEffect(() => {
         AOS.init();
@@ -41,6 +45,7 @@ const SingleBlog = ({ singleBlog }) => {
         <Layout
             title={`Rui - Blog ${singleBlog ? `- ${singleBlog.title}` : " "}`}
             description={`${singleBlog ? `${singleBlog.subtitle}` : " "}`}
+            currentUrl={`https://ruingwe.com${location.asPath}`}
         >
             <main className={styles.main}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>

@@ -1,12 +1,16 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styles from '../styles/Projects.module.css';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 
 const Project = () => {
+
+    const location = useRouter();
+
     return (
-        <Layout title='Rui - Projects'>
+        <Layout title='Rui - Projects' currentUrl={`https://ruingwe.com${location.asPath}`}>
             <main className={styles.main}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
                     <div className='container'>

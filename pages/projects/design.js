@@ -4,6 +4,7 @@ import Link from 'next/link';
 import sanityClient from '@/sanity/client.js';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
+import { useRouter } from 'next/router';
 import 'aos/dist/aos.css';
 import styles from '@/styles/Design.module.css';
 import Layout from '@/components/Layout';
@@ -18,6 +19,9 @@ const Design = ({ designData }) => {
         AOS.refresh();
     }, []);
 
+    const location = useRouter();
+
+
     // if (!designData)
     //     return (
     //         <div>
@@ -31,7 +35,7 @@ const Design = ({ designData }) => {
     //     );
 
     return (
-        <Layout title='Rui - Design Projects'>
+        <Layout title='Rui - Design Projects' currentUrl={`https://ruingwe.com${location.asPath}`}>
             <main className={styles.main}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
                     <div className='container'>

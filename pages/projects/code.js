@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import sanityClient from '@/sanity/client.js';
 import { motion } from 'framer-motion';
 import Layout from '@/components/Layout';
@@ -15,6 +16,8 @@ const Code = ({ codeData }) => {
         AOS.refresh();
     }, []);
 
+    const location = useRouter();
+
     // if (!codeData)
     //     return (
     //         <div>
@@ -28,7 +31,7 @@ const Code = ({ codeData }) => {
     //     );
 
     return (
-        <Layout title='Rui - Code Projects'>
+        <Layout title='Rui - Code Projects' currentUrl={`https://ruingwe.com${location.asPath}`}>
             <main className={styles.main}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
                     <div className='container'>
