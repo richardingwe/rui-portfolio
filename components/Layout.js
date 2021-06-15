@@ -4,6 +4,7 @@ import styles from '../styles/Layout.module.css';
 import Footer from './Footer';
 import Navbar from './NavBar';
 import MiniNavBar from './MiniNavBar';
+import AnimatedCursor from 'react-animated-cursor';
 import WhatsApp from './WhatsApp';
 
 const Layout = ({ title, keywords, description, children }) => {
@@ -24,7 +25,14 @@ const Layout = ({ title, keywords, description, children }) => {
                     crossOrigin="anonymous"
                 ></script>
             </Head>
-
+            <AnimatedCursor
+                innerSize={13}
+                outerSize={15}
+                color='255, 150, 150'
+                outerAlpha={0.3}
+                innerScale={1}
+                outerScale={5.5}
+            />
             <Navbar
                 handleClick={handleClick}
                 navOpen={navOpen}
