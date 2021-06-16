@@ -32,6 +32,7 @@ class MyDocument extends Document {
                     <meta name="twitter:image" content='https://ruingwe.com/logo512.png' />
                     <meta name="twitter:image:alt" content='Rui logo' />
                     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></link>
+                    <meta name="google-site-verification" content="w31_gCqMJnNbzIL-ENdtt90gIVc75fMw8T0LJ4mOvKk" />
                 </Head>
                 <body>
                     <Main />
