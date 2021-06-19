@@ -8,7 +8,7 @@ module.exports = withPWA({
         dest: "public",
         register: true,
         skipWaiting: true,
-        runtimeCaching,
+        // runtimeCaching,
     },
     images: {
         domains: ['cdn.sanity.io']
