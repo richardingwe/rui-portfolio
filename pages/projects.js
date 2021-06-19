@@ -10,7 +10,7 @@ const Project = () => {
     const location = useRouter();
 
     return (
-        <Layout title='Rui - Projects' currentUrl={`https://ruingwe.com${location.asPath}`}>
+        <Layout title='Rui | Projects' currentUrl={`https://ruingwe.com${location.asPath}`}>
             <main className={styles.main}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
                     <div className='container'>

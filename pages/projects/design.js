@@ -21,21 +21,8 @@ const Design = ({ designData }) => {
 
     const location = useRouter();
 
-
-    // if (!designData)
-    //     return (
-    //         <div>
-    //             <div className='preloader-area'>
-    //                 <div className='loader-box'>
-    //                     {/* <LoaderTwo /> */}
-    //                     {/* <div className='loader'></div> */}
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     );
-
     return (
-        <Layout title='Rui - Design Projects' currentUrl={`https://ruingwe.com${location.asPath}`}>
+        <Layout title='Rui | Design Projects' currentUrl={`https://ruingwe.com${location.asPath}`}>
             <main className={styles.main}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
                     <div className='container'>

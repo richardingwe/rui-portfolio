@@ -20,16 +20,12 @@ class MyDocument extends Document {
                     <meta property="og:type" content="website" />
                     <meta property="og:site_name" content='Richard Ingwe Portfolio' />
                     {/* <meta property="og:description" content='Richard Unimke Ingwe Creates Beautiful Experiences, That Could Keep Potential Customers Glued & Loyal To Your Businesses, Brands & Websites.' /> */}
-                    <meta property="og:image" content='https://ruingwe.com/logo512.png' />
-                    <meta property="og:image:alt" content='Rui logo' />
                     <meta property="og:locale" content="en_US" />
                     <meta property="fb:app_id" content="235151421406499"></meta>
                     <meta name="twitter:card" content="summary" />
                     <meta name="twitter:site" content="@richardingwe"></meta>
                     <meta name="twitter:creator" content="@richardingwe"></meta>
                     {/* <meta name="twitter:description" content='Richard Unimke Ingwe Creates Beautiful Experiences, That Could Keep Potential Customers Glued & Loyal To Your Businesses, Brands & Websites.' /> */}
-                    <meta name="twitter:image" content='https://ruingwe.com/logo512.png' />
-                    <meta name="twitter:image:alt" content='Rui logo' />
                     {/* <meta name="google-site-verification" content="w31_gCqMJnNbzIL-ENdtt90gIVc75fMw8T0LJ4mOvKk" /> */}
                 </Head>
                 <body>

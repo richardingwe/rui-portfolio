@@ -32,7 +32,7 @@ const Post = ({ blogData }) => {
     //     </div>
     // );
     return (
-        <Layout title='Rui - Blog' currentUrl={`https://ruingwe.com${location.asPath}`}>
+        <Layout title='Rui | Blog' currentUrl={`https://ruingwe.com${location.asPath}`}>
             <main className={styles.main}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
                     <div className="container">

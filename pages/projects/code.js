@@ -31,7 +31,7 @@ const Code = ({ codeData }) => {
     //     );
 
     return (
-        <Layout title='Rui - Code Projects' currentUrl={`https://ruingwe.com${location.asPath}`}>
+        <Layout title='Rui | Code Projects' currentUrl={`https://ruingwe.com${location.asPath}`}>
             <main className={styles.main}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
                     <div className='container'>

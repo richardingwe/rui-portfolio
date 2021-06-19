@@ -45,7 +45,7 @@ const About = ({ author }) => {
     //         </div>
     //     );
     return (
-        <Layout title='Rui - About Me' currentUrl={`https://ruingwe.com${location.asPath}`} description='Richard Unimke Ingwe is a Software Developer and a Graphic Designer, I am very passionate about bringing ideas to reality through Codes and Graphic designs. For now, I build powerful, beautiful, and swift web applications that help businesses / brands keep potential customers and compete globally. I am obsessed with technology and I plan on working with technologies like Artificial Intelligence, Virtual Reality, Augmented Reality, and Mixed Reality in the future. I am currently the lead developer / designer of Rui Creative and I am also available for partnerships.'>
+        <Layout title='Rui | About Me' imageUrl={author.authorImage && urlFor(author.authorImage).url()} image_alt={author && author.name} currentUrl={`https://ruingwe.com${location.asPath}`} description='Richard Unimke Ingwe is a Software Developer and a Graphic Designer, I am very passionate about bringing ideas to reality through Codes and Graphic designs. For now, I build powerful, beautiful, and swift web applications that help businesses / brands keep potential customers and compete globally. I am obsessed with technology and I plan on working with technologies like Artificial Intelligence, Virtual Reality, Augmented Reality, and Mixed Reality in the future. I am currently the lead developer / designer of Rui Creative and I am also available for partnerships.'>
             <main className={`${styles.main}`}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
                     <div className='container'>

@@ -12,7 +12,7 @@ const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
     ssr: false
 });
 
-const Layout = ({ title, keywords, description, children, currentUrl }) => {
+const Layout = ({ title, keywords, description, children, currentUrl, imageUrl, image_alt }) => {
     const [navOpen, setNavOpen] = useState(false);
 
     const handleClick = () => {
@@ -31,6 +31,10 @@ const Layout = ({ title, keywords, description, children, currentUrl }) => {
                 <meta name="twitter:url" content={currentUrl} />
                 <meta property="og:description" content={description} />
                 <meta property="twitter:description" content={description} />
+                <meta property="og:image" content={imageUrl} />
+                <meta property="og:image:alt" content={image_alt} />
+                <meta name="twitter:image" content={imageUrl} />
+                <meta name="twitter:image:alt" content={image_alt} />
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></link>
             </Head>
             <AnimatedCursor
@@ -58,10 +62,12 @@ const Layout = ({ title, keywords, description, children, currentUrl }) => {
 
 
 Layout.defaultProps = {
-    title: 'Rui - Software Developer & Brand Identity Designer',
+    title: 'Rui | Software Developer & Brand Identity Designer',
     currentUrl: 'https://ruingwe.com',
     description: 'Richard Unimke Ingwe Creates Beautiful Experiences, That Could Keep Potential Customers Glued & Loyal To Your Businesses, Brands & Websites.',
-    keywords: 'rui, frontend developer, web developer, brand identiy designer, graphic designer, richard ingwe'
+    keywords: 'rui, frontend developer, web developer, brand identiy designer, graphic designer, richard ingwe',
+    imageUrl: 'https://ruingwe.com/logo512.png',
+    image_alt: 'Rui logo'
 };
 
 export default Layout;

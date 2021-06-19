@@ -43,9 +43,11 @@ const SingleBlog = ({ singleBlog }) => {
 
     return (
         <Layout
-            title={`Rui - Blog ${singleBlog ? `- ${singleBlog.title}` : " "}`}
+            title={`Rui | Blog ${singleBlog ? `| ${singleBlog.title}` : " "}`}
             description={`${singleBlog ? `${singleBlog.subtitle}` : " "}`}
             currentUrl={`https://ruingwe.com${location.asPath}`}
+            imageUrl={singleBlog.mainImage?.asset.url}
+            image_alt={singleBlog?.title}
         >
             <main className={styles.main}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
