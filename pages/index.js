@@ -91,22 +91,23 @@ export default function Home() {
                   <span>e</span>
                   <span>.</span>
                 </a>
-                <a
-                  // onClick={download}
-                  href='https://richardingwe.github.io/my-cv/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className={styles.primaryBtn}
-                  data-text='Resume.'
+                <Link
+                  href='/resume'
                 >
-                  <span>R</span>
-                  <span>e</span>
-                  <span>s</span>
-                  <span>u</span>
-                  <span>m</span>
-                  <span>e</span>
-                  <span>.</span>
-                </a>
+                  <a
+                    target='_blank'
+                    className={styles.primaryBtn}
+                    data-text='Resume.'
+                  >
+                    <span>R</span>
+                    <span>e</span>
+                    <span>s</span>
+                    <span>u</span>
+                    <span>m</span>
+                    <span>e</span>
+                    <span>.</span>
+                  </a>
+                </Link>
               </motion.div>
             </section>
             {/* <Footer /> */}
@@ -299,22 +300,23 @@ export default function Home() {
                   <span>e</span>
                   <span>.</span>
                 </a>
-                <a
-                  // onClick={download}
-                  href='https://richardingwe.github.io/my-cv/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className={styles.primaryBtn}
-                  data-text='Resume.'
+                <Link
+                  href='/resume'
                 >
-                  <span>R</span>
-                  <span>e</span>
-                  <span>s</span>
-                  <span>u</span>
-                  <span>m</span>
-                  <span>e</span>
-                  <span>.</span>
-                </a>
+                  <a
+                    target='_blank'
+                    className={styles.primaryBtn}
+                    data-text='Resume.'
+                  >
+                    <span>R</span>
+                    <span>e</span>
+                    <span>s</span>
+                    <span>u</span>
+                    <span>m</span>
+                    <span>e</span>
+                    <span>.</span>
+                  </a>
+                </Link>
               </motion.div>
             </section>
             {/* <Footer /> */}
