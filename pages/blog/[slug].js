@@ -46,7 +46,7 @@ const SingleBlog = ({ singleBlog }) => {
             title={`Rui | Blog ${singleBlog ? `| ${singleBlog.title}` : " "}`}
             description={`${singleBlog ? `${singleBlog.subtitle}` : " "}`}
             currentUrl={`https://ruingwe.com${location.asPath}`}
-            imageUrl={singleBlog.mainImage?.asset.url}
+            imageUrl={urlFor(singleBlog.mainImage?.asset.url).width(1200).url()}
             image_alt={singleBlog?.title}
         >
             <main className={styles.main}>
