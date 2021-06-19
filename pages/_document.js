@@ -10,13 +10,12 @@ class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head>
-                    <meta name="viewport" content="width=device-width, initial-scale=1" />
                     <meta name="theme-color" content="#1f2937" />
                     <link rel="apple-touch-icon" href="/logo192.png" />
                     <meta name='description' content='Richard Unimke Ingwe Creates Beautiful Experiences, That Could Keep Potential Customers Glued & Loyal To Your Businesses, Brands & Websites.' />
                     <link rel="manifest" href="/manifest.json" />
-                    <title>Rui - Software Developer & Brand Identity Designer</title>
                     <meta name="author" content="Richard Ingwe" />
+                    <meta name='keywords' content='rui, frontend developer, web developer, brand identiy designer, graphic designer, richard ingwe, ruingwe, ruingwe.com' />
                     <meta name="Rui Portfolio" content="Rui Portfolio" />
                     <meta property="og:type" content="website" />
                     <meta property="og:site_name" content='Richard Ingwe Portfolio' />
@@ -31,7 +30,6 @@ class MyDocument extends Document {
                     {/* <meta name="twitter:description" content='Richard Unimke Ingwe Creates Beautiful Experiences, That Could Keep Potential Customers Glued & Loyal To Your Businesses, Brands & Websites.' /> */}
                     <meta name="twitter:image" content='https://ruingwe.com/logo512.png' />
                     <meta name="twitter:image:alt" content='Rui logo' />
-                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></link>
                     {/* <meta name="google-site-verification" content="w31_gCqMJnNbzIL-ENdtt90gIVc75fMw8T0LJ4mOvKk" /> */}
                 </Head>
                 <body>

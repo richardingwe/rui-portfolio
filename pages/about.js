@@ -118,24 +118,25 @@ const About = ({ author }) => {
                                             <span>e</span>
                                             <span>.</span>
                                         </a>
-                                        <a
-                                            // onClick={download}
-                                            data-aos='fade-up'
-                                            data-aos-delay='300'
-                                            href='https://richardingwe.github.io/my-cv/'
-                                            target='_blank'
-                                            rel='noopener noreferrer'
-                                            className={styles.primaryBtn}
-                                            data-text='Resume.'
-                                        >
-                                            <span>R</span>
-                                            <span>e</span>
-                                            <span>s</span>
-                                            <span>u</span>
-                                            <span>m</span>
-                                            <span>e</span>
-                                            <span>.</span>
-                                        </a>
+                                        <Link href='/resume'>
+                                            <a
+                                                // onClick={download}
+                                                data-aos='fade-up'
+                                                data-aos-delay='300'
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                                className={styles.primaryBtn}
+                                                data-text='Resume.'
+                                            >
+                                                <span>R</span>
+                                                <span>e</span>
+                                                <span>s</span>
+                                                <span>u</span>
+                                                <span>m</span>
+                                                <span>e</span>
+                                                <span>.</span>
+                                            </a>
+                                        </Link>
                                     </div>
                                 </motion.div>
                             </div>

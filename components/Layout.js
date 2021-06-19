@@ -25,11 +25,13 @@ const Layout = ({ title, keywords, description, children, currentUrl }) => {
                 <meta name='description' content={description} />
                 <meta name='keywords' content={keywords} />
                 <meta property="og:url" content={currentUrl} />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta property="og:title" content={title} />
                 <meta name="twitter:title" content={title} />
                 <meta name="twitter:url" content={currentUrl} />
                 <meta property="og:description" content={description} />
                 <meta property="twitter:description" content={description} />
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></link>
             </Head>
             <AnimatedCursor
                 innerSize={13}

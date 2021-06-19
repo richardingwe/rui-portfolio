@@ -4,12 +4,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap');
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Mulish&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 body {
 	font-family: 'Karla', sans-serif;
 	font-style: 400;
 }
-
+.mont {
+	font-family: Montserrat !important;
+}
 /* customized the scroll bar here */
 
 /* Works on Firefox */
