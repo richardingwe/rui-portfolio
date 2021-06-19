@@ -1,7 +1,13 @@
+import { useState } from 'react';
 import Head from 'next/head';
 import styles from '@/styles/Resume.module.css';
 
 const resume = () => {
+    const [downloadUrl, setDownloadUrl] = useState('/');
+
+    const download = () => {
+        setDownloadUrl("/pdf/richard-ingwe-resume.pdf");
+    };
     return (
         <div id={`${styles.body} mont`} className='mont'>
             <Head>
@@ -1321,7 +1327,7 @@ const resume = () => {
                     </div>
                 </div>
             </div>
-            <a className={`${styles.a} ${styles.download} ${styles.heartbeat} `} href="/pdf/richard-ingwe-resume.pdf" download>
+            <a onClick={download} className={`${styles.a} ${styles.download} ${styles.heartbeat} `} href={downloadUrl} download>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     version="1.1"
