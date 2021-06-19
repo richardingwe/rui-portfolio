@@ -1321,7 +1321,7 @@ const resume = () => {
                     </div>
                 </div>
             </div>
-            <a className={`${styles.a} ${styles.download} ${styles.heartbeat} `} href="./pdf/MY CV.pdf" download>
+            <a className={`${styles.a} ${styles.download} ${styles.heartbeat} `} href="/pdf/richard-ingwe-resume.pdf" download>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     version="1.1"
