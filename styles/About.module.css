@@ -1408,3 +1408,63 @@
 	padding-top: 100px;
 	padding-bottom: 0;
 }
+
+.socials {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	z-index: 15;
+	margin-top: 2rem;
+}
+.socials a {
+	color: white;
+	font-size: 1.2rem;
+	margin-bottom: 5px;
+	transition: 500ms;
+	background-color: #0b0d14;
+	/* padding: 1rem; */
+	height: 50px;
+	width: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+}
+.socials a:hover {
+	color: #e45447;
+}
+
+.socials svg {
+	width: 25px;
+}
+
+.facebook {
+	height: 25px;
+}
+@media (max-width: 500px) {
+	.socials a {
+		width: 40px;
+		height: 40px;
+	}
+	.socials svg {
+		width: 20px;
+	}
+	.facebook {
+		height: 20px;
+	}
+}
+
+@media (max-width: 320px) {
+	.socials a {
+		width: 35px;
+		height: 35px;
+	}
+	.socials svg {
+		width: 15px;
+	}
+	.facebook {
+		height: 15px;
+	}
+}
