@@ -126,14 +126,14 @@ const About = ({ author }) => {
                                                 target='_blank'
                                                 rel='noopener noreferrer'
                                                 className={styles.primaryBtn}
-                                                data-text='Resume.'
+                                                data-text='Résumé.'
                                             >
                                                 <span>R</span>
-                                                <span>e</span>
+                                                <span>é</span>
                                                 <span>s</span>
                                                 <span>u</span>
                                                 <span>m</span>
-                                                <span>e</span>
+                                                <span>é</span>
                                                 <span>.</span>
                                             </a>
                                         </Link>
