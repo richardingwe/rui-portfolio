@@ -3,15 +3,15 @@ import Head from 'next/head';
 import styles from '@/styles/Resume.module.css';
 
 const resume = () => {
-    const [downloadUrl, setDownloadUrl] = useState('/');
+    // const [downloadUrl, setDownloadUrl] = useState('/');
 
-    const download = () => {
-        setDownloadUrl("/pdf/richard-ingwe-resume.pdf");
-    };
+    // const download = () => {
+    //     setDownloadUrl("/pdf/richard-ingwe-resume.pdf");
+    // };
     return (
         <div id={`${styles.body} mont`} className='mont'>
             <Head>
-                <title>Rui | Resume</title>
+                <title>Rui | Résumé</title>
                 <link
                     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
                     rel="stylesheet"
@@ -1327,7 +1327,7 @@ const resume = () => {
                     </div>
                 </div>
             </div>
-            <a onClick={download} className={`${styles.a} ${styles.download} ${styles.heartbeat} `} href={downloadUrl} download>
+            <a className={`${styles.a} ${styles.download} ${styles.heartbeat} `} href='https://cdn.sanity.io/files/y0xdnwwh/production/cd06a537ca98b2382161607e5e30ded5311a1fcd.pdf?dl'>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     version="1.1"
