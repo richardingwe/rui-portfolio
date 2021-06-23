@@ -1,9 +1,13 @@
 import React from 'react';
+import Head from 'next/head';
 import styles from '@/styles/Loader.module.css';
 
 const Loader = () => {
     return (
         <div className={styles.preloaderArea}>
+            <Head>
+                <title>Rui | Software Developer & Brand Identity Designer</title>
+            </Head>
             <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1000 1000" width="1000" height="1000">
                 <path className={`${styles.st0} ${styles.svgelem1}`} d="M4,500c0-136.8,55.6-260.8,145.4-350.6l-5.8-5.8C97.3,189.9,61,243.8,35.6,303.8C9.3,366-4,432-4,500
 	S9.3,634,35.6,696.2c25.4,60,61.7,113.9,108,160.2l5.8-5.8C59.6,760.8,4,636.8,4,500z"></path>
