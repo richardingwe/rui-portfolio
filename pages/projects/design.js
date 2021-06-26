@@ -8,7 +8,6 @@ import { useRouter } from 'next/router';
 import 'aos/dist/aos.css';
 import styles from '@/styles/Design.module.css';
 import Layout from '@/components/Layout';
-// import LoaderTwo from './LoaderTwo';
 
 const Design = ({ designData }) => {
     useEffect(() => {

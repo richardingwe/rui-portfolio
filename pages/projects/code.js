@@ -8,7 +8,6 @@ import Layout from '@/components/Layout';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styles from '@/styles/Code.module.css';
-// import LoaderTwo from './LoaderTwo';
 
 const Code = ({ codeData }) => {
     useEffect(() => {
@@ -17,18 +16,6 @@ const Code = ({ codeData }) => {
     }, []);
 
     const location = useRouter();
-
-    // if (!codeData)
-    //     return (
-    //         <div>
-    //             <div className='preloader-area'>
-    //                 <div className='loader-box'>
-    //                     <LoaderTwo />
-    //                     {/* <div className='loader'></div> */}
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     );
 
     return (
         <Layout title='Rui | Code Projects' currentUrl={`https://ruingwe.com${location.asPath}`}>

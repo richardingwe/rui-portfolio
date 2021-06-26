@@ -10,7 +10,6 @@ import { useRouter } from 'next/router';
 import "aos/dist/aos.css";
 import styles from "@/styles/SingleBlog.module.css";
 import Layout from '@/components/Layout';
-// import LoaderTwo from './LoaderTwo.js';
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -26,18 +25,6 @@ const SingleBlog = ({ singleBlog }) => {
         AOS.init();
         AOS.refresh();
     }, []);
-
-
-    // if (!singleBlog) return (
-    //     <div>
-    //         <div className="preloader-area">
-    //             <div className="loader-box">
-    //                 <LoaderTwo />
-    //                 {/* <div className="loader"></div> */}
-    //             </div>
-    //         </div>
-    //     </div>
-    // );
 
     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
