@@ -10,3 +10,8 @@
 .email:hover {
 	color: #e45447;
 }
+@media (max-width: 1130px) {
+	.email {
+		display: none;
+	}
+}
