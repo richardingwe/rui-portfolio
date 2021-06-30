@@ -22,7 +22,7 @@ const Footer = () => {
                 <span>© {new Date().getFullYear()} Rui Creative. All rights reserved. </span>
                 {/* <br /> */}
                 <a href="https://github.com/richardingwe" target="_blank" rel="nofollow noopener noreferrer" className="">
-                    Designed && Coded By Rui.
+                    Designed && Built By Rui.
                 </a>
             </div>
         </footer>
