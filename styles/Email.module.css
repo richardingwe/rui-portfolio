@@ -1,0 +1,12 @@
+.email {
+	position: fixed;
+	right: -3.3rem;
+	top: 50%;
+	color: white;
+	transform: rotate(90deg);
+	z-index: 99;
+}
+
+.email:hover {
+	color: #e45447;
+}

@@ -7,6 +7,7 @@ import MiniNavBar from './MiniNavBar';
 import WhatsApp from './WhatsApp';
 
 import dynamic from 'next/dynamic';
+import Email from './Email';
 
 const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
     ssr: false
@@ -50,6 +51,7 @@ const Layout = ({ title, keywords, description, children, currentUrl, imageUrl, 
                 navOpen={navOpen}
                 setNavOpen={setNavOpen}
             />
+            <Email />
             {navOpen && <MiniNavBar handleClick={handleClick} />}
             <WhatsApp />
             <div>
