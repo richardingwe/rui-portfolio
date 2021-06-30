@@ -53,7 +53,7 @@ const Design = ({ designData }) => {
                                     <div
                                         key={design.projectImage.asset._id}
                                         data-aos='fade-up'
-                                        className='col-md-6'
+                                        className={`col-md-6 ${styles.margin_0}`}
                                     >
                                         <div className={styles.singleCategory}>
                                             <a

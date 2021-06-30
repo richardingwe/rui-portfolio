@@ -90,7 +90,7 @@
 }
 .singleCategory {
 	/* background: #fff; */
-	margin-bottom: 20px;
+	/* margin-bottom: 20px; */
 	position: relative;
 	overflow: hidden;
 }
@@ -147,7 +147,7 @@
 	overflow: hidden;
 	position: relative;
 	width: 100%;
-	height: 450px;
+	height: auto;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -168,4 +168,9 @@
 }
 .singleCategory:hover img {
 	transform: scale(1);
+}
+
+.margin_0 {
+	padding-right: 0;
+	padding-left: 0;
 }
