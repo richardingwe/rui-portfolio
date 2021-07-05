@@ -35,10 +35,12 @@
 }
 
 .theme {
-	width: 25px;
-	height: 25px;
+	width: 22px;
+	height: 22px;
 	background-color: #fff;
 	border-radius: 50%;
+	position: absolute;
+	right: 20rem;
 }
 
 .themeColor {
@@ -124,6 +126,10 @@
 		cursor: pointer;
 	}
 	.NavLinks {
+		display: none;
+	}
+	.theme {
+		position: static;
 		display: none;
 	}
 }

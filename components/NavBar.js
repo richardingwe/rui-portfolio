@@ -119,9 +119,9 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 							</motion.svg>
 						</a>
 					</Link>
-					{/* <div className={`inline-flex items-center ${styles.theme}`}>
+					<div className={`inline-flex items-center ${styles.theme}`}>
 						<span className={`inline-flex items-center ${styles.themeColor}`}></span>
-					</div> */}
+					</div>
 					<motion.div
 						initial={{ x: '10vw', opacity: 0 }}
 						transition={{ delay: 0.5 }}
