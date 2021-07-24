@@ -191,15 +191,23 @@
 	}
 }
 .tech {
-	background-color: wheat;
+	background-color: #0b0d14;
 	margin-right: 10px;
 	margin-top: 1rem;
-	padding: 2px 7px;
-	color: black;
+	padding: 4px 10px;
+	/* color: #e45447; */
 	font-size: 14px;
 	font-weight: 700;
 	border-radius: 7px;
+	/* border: 2px solid #e45447; */
 }
+
+/* .tech:nth-child(1) {
+	border-left: none;
+}
+.tech:nth-last-child(1) {
+	border-right: none;
+} */
 
 .links {
 	display: flex;

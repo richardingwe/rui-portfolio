@@ -77,7 +77,7 @@ const Code = ({ codeData }) => {
                                             <div className={styles.techUsed}>
                                                 {code.technologiesUsed &&
                                                     code.technologiesUsed.map((tech, i) => (
-                                                        <div key={i} className={styles.tech}>
+                                                        <div key={i} className={styles.tech} style={{ color: `${(i + 2) % 2 === 0 ? '#e45447' : '#fff'}` }}>
                                                             {tech}
                                                         </div>
                                                     ))}
