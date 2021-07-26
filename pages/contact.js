@@ -110,7 +110,8 @@ const Post = () => {
                                             </a>
                                         </li>
                                     </ul> */}
-                                    <div className={`${styles.svg_body} d-none d-sm-block mt-5`}>
+                                    <div data-aos='fade-up'
+                                        data-aos-delay='300' className={`${styles.svg_body} d-none d-sm-block mt-5`}>
                                         <img src="/images/contact2.svg" alt="" />
                                         <img className={`${styles.svg2} animate__animated animate__pulse animate__infinite infinite`} src="/images/contact3.svg" alt="" />
                                     </div>
