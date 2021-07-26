@@ -202,13 +202,6 @@
 	/* border: 2px solid #e45447; */
 }
 
-/* .tech:nth-child(1) {
-	border-left: none;
-}
-.tech:nth-last-child(1) {
-	border-right: none;
-} */
-
 .links {
 	display: flex;
 	justify-content: flex-start;

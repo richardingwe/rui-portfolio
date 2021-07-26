@@ -78,7 +78,7 @@ export default function Home() {
                 className={`${styles.action} ${styles.aboutArea}`}
               >
                 <a
-                  href='mailto:ruitech00@gmail.com'
+                  href='mailto:richardingwe5@gmail.com'
                   className={`${styles.primaryBtn} ${styles.white}`}
                   data-text='Hire Me.'
                 >
@@ -287,7 +287,7 @@ export default function Home() {
                 className={`${styles.action} ${styles.aboutArea}`}
               >
                 <a
-                  href='mailto:ruitech00@gmail.com'
+                  href='mailto:richardingwe5@gmail.com'
                   className={`${styles.primaryBtn} ${styles.white}`}
                   data-text='Hire Me.'
                 >

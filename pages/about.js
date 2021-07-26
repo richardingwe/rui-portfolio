@@ -105,7 +105,7 @@ const About = ({ author }) => {
                                         <a
                                             data-aos='fade-up'
                                             data-aos-delay='300'
-                                            href='mailto:ruitech00@gmail.com'
+                                            href='mailto:richardingwe5@gmail.com'
                                             className={`${styles.primaryBtn} ${styles.white}`}
                                             data-text='Hire Me.'
                                         >
