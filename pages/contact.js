@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion } from "framer-motion";
 import AOS from "aos";
@@ -7,8 +7,21 @@ import "aos/dist/aos.css";
 import styles from "@/styles/Contact.module.css";
 import Layout from '@/components/Layout';
 import "animate.css";
+import { useForm } from '@formspree/react';
 
 const Post = () => {
+
+    const [state, handleSubmit] = useForm("xknkqwpq");
+    const [btnMsg, setBtnMsg] = useState("Send Message");
+
+    if (state.succeeded) {
+        setBtnMsg('Message Sent');
+        setTimeout(() => {
+            setBtnMsg('Send Message');
+        }, 3000);
+    }
+
+
     useEffect(() => {
         AOS.init({
             delay: 200
@@ -107,7 +120,7 @@ const Post = () => {
                                 {/* Contact Box  */}
                                 <div className={`${styles.contact_box} text-center`}>
                                     {/* Contact Form  */}
-                                    <form id="contact-form" method="POST" action="">
+                                    <form id="contact-form" method="POST" onSubmit={handleSubmit}>
                                         <div className="row">
                                             <div className="col-12">
                                                 <div className="form-group" data-aos='fade-up' data-aos-delay='300'>
@@ -126,13 +139,13 @@ const Post = () => {
                                                 </div>
                                             </div>
                                             <div className="col-12" data-aos='fade-up' data-aos-delay='400'>
-                                                <button type="submit" className="text-white btn btn-lg btn-block mt-3">
+                                                <button type="submit" disabled={state.submitting} className="text-white btn btn-lg btn-block mt-3">
                                                     <span className="text-white pr-3">
                                                         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="paper-plane" className={styles.svg_plane} role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                                             <path fill="currentColor" d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z">
                                                             </path>
                                                         </svg>
-                                                    </span>Send Message</button>
+                                                    </span>{btnMsg}</button>
                                             </div>
                                         </div>
                                     </form>
