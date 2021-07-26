@@ -14,12 +14,12 @@ const Post = () => {
     const [state, handleSubmit] = useForm("xknkqwpq");
     const [btnMsg, setBtnMsg] = useState("Send Message");
 
-    if (state.succeeded) {
-        setBtnMsg('Message Sent');
-        setTimeout(() => {
-            setBtnMsg('Send Message');
-        }, 3000);
-    }
+    // if (state.succeeded) {
+    //     setBtnMsg('Message Sent');
+    //     setTimeout(() => {
+    //         setBtnMsg('Send Message');
+    //     }, 3000);
+    // }
 
 
     useEffect(() => {
