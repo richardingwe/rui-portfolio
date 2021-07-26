@@ -170,6 +170,13 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 								Blog.
 							</a>
 						</Link>
+						<Link
+							href='/contact'
+						>
+							<a className={`inline-flex items-center ${location.pathname.includes('/contact') ? `${styles.navActive}` : ''}`}>
+								Contact Me.
+							</a>
+						</Link>
 					</motion.div>
 					<div
 						className={`${styles.hamburger} ${rotate ? `${styles.rotate}` : ' '}`}
