@@ -44,12 +44,12 @@ const Post = () => {
                                 animate={{ y: 0, opacity: 1 }}
                                 className={`${styles.aboutContent} col-lg-12`}>
                                 <h1 className="text-white">
-                                    Contact Us.
+                                    Contact Me.
                                 </h1>
                                 <p className={styles.linkNav}>
                                     <span className={styles.box}>
                                         <Link href="/">Home.</Link>
-                                        <Link href="/contact">Contact Us.</Link>
+                                        <Link href="/contact">Contact Me.</Link>
                                     </span>
                                 </p>
                             </motion.div>
