@@ -36,6 +36,13 @@ const MiniNavBar = ({ handleClick }) => {
                                 Blog.
                             </a>
                         </NavLink>
+                        <NavLink
+                            href='/contact'
+                        >
+                            <a className={`inline-flex items-center ${location.pathname.includes('/contact') ? `${styles.navActive}` : ''}`}>
+                                Contact Me.
+                            </a>
+                        </NavLink>
                     </div>
                 </nav>
             </motion.div>
