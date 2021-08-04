@@ -86,7 +86,7 @@ const Design = ({ designData }) => {
 export default Design;
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     try {
         const data = await sanityClient
             .fetch(
@@ -109,7 +109,8 @@ export async function getServerSideProps() {
             );
         return {
             props: {
-                designData: data
+                designData: data,
+                revalidate: 1,
             },
         };
     } catch (error) {

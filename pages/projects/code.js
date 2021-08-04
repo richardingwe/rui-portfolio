@@ -146,7 +146,7 @@ export default Code;
 
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     try {
         const data = await sanityClient.fetch(
             `*[_type == "CodeProject"]{
@@ -169,7 +169,8 @@ export async function getServerSideProps() {
         );
         return {
             props: {
-                codeData: data
+                codeData: data,
+                revalidate: 1,
             },
         };
     } catch (error) {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from "framer-motion";
 import sanityClient from "@/sanity/client";
@@ -7,7 +7,6 @@ import { useRouter } from 'next/router';
 import "aos/dist/aos.css";
 import styles from "@/styles/Blog.module.css";
 import Layout from '@/components/Layout';
-// import LoaderTwo from './LoaderTwo';
 
 const Post = ({ blogData }) => {
     useEffect(() => {
@@ -21,16 +20,6 @@ const Post = ({ blogData }) => {
 
     const location = useRouter();
 
-    // if (!blogData) return (
-    //     <div>
-    //         <div className="preloader-area">
-    //             <div className="loader-box">
-    //                 <LoaderTwo />
-    //                 {/* <div className="loader"></div> */}
-    //             </div>
-    //         </div>
-    //     </div>
-    // );
     return (
         <Layout title='Rui | Blog' currentUrl={`https://ruingwe.com${location.asPath}`}>
             <main className={styles.main}>
@@ -116,7 +105,7 @@ const Post = ({ blogData }) => {
 export default Post;
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     try {
         const data = await sanityClient.fetch(
             `*[_type == "blog"]{
@@ -136,7 +125,8 @@ export async function getServerSideProps() {
             }`);
         return {
             props: {
-                blogData: data
+                blogData: data,
+                revalidate: 1,
             },
         };
     } catch (error) {
