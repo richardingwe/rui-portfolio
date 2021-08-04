@@ -74,7 +74,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 			<div className={styles.Nav}>
 				<nav className={styles.navItems} style={{ color: `${location.pathname === '/' ? '#fff' : !theme.light ? '#fff' : '#000'}` }}>
 					<Link href='/'>
-						<a>
+						<a className='mx-0'>
 							{location.pathname === '/' ?
 								<motion.svg className={styles.svg}
 									onClick={handleLogoClick}
@@ -291,7 +291,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 							initial={{ x: '10vw', opacity: 0 }}
 							transition={{ delay: 1.5 }}
 							animate={{ x: 0, opacity: 1 }}
-							src={navOpen ? '/images/hamburgerClose.svg' : '/images/hamburger.svg'}
+							src={location.pathname === '/' && navOpen ? '/images/hamburgerClose.svg' : location.pathname === '/' && !navOpen ? '/images/hamburger.svg' : theme.light && navOpen ? '/images/hamburgerCloseDark.svg' : !theme.light && navOpen ? '/images/hamburgerClose.svg' : theme.light && !navOpen ? '/images/hamburgerDark.svg' : '/images/hamburger.svg'}
 							className={`${styles.svg}`}
 							alt='hamburger'
 						/>
