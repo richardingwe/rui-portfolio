@@ -126,19 +126,7 @@ export default SingleBlog;
 export const getStaticPaths = async () => {
     const res = await sanityClient.fetch(
         `*[_type == "blog"]{
-                title,
                 slug,
-                publishedAt,
-                body,
-                subtitle,
-                "name": author->name,
-                mainImage{
-                    asset->{
-                        _id,
-                        url
-                    },
-                    alt
-                }
             }`);
 
     const paths = res.map((blog) => {
@@ -164,12 +152,7 @@ export async function getStaticProps({ params: { slug } }) {
             _id,
             slug,
         publishedAt,
-            mainImage {
-                asset-> {
-                    _id,
-                    url
-                }
-            },
+            
             body,
             "name": author->name,
             "authorImage": author->image
