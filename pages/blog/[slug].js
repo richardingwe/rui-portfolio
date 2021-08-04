@@ -69,7 +69,7 @@ const SingleBlog = ({ singleBlog }) => {
                                             <div data-aos="fade-up" data-aos-delay="300" className={styles.subtitle}>
                                                 <p >{singleBlog.subtitle}</p>
                                             </div>
-                                            <div data-aos="fade-up" data-aos-delay="200" className={styles.featureImg} style={{ backgroundImage: `url(${singleBlog.mainImage.asset.url})` }}>
+                                            <div data-aos="fade-up" data-aos-delay="200" className={styles.featureImg} style={{ backgroundImage: `url(${singleBlog.mainImage?.asset.url})` }}>
                                                 {/* <img className="img-fluid" src={singleBlog.mainImage.asset.url} alt={singleBlog.title} /> */}
                                             </div>
                                         </div>
@@ -131,7 +131,7 @@ export const getStaticPaths = async () => {
 
     const paths = res.map((blog) => {
         return {
-            params: { slug: blog.slug.current.toString() },
+            params: { slug: blog.slug.current },
         };
     });
 
@@ -143,10 +143,10 @@ export const getStaticPaths = async () => {
 
 
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params: { slug } }) {
     try {
         const data = await sanityClient.fetch(
-            `*[slug.current == "${params.slug}"]{
+            `*[slug.current == "${slug}"]{
             title,
             subtitle,
             _id,
