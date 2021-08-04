@@ -1,12 +1,12 @@
 .Footer {
-	background-color: rgb(11, 13, 20);
+	/* background-color: #0b0d14; */
 	height: 100%;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 1rem 3rem;
-	color: white;
+	/* color: white; */
 }
 
 .Footer div {
