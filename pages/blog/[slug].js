@@ -143,10 +143,10 @@ export const getStaticPaths = async () => {
 
 
 
-export async function getStaticProps({ params: { slug } }) {
+export async function getStaticProps({ params }) {
     try {
         const data = await sanityClient.fetch(
-            `*[slug.current == "${slug}"]{
+            `*[slug.current == "${params.slug}"]{
             title,
             subtitle,
             _id,
