@@ -20,7 +20,7 @@ const SingleBlog = ({ singleBlog }) => {
 
     const location = useRouter();
 
-    const [imageUrl, setImageUrl] = useState('');
+    const [imageUrl, setImageUrl] = useState(urlFor(singleBlog.mainImage?.asset.url).width(1200).url());
 
 
     useEffect(() => {
