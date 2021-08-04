@@ -44,7 +44,7 @@
 	}
 }
 .aboutContent .box a {
-	color: #fff;
+	color: inherit;
 	font-size: 15px;
 	-webkit-transition: all 0.3s ease 0s;
 	-moz-transition: all 0.3s ease 0s;

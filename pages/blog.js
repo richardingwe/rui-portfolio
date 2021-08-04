@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import "aos/dist/aos.css";
 import styles from "@/styles/Blog.module.css";
 import Layout from '@/components/Layout';
+import { useThemeContext } from '../context/state';
 
 const Post = ({ blogData }) => {
     useEffect(() => {
@@ -19,10 +20,11 @@ const Post = ({ blogData }) => {
     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
     const location = useRouter();
+    const { theme } = useThemeContext();
 
     return (
         <Layout title='Rui | Blog' currentUrl={`https://ruingwe.com${location.asPath}`}>
-            <main className={styles.main}>
+            <main className={styles.main} style={{ backgroundColor: `${theme.light ? '#fff' : '#11161f'}` }}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
                     <div className="container">
                         <div className="row d-flex align-items-center justify-content-center">
@@ -31,13 +33,28 @@ const Post = ({ blogData }) => {
                                 transition={{ type: "spring", stiffness: 300, delay: 1.2 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 className={`${styles.aboutContent} col-lg-12`}>
-                                <h1 className="text-white">
+                                <h1 style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }}>
                                     Blog
                                 </h1>
                                 <p className={styles.linkNav}>
-                                    <span className={styles.box}>
-                                        <Link href="/">Home</Link>
-                                        <Link href="/blog">Blog</Link>
+                                    <span className={styles.box} style={{
+                                        borderColor: `${!theme.light ? '#fff' : '#11161f'}`,
+                                        color: `${!theme.light ? '#fff' : '#11161f'}`,
+                                    }}>
+                                        <Link href="/">
+                                            <a
+                                                style={{
+                                                    borderColor: `${!theme.light ? '#fff' : '#11161f'}`,
+                                                }}
+                                            >
+                                                Home.
+                                            </a>
+                                        </Link>
+                                        <Link href="/blog">
+                                            <a>
+                                                Blog.
+                                            </a>
+                                        </Link>
                                     </span>
                                 </p>
                             </motion.div>
@@ -46,7 +63,7 @@ const Post = ({ blogData }) => {
                 </section>
                 {!blogData.length && (
                     <div className={`${styles.noPost} container text-white text-center d-flex align-items-center justify-content-center my-5`} >
-                        <h1>Oops!! No Blog Post Is Available For Now.</h1>
+                        <h1 style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }}>Oops!! No Blog Post Is Available For Now.</h1>
                     </div>
                 )}
                 <section className={`${styles.ftcoSection} text-white`}>
@@ -69,7 +86,7 @@ const Post = ({ blogData }) => {
                                                 </div>
                                             </div>
                                             <h3 className={styles.heading}><Link href={`/blog/${blog.slug.current}`}>{blog.title}</Link></h3>
-                                            <p>
+                                            <p style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }}>
                                                 {blog.subtitle || blog.body[0].children[0].text.substr(0, 130).concat("...")}
                                             </p>
                                             <div className={`d-flex align-items-center justify-content-center mt-4 ${styles.meta}`}>

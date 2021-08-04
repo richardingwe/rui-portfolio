@@ -10,6 +10,7 @@ import { useRouter } from 'next/router';
 import "aos/dist/aos.css";
 import styles from "@/styles/SingleBlog.module.css";
 import Layout from '@/components/Layout';
+import { useThemeContext } from '../../context/state';
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -19,7 +20,7 @@ function urlFor(source) {
 const SingleBlog = ({ singleBlog }) => {
 
     const location = useRouter();
-
+    const { theme } = useThemeContext();
 
     useEffect(() => {
         AOS.init();
@@ -36,7 +37,7 @@ const SingleBlog = ({ singleBlog }) => {
             imageUrl={urlFor(singleBlog.mainImage?.asset.url).width(1200).url()}
             image_alt={singleBlog?.title}
         >
-            <main className={styles.main}>
+            <main className={styles.main} style={{ backgroundColor: `${theme.light ? '#fff' : '#11161f'}` }}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
                     <div className="container">
                         <div className="row d-flex align-items-center justify-content-center">
@@ -45,14 +46,37 @@ const SingleBlog = ({ singleBlog }) => {
                                 transition={{ type: "spring", stiffness: 300, delay: 1.2 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 className={`${styles.aboutContent} col-lg-12`}>
-                                <h1 className="text-white">
+                                <h1 style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }}>
                                     Blog Details
                                 </h1>
                                 <p className={styles.linkNav}>
-                                    <span className={styles.box}>
-                                        <Link href="/">Home </Link>
-                                        <Link href="/blog">Blog</Link>
-                                        <Link href='javascript:void(0)'>Blog Details</Link>
+                                    <span className={styles.box} style={{
+                                        borderColor: `${!theme.light ? '#fff' : '#11161f'}`,
+                                        color: `${!theme.light ? '#fff' : '#11161f'}`,
+                                    }}>
+                                        <Link href="/">
+                                            <a
+                                                style={{
+                                                    borderColor: `${!theme.light ? '#fff' : '#11161f'}`,
+                                                }}
+                                            >
+                                                Home.
+                                            </a>
+                                        </Link>
+                                        <Link href="/blog">
+                                            <a
+                                                style={{
+                                                    borderColor: `${!theme.light ? '#fff' : '#11161f'}`,
+                                                }}
+                                            >
+                                                Blog.
+                                            </a>
+                                        </Link>
+                                        <Link href='javascript:void(0)'>
+                                            <a>
+                                                Blog Details
+                                            </a>
+                                        </Link>
                                     </span>
                                 </p>
                             </motion.div>
@@ -66,8 +90,8 @@ const SingleBlog = ({ singleBlog }) => {
                                 <div className="posts-list">
                                     <div className={`${styles.singlePost} row text-white`}>
                                         <div className="col-lg-12">
-                                            <div data-aos="fade-up" data-aos-delay="300" className={styles.subtitle}>
-                                                <p >{singleBlog.subtitle}</p>
+                                            <div data-aos="fade-up" data-aos-delay="300" className={styles.subtitle} style={{ borderColor: `${!theme.light ? '#fff' : '#11161f'}` }}>
+                                                <p style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }}>{singleBlog.subtitle}</p>
                                             </div>
                                             <div data-aos="fade-up" data-aos-delay="200" className={styles.featureImg} style={{ backgroundImage: `url(${singleBlog.mainImage?.asset.url})` }}>
                                                 {/* <img className="img-fluid" src={singleBlog.mainImage.asset.url} alt={singleBlog.title} /> */}
@@ -77,19 +101,24 @@ const SingleBlog = ({ singleBlog }) => {
                                             <div data-aos="fade-up" data-aos-delay="300" className="user-details row mt-2 justify-content-center align-items-center">
                                                 <p className={`${styles.userName} col-lg-12 col-md-12 col-6`}>
                                                     <Link href="/about">
-                                                        <a>
+                                                        <a style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }}>
                                                             {singleBlog.name}
                                                             <img className={styles.authorImg} src={urlFor(singleBlog.authorImage).url()} alt=" ">
                                                             </img>
                                                         </a>
                                                     </Link>
                                                 </p>
-                                                <p className={`${styles.date} col-lg-12 col-md-12 col-6`}>{new Date(singleBlog.publishedAt).getDate()} {months[new Date(singleBlog.publishedAt).getMonth()]},  {new Date(singleBlog.publishedAt).getFullYear()}</p>
+                                                <p
+                                                    className={`${styles.date} col-lg-12 col-md-12 col-6`}
+                                                    style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }}
+                                                >
+                                                    {new Date(singleBlog.publishedAt).getDate()} {months[new Date(singleBlog.publishedAt).getMonth()]},  {new Date(singleBlog.publishedAt).getFullYear()}
+                                                </p>
                                             </div>
                                         </div>
                                         <div data-aos="fade-up" data-aos-delay="300" className="col-lg-9 col-md-9">
-                                            <h3 className={`mt-5 mb-1 ${styles.blogTitle}`}>{singleBlog && singleBlog.title}</h3>
-                                            <div className={styles.excert}>
+                                            <h3 style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }} className={`mt-5 mb-1 ${styles.blogTitle}`}>{singleBlog && singleBlog.title}</h3>
+                                            <div style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }} className={styles.excert}>
                                                 <BlockContent blocks={singleBlog.body} projectId="y0xdnwwh" dataset="production" />
                                             </div>
                                         </div>
@@ -97,21 +126,38 @@ const SingleBlog = ({ singleBlog }) => {
                                 </div>
                             </div>
                             <div className="mb-2">
-                                <h3 className={styles.leaveComment}>
+                                <h3 style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }} className={styles.leaveComment}>
                                     Please leave a comment
                                 </h3>
                             </div>
-                            <DiscussionEmbed
-                                shortname='Rui'
-                                config={
-                                    {
-                                        url: `https://ruingwe.com/blog/${singleBlog.slug}`,
-                                        identifier: singleBlog._id,
-                                        title: singleBlog.title,
-                                        language: 'en' //e.g. for Traditional Chinese (Taiwan)	
+
+                            {theme.light ?
+                                <DiscussionEmbed
+                                    shortname='Rui'
+                                    config={
+                                        {
+                                            url: `https://ruingwe.com/blog/${singleBlog.slug}`,
+                                            identifier: singleBlog._id,
+                                            title: singleBlog.title,
+                                            language: 'en' //e.g. for Traditional Chinese (Taiwan)	
+                                        }
                                     }
-                                }
-                            />
+                                />
+                                :
+                                <div>
+                                    <DiscussionEmbed
+                                        shortname='Rui'
+                                        config={
+                                            {
+                                                url: `https://ruingwe.com/blog/${singleBlog.slug}`,
+                                                identifier: singleBlog._id,
+                                                title: singleBlog.title,
+                                                language: 'en' //e.g. for Traditional Chinese (Taiwan)	
+                                            }
+                                        }
+                                    />
+                                </div>
+                            }
                         </div>
                     </section>
                 }
