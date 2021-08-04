@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import 'aos/dist/aos.css';
 import styles from '@/styles/Design.module.css';
 import Layout from '@/components/Layout';
+import { useThemeContext } from '../../context/state';
 
 const Design = ({ designData }) => {
     useEffect(() => {
@@ -19,10 +20,12 @@ const Design = ({ designData }) => {
     }, []);
 
     const location = useRouter();
+    const { theme } = useThemeContext();
+
 
     return (
         <Layout title='Rui | Design Projects' currentUrl={`https://ruingwe.com${location.asPath}`}>
-            <main className={styles.main}>
+            <main className={styles.main} style={{ backgroundColor: `${theme.light ? '#fff' : '#11161f'}` }} className={styles.main}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
                     <div className='container'>
                         <div className='row d-flex align-items-center justify-content-center'>
@@ -32,12 +35,33 @@ const Design = ({ designData }) => {
                                 animate={{ y: 0, opacity: 1 }}
                                 className={`${styles.aboutContent} col-lg-12`}
                             >
-                                <h1 className='text-white'>Design Projects</h1>
+                                <h1 style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }}>Design Projects</h1>
                                 <p className={styles.linkNav}>
-                                    <span className={styles.box}>
-                                        <Link href='/'>Home</Link>
-                                        <Link href='/projects'>Projects</Link>
-                                        <Link href='/projects/design'>Design</Link>
+                                    <span className={styles.box} style={{
+                                        borderColor: `${!theme.light ? '#fff' : '#11161f'}`,
+                                        color: `${!theme.light ? '#fff' : '#11161f'}`,
+                                    }}>
+                                        <Link href='/'>
+                                            <a
+                                                style={{
+                                                    borderColor: `${!theme.light ? '#fff' : '#11161f'}`,
+                                                }}
+                                            >
+                                                Home.
+                                            </a>
+                                        </Link>
+                                        <Link href='/projects'><a
+                                            style={{
+                                                borderColor: `${!theme.light ? '#fff' : '#11161f'}`,
+                                            }}
+                                        >
+                                            Projects.
+                                        </a></Link>
+                                        <Link href='/projects/design'>
+                                            <a>
+                                                Design.
+                                            </a>
+                                        </Link>
                                     </span>
                                 </p>
                             </motion.div>

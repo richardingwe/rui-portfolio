@@ -238,10 +238,16 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 							className='projects'
 						>
 							<a
-								className={`inline-flex items-center  ${location.pathname.includes('/projects') && !theme.light ? `${styles.navActive}` : location.pathname.includes('/projects') && theme.light ? `${styles.navActiveLight}` : ''}`}
+								className={`inline-flex items-center ${styles.projects}  ${location.pathname.includes('/projects') && !theme.light ? `${styles.navActive}` : location.pathname.includes('/projects') && theme.light ? `${styles.navActiveLight}` : ''}`}
 							>
 								Projects.
-								<div className={`${styles.projectsDropdown} dropdown`}>
+								<div
+									className={`${styles.projectsDropdown} dropdown`}
+									style={{
+										backgroundColor: `${theme.light ? '#eeeeee' : '#25252554'}`,
+										color: `${!theme.light ? '#fff' : '#11161f'}`,
+										borderBottom: `${!theme.light ? '3px solid white' : '3px solid #11161f'}`,
+									}}>
 									<Link href='/projects/design'>
 										Design Projects.
 									</Link>
