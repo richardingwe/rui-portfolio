@@ -20,10 +20,13 @@ const SingleBlog = ({ singleBlog }) => {
 
     const location = useRouter();
 
+    const [imageUrl, setImageUrl] = useState('');
+
 
     useEffect(() => {
         AOS.init();
         AOS.refresh();
+        setImageUrl(urlFor(singleBlog.mainImage?.asset.url).width(1200).url());
     }, []);
 
     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -33,7 +36,7 @@ const SingleBlog = ({ singleBlog }) => {
             title={`Rui | Blog ${singleBlog ? `| ${singleBlog.title}` : " "}`}
             description={`${singleBlog ? `${singleBlog.subtitle}` : " "}`}
             currentUrl={`https://ruingwe.com${location.asPath}`}
-            // imageUrl={urlFor(singleBlog.mainImage?.asset.url).width(1200).url()}
+            imageUrl={imageUrl}
             image_alt={singleBlog?.title}
         >
             <main className={styles.main}>
