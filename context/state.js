@@ -9,7 +9,7 @@ const initialState = {
 function themeReducer(state, action) {
     switch (action.type) {
         case 'setTheme':
-            return { light: !light };
+            return { light: !state.light };
         default:
             throw new Error();
     }

@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { debounce } from '../utilities/helpers';
 import styles from '../styles/NavBar.module.css';
+import { useThemeContext } from '../context/state';
 
 const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 	const [rotate, setRotate] = useState(false);
@@ -11,6 +12,8 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 	const [visible, setVisible] = useState(true);
 	const location = useRouter();
 
+
+	const { theme, dispatch } = useThemeContext();
 
 	const handleNavClick = () => {
 		handleClick();
@@ -119,9 +122,14 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 							</motion.svg>
 						</a>
 					</Link>
-					{/* <div className={`inline-flex items-center ${styles.theme}`}>
-						<span className={`inline-flex items-center ${styles.themeColor}`}></span>
-					</div> */}
+					<motion.div
+						initial={{ x: '10vw', opacity: 0 }}
+						transition={{ delay: 0.5 }}
+						animate={{ x: 0, opacity: 1 }}
+						onClick={() => dispatch({ type: 'setTheme' })}
+						className={`inline-flex items-center ${styles.theme}`}>
+						<img className={styles.theme_icon} src={`${!theme.light ? '/images/light-mode.png' : '/images/night-mode.png'}`} alt="" />
+					</motion.div>
 					<motion.div
 						initial={{ x: '10vw', opacity: 0 }}
 						transition={{ delay: 0.5 }}

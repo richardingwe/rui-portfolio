@@ -37,16 +37,13 @@
 .theme {
 	width: 22px;
 	height: 22px;
-	background-color: #fff;
+	/* background-color: #fff; */
 	border-radius: 50%;
 	position: absolute;
-	right: 20rem;
-}
-
-.themeColor {
-	width: 20px !important;
-	height: 20px !important;
-	background-color: #fff;
+	right: 28rem;
+	display: flex;
+	justify-items: center;
+	cursor: pointer;
 }
 
 .projects {
@@ -130,7 +127,7 @@
 	}
 	.theme {
 		position: static;
-		display: none;
+		/* display: none; */
 	}
 }
 .navActive {
@@ -164,4 +161,8 @@
 }
 .cls-2 {
 	fill: #096aba;
+}
+
+.theme_icon {
+	width: 22px;
 }
