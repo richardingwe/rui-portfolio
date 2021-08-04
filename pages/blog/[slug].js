@@ -123,27 +123,27 @@ const SingleBlog = ({ singleBlog }) => {
 export default SingleBlog;
 
 
-export const getStaticPaths = async () => {
-    const res = await sanityClient.fetch(
-        `*[_type == "blog"]{
-                slug,
-            }`);
+// export const getStaticPaths = async () => {
+//     const res = await sanityClient.fetch(
+//         `*[_type == "blog"]{
+//                 slug,
+//             }`);
 
-    const paths = res.map((blog) => {
-        return {
-            params: { slug: blog.slug.current },
-        };
-    });
+//     const paths = res.map((blog) => {
+//         return {
+//             params: { slug: blog.slug.current },
+//         };
+//     });
 
-    return {
-        paths,
-        fallback: true,
-    };
-};
+//     return {
+//         paths,
+//         fallback: true,
+//     };
+// };
 
 
 
-export async function getStaticProps({ params: { slug } }) {
+export async function getServerSideProps({ query: { slug } }) {
     try {
         const data = await sanityClient.fetch(
             `*[slug.current == "${slug}"]{
@@ -165,7 +165,7 @@ export async function getStaticProps({ params: { slug } }) {
         return {
             props: {
                 singleBlog: data[0],
-                revalidate: 1,
+                // revalidate: 1,
             },
         };
     } catch (error) {
