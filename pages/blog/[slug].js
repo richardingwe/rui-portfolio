@@ -69,9 +69,7 @@ const SingleBlog = ({ singleBlog }) => {
                                             <div data-aos="fade-up" data-aos-delay="300" className={styles.subtitle}>
                                                 <p >{singleBlog.subtitle}</p>
                                             </div>
-                                            <div data-aos="fade-up" data-aos-delay="200" className={styles.featureImg} style={{ backgroundImage: `url(${singleBlog.mainImage?.asset.url})` }}>
-                                                {/* <img className="img-fluid" src={singleBlog.mainImage.asset.url} alt={singleBlog.title} /> */}
-                                            </div>
+
                                         </div>
                                         <div className={`col-lg-3  col-md-3 ${styles.metaDetails}`}>
                                             <div data-aos="fade-up" data-aos-delay="300" className="user-details row mt-2 justify-content-center align-items-center">
