@@ -33,7 +33,7 @@ const SingleBlog = ({ singleBlog }) => {
             title={`Rui | Blog ${singleBlog ? `| ${singleBlog.title}` : " "}`}
             description={`${singleBlog ? `${singleBlog.subtitle}` : " "}`}
             currentUrl={`https://ruingwe.com${location.asPath}`}
-            imageUrl={urlFor(singleBlog.mainImage?.asset.url).width(1200).url()}
+            // imageUrl={urlFor(singleBlog.mainImage?.asset.url).width(1200).url()}
             image_alt={singleBlog?.title}
         >
             <main className={styles.main}>
@@ -152,7 +152,12 @@ export async function getStaticProps({ params: { slug } }) {
             _id,
             slug,
         publishedAt,
-            
+            mainImage {
+                asset-> {
+                    _id,
+                    url
+                }
+            },
             body,
             "name": author->name,
             "authorImage": author->image
