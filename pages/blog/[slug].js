@@ -131,7 +131,7 @@ export const getStaticPaths = async () => {
 
     const paths = res.map((blog) => {
         return {
-            params: { slug: blog.slug.current },
+            params: { slug: blog.slug.current.toString() },
         };
     });
 
