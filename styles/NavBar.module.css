@@ -24,7 +24,7 @@
 	align-items: center;
 }
 .navItems a {
-	color: white;
+	color: inherit;
 	font-weight: 400;
 	transition: 500ms;
 	cursor: pointer;
@@ -130,7 +130,8 @@
 		/* display: none; */
 	}
 }
-.navActive {
+.navActive,
+.navActiveLight {
 	position: relative;
 	color: #e45447 !important;
 }
@@ -146,15 +147,31 @@
 	border-bottom: 2px solid white;
 }
 
+.navActiveLight::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -7px;
+	width: 100%;
+	height: 2px;
+	transition: 300ms;
+	border-bottom: 2px solid rgb(20, 20, 20) !important;
+	z-index: 9;
+}
+
 .rotate {
 	transform: rotate(540deg);
 	transition: 700ms;
 }
-.st0 {
+.st0,
+.st3 {
 	fill: #ffffff;
 }
 .st1 {
 	fill: #096aba;
+}
+.st4 {
+	fill: #11161f;
 }
 .cls-1 {
 	fill: #fff;
