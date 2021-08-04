@@ -10,6 +10,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styles from '../styles/About.module.css';
 import Layout from '../components/Layout.js';
+import { useThemeContext } from '../context/state';
 
 
 const builder = imageUrlBuilder(sanityClient);
@@ -17,8 +18,11 @@ function urlFor(source) {
     return builder.image(source);
 }
 
+
+
 const About = ({ author }) => {
     const location = useRouter();
+    const { theme } = useThemeContext();
 
     useEffect(() => {
         AOS.init();
@@ -27,7 +31,7 @@ const About = ({ author }) => {
 
     return (
         <Layout title='Rui | About Me' imageUrl={author.authorImage && urlFor(author.authorImage).url()} image_alt={author && author.name} currentUrl={`https://ruingwe.com${location.asPath}`} description='Richard Unimke Ingwe is a Software Developer and a Graphic Designer, I am very passionate about bringing ideas to reality through Codes and Graphic designs. For now, I build powerful, beautiful, and swift web applications that help businesses / brands keep potential customers and compete globally. I am obsessed with technology and I plan on working with technologies like Artificial Intelligence, Virtual Reality, Augmented Reality, and Mixed Reality in the future. I am currently the lead developer / designer of Rui Creative and I am also available for partnerships.'>
-            <main className={`${styles.main}`}>
+            <main style={{ backgroundColor: `${theme.light ? '#fff' : '#11161f'}` }} className={`${styles.main}`}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
                     <div className='container'>
                         <div className='row d-flex align-items-center justify-content-center'>
@@ -37,11 +41,26 @@ const About = ({ author }) => {
                                 animate={{ y: 0, opacity: 1 }}
                                 className={`${styles.aboutContent} col-lg-12`}
                             >
-                                <h1 className='text-white'>About Me.</h1>
+                                <h1 style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }}>About Me.</h1>
                                 <p className={styles.linkNav}>
-                                    <span className={styles.box}>
-                                        <Link href='/'>Home.</Link>
-                                        <Link href='/about'>About.</Link>
+                                    <span className={styles.box} style={{
+                                        borderColor: `${!theme.light ? '#fff' : '#11161f'}`,
+                                        color: `${!theme.light ? '#fff' : '#11161f'}`,
+                                    }}>
+                                        <Link href='/'>
+                                            <a
+                                                style={{
+                                                    borderColor: `${!theme.light ? '#fff' : '#11161f'}`,
+                                                }}
+                                            >
+                                                Home.
+                                            </a>
+                                        </Link>
+                                        <Link href='/about'>
+                                            <a>
+                                                About.
+                                            </a>
+                                        </Link>
                                     </span>
                                 </p>
                             </motion.div>
@@ -71,10 +90,11 @@ const About = ({ author }) => {
                                     className='col-lg-5 col-md-12 about-right'
                                 >
                                     <div className={`${styles.sectionTitle} text-white`}>
-                                        <h2>about myself.</h2>
+                                        <h2 style={{ color: `${!theme.light ? '#fff' : '#11161f'}`, }}>about myself.</h2>
                                     </div>
                                     <div
-                                        className={`${styles.mb50} text-white`}
+                                        className={`${styles.mb50}`}
+                                        style={{ color: `${!theme.light ? '#fff' : '#11161f'}`, }}
                                     >
                                         <div data-aos='fade-up' data-aos-delay='300'>
                                             <BlockContent
@@ -263,6 +283,7 @@ const About = ({ author }) => {
                                         data-aos='fade-up'
                                         data-aos-delay='200'
                                         className='stack-tools'
+                                        style={{ color: `${!theme.light ? '#fff' : '#11161f'}`, }}
                                     >
                                         Stack And Tools.
                                     </h2>

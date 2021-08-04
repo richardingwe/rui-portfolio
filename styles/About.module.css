@@ -682,7 +682,7 @@
 	}
 }
 .aboutContent .box {
-	border: 2px solid #fff;
+	border: 2px solid white;
 	padding: 10px 18px;
 	border-radius: 25px;
 	display: inline-block;
@@ -693,7 +693,7 @@
 	}
 }
 .aboutContent .box a {
-	color: #fff;
+	color: inherit;
 	font-size: 15px;
 	-webkit-transition: all 0.3s ease 0s;
 	-moz-transition: all 0.3s ease 0s;
@@ -712,7 +712,7 @@
 	padding-left: 0;
 }
 .aboutContent .box a:last-child {
-	border-right: 0;
+	border-right: 0 !important;
 	padding-right: 0;
 }
 .aboutContent .box a:hover {
