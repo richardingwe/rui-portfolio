@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import sanityClient from '@/sanity/client.js';
 import imageUrlBuilder from '@sanity/image-url';
@@ -6,9 +6,7 @@ import Link from 'next/link';
 import BlockContent from '@sanity/block-content-to-react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
-// import LoaderTwo from './LoaderTwo.js';
 import AOS from 'aos';
-// import cv from '../files/MY CV.pdf';
 import 'aos/dist/aos.css';
 import styles from '../styles/About.module.css';
 import Layout from '../components/Layout.js';
@@ -20,12 +18,6 @@ function urlFor(source) {
 }
 
 const About = ({ author }) => {
-    // const [downloadUrl, setDownloadUrl] = useState('/');
-
-    // const download = () => {
-    // 	setDownloadUrl(cv);
-    // };
-
     const location = useRouter();
 
     useEffect(() => {
@@ -33,17 +25,6 @@ const About = ({ author }) => {
         AOS.refresh();
     }, []);
 
-    // if (!author)
-    //     return (
-    //         <div>
-    //             <div className='preloader-area'>
-    //                 <div className='loader-box'>
-    //                     {/* <LoaderTwo /> */}
-    //                     {/* <div className='loader'></div> */}
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     );
     return (
         <Layout title='Rui | About Me' imageUrl={author.authorImage && urlFor(author.authorImage).url()} image_alt={author && author.name} currentUrl={`https://ruingwe.com${location.asPath}`} description='Richard Unimke Ingwe is a Software Developer and a Graphic Designer, I am very passionate about bringing ideas to reality through Codes and Graphic designs. For now, I build powerful, beautiful, and swift web applications that help businesses / brands keep potential customers and compete globally. I am obsessed with technology and I plan on working with technologies like Artificial Intelligence, Virtual Reality, Augmented Reality, and Mixed Reality in the future. I am currently the lead developer / designer of Rui Creative and I am also available for partnerships.'>
             <main className={`${styles.main}`}>
@@ -625,7 +606,7 @@ export default About;
 
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     try {
         const data = await sanityClient.fetch(
             `*[_type == "author"]{
@@ -636,7 +617,8 @@ export async function getServerSideProps() {
         );
         return {
             props: {
-                author: data[0]
+                author: data[0],
+                revalidate: 1,
             },
         };
     } catch (error) {

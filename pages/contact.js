@@ -7,20 +7,13 @@ import "aos/dist/aos.css";
 import styles from "@/styles/Contact.module.css";
 import Layout from '@/components/Layout';
 import "animate.css";
-import { useForm } from '@formspree/react';
+import { useForm, ValidationError } from '@formspree/react';
 
 const Post = () => {
 
     const [state, handleSubmit] = useForm("xknkqwpq");
     const [btnMsg, setBtnMsg] = useState("Send Message");
-
-    // if (state.succeeded) {
-    //     setBtnMsg('Message Sent');
-    //     setTimeout(() => {
-    //         setBtnMsg('Send Message');
-    //     }, 3000);
-    // }
-
+    const [sent, setSent] = useState(false);
 
     useEffect(() => {
         AOS.init({
@@ -126,17 +119,37 @@ const Post = () => {
                                             <div className="col-12">
                                                 <div className="form-group" data-aos='fade-up' data-aos-delay='300'>
                                                     <input type="text" className="form-control" name="name" placeholder="Name" required="required" />
+                                                    <ValidationError
+                                                        prefix="Name"
+                                                        field="name"
+                                                        errors={state.errors}
+                                                    />
                                                 </div>
                                                 <div className="form-group" data-aos='fade-up' data-aos-delay='350'>
                                                     <input type="email" className="form-control" name="email" placeholder="Email" required="required" />
+                                                    <ValidationError
+                                                        prefix="Email"
+                                                        field="email"
+                                                        errors={state.errors}
+                                                    />
                                                 </div>
                                                 <div className="form-group" data-aos='fade-up' data-aos-delay='400'>
                                                     <input type="text" className="form-control" name="subject" placeholder="Subject" required="required" />
+                                                    <ValidationError
+                                                        prefix="Subject"
+                                                        field="subject"
+                                                        errors={state.errors}
+                                                    />
                                                 </div>
                                             </div>
                                             <div className="col-12">
                                                 <div className="form-group" data-aos='fade-up' data-aos-delay='450'>
                                                     <textarea className="form-control" name="message" placeholder="Message" required="required"></textarea>
+                                                    <ValidationError
+                                                        prefix="Message"
+                                                        field="message"
+                                                        errors={state.errors}
+                                                    />
                                                 </div>
                                             </div>
                                             <div className="col-12" data-aos='fade-up' data-aos-delay='400'>
