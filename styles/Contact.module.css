@@ -44,7 +44,7 @@
 	}
 }
 .aboutContent .box a {
-	color: #fff;
+	color: inherit;
 	font-size: 15px;
 	-webkit-transition: all 0.3s ease 0s;
 	-moz-transition: all 0.3s ease 0s;
@@ -189,6 +189,10 @@
 	box-shadow: 0 5px 10px #0000001f;
 	-webkit-transition: 0.5s;
 	transition: 0.5s;
+}
+
+.borderLeft {
+	border-left: 2px solid #e45447;
 }
 
 .contact_box input::-webkit-input-placeholder,

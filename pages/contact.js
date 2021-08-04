@@ -8,6 +8,7 @@ import styles from "@/styles/Contact.module.css";
 import Layout from '@/components/Layout';
 import "animate.css";
 import { useForm, ValidationError } from '@formspree/react';
+import { useThemeContext } from '../context/state';
 
 const Post = () => {
 
@@ -24,10 +25,11 @@ const Post = () => {
 
 
     const location = useRouter();
+    const { theme } = useThemeContext();
 
     return (
         <Layout title='Rui | Contact Me' currentUrl={`https://ruingwe.com${location.asPath}`}>
-            <main className={styles.main}>
+            <main className={styles.main} style={{ backgroundColor: `${theme.light ? '#fff' : '#11161f'}` }}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
                     <div className="container">
                         <div className="row d-flex align-items-center justify-content-center">
@@ -36,13 +38,28 @@ const Post = () => {
                                 transition={{ type: "spring", stiffness: 300, delay: 1.2 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 className={`${styles.aboutContent} col-lg-12`}>
-                                <h1 className="text-white">
+                                <h1 style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }}>
                                     Contact Me.
                                 </h1>
                                 <p className={styles.linkNav}>
-                                    <span className={styles.box}>
-                                        <Link href="/">Home.</Link>
-                                        <Link href="/contact">Contact Me.</Link>
+                                    <span className={styles.box} style={{
+                                        borderColor: `${!theme.light ? '#fff' : '#11161f'}`,
+                                        color: `${!theme.light ? '#fff' : '#11161f'}`,
+                                    }}>
+                                        <Link href="/">
+                                            <a
+                                                style={{
+                                                    borderColor: `${!theme.light ? '#fff' : '#11161f'}`,
+                                                }}
+                                            >
+                                                Home.
+                                            </a>
+                                        </Link>
+                                        <Link href="/contact">
+                                            <a>
+                                                Contact Me.
+                                            </a>
+                                        </Link>
                                     </span>
                                 </p>
                             </motion.div>
@@ -60,7 +77,7 @@ const Post = () => {
                                 animate={{ y: 0, opacity: 1 }}
                                 className="col-12 col-md-10 col-lg-8">
                                 {/* Section Heading  */}
-                                <div className={`${styles.section_heading} text-center`}>
+                                <div className={`${styles.section_heading} text-center`} style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }}>
                                     <h2 className="text-capitalize">Let's Work</h2>
                                     <p className=" mt-4">I'm always open to new projects and freelance collaborations!
                                         So if you want us to work together, get in touch! I don’t scratch!</p>
@@ -118,7 +135,7 @@ const Post = () => {
                                         <div className="row">
                                             <div className="col-12">
                                                 <div className="form-group" data-aos='fade-up' data-aos-delay='300'>
-                                                    <input type="text" className="form-control" name="name" placeholder="Name" required="required" />
+                                                    <input type="text" className="form-control" name="name" placeholder="Name" required="required" style={{ borderLeft: `${theme.light ? '3px solid #e45447' : '0'}` }} />
                                                     <ValidationError
                                                         prefix="Name"
                                                         field="name"
@@ -126,7 +143,7 @@ const Post = () => {
                                                     />
                                                 </div>
                                                 <div className="form-group" data-aos='fade-up' data-aos-delay='350'>
-                                                    <input type="email" className="form-control" name="email" placeholder="Email" required="required" />
+                                                    <input type="email" className="form-control" name="email" placeholder="Email" required="required" style={{ borderLeft: `${theme.light ? '3px solid #e45447' : '0'}` }} />
                                                     <ValidationError
                                                         prefix="Email"
                                                         field="email"
@@ -134,7 +151,7 @@ const Post = () => {
                                                     />
                                                 </div>
                                                 <div className="form-group" data-aos='fade-up' data-aos-delay='400'>
-                                                    <input type="text" className="form-control" name="subject" placeholder="Subject" required="required" />
+                                                    <input type="text" className="form-control" name="subject" placeholder="Subject" required="required" style={{ borderLeft: `${theme.light ? '3px solid #e45447' : '0'}` }} />
                                                     <ValidationError
                                                         prefix="Subject"
                                                         field="subject"
@@ -144,7 +161,7 @@ const Post = () => {
                                             </div>
                                             <div className="col-12">
                                                 <div className="form-group" data-aos='fade-up' data-aos-delay='450'>
-                                                    <textarea className="form-control" name="message" placeholder="Message" required="required"></textarea>
+                                                    <textarea className="form-control" name="message" placeholder="Message" required="required" style={{ borderLeft: `${theme.light ? '3px solid #e45447' : '0'}` }}></textarea>
                                                     <ValidationError
                                                         prefix="Message"
                                                         field="message"
