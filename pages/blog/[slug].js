@@ -20,13 +20,10 @@ const SingleBlog = ({ singleBlog }) => {
 
     const location = useRouter();
 
-    const [imageUrl, setImageUrl] = useState(urlFor(singleBlog.mainImage?.asset.url).width(1200).url());
-
 
     useEffect(() => {
         AOS.init();
         AOS.refresh();
-        setImageUrl(urlFor(singleBlog.mainImage?.asset.url).width(1200).url());
     }, []);
 
     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -36,7 +33,7 @@ const SingleBlog = ({ singleBlog }) => {
             title={`Rui | Blog ${singleBlog ? `| ${singleBlog.title}` : " "}`}
             description={`${singleBlog ? `${singleBlog.subtitle}` : " "}`}
             currentUrl={`https://ruingwe.com${location.asPath}`}
-            imageUrl={imageUrl}
+            imageUrl={urlFor(singleBlog.mainImage?.asset.url).width(1200).url()}
             image_alt={singleBlog?.title}
         >
             <main className={styles.main}>
@@ -126,27 +123,27 @@ const SingleBlog = ({ singleBlog }) => {
 export default SingleBlog;
 
 
-export const getStaticPaths = async () => {
-    const res = await sanityClient.fetch(
-        `*[_type == "blog"]{
-                slug,
-            }`);
+// export const getStaticPaths = async () => {
+//     const res = await sanityClient.fetch(
+//         `*[_type == "blog"]{
+//                 slug,
+//             }`);
 
-    const paths = res.map((blog) => {
-        return {
-            params: { slug: blog.slug.current },
-        };
-    });
+//     const paths = res.map((blog) => {
+//         return {
+//             params: { slug: blog.slug.current },
+//         };
+//     });
 
-    return {
-        paths,
-        fallback: true,
-    };
-};
+//     return {
+//         paths,
+//         fallback: true,
+//     };
+// };
 
 
 
-export async function getStaticProps({ params: { slug } }) {
+export async function getServerSideProps({ query: { slug } }) {
     try {
         const data = await sanityClient.fetch(
             `*[slug.current == "${slug}"]{
@@ -168,7 +165,7 @@ export async function getStaticProps({ params: { slug } }) {
         return {
             props: {
                 singleBlog: data[0],
-                revalidate: 1,
+                // revalidate: 1,
             },
         };
     } catch (error) {
