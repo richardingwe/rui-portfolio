@@ -4,14 +4,16 @@ import { useRouter } from 'next/router';
 import styles from '../styles/Projects.module.css';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
+import { useThemeContext } from '../context/state';
 
 const Project = () => {
 
     const location = useRouter();
+    const { theme } = useThemeContext();
 
     return (
         <Layout title='Rui | Projects' currentUrl={`https://ruingwe.com${location.asPath}`}>
-            <main className={styles.main}>
+            <main style={{ backgroundColor: `${theme.light ? '#fff' : '#11161f'}` }} className={styles.main}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
                     <div className='container'>
                         <div className='row d-flex align-items-center justify-content-center'>
@@ -21,11 +23,26 @@ const Project = () => {
                                 animate={{ y: 0, opacity: 1 }}
                                 className={`${styles.aboutContent} col-lg-12`}
                             >
-                                <h1 className='text-white'>Projects.</h1>
+                                <h1 style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }}>Projects.</h1>
                                 <p className={styles.linkNav}>
-                                    <span className={styles.box}>
-                                        <Link href='/'>Home.</Link>
-                                        <Link href='/projects'>Projects.</Link>
+                                    <span className={styles.box} style={{
+                                        borderColor: `${!theme.light ? '#fff' : '#11161f'}`,
+                                        color: `${!theme.light ? '#fff' : '#11161f'}`,
+                                    }}>
+                                        <Link href='/'>
+                                            <a
+                                                style={{
+                                                    borderColor: `${!theme.light ? '#fff' : '#11161f'}`,
+                                                }}
+                                            >
+                                                Home.
+                                            </a>
+                                        </Link>
+                                        <Link href='/projects'>
+                                            <a>
+                                                Projects.
+                                            </a>
+                                        </Link>
                                     </span>
                                 </p>
                             </motion.div>
@@ -39,7 +56,9 @@ const Project = () => {
                         <div className='row'>
                             <motion.div className={`col-md-6 ${styles.card}`} initial={{ y: '10vh', opacity: 0 }}
                                 transition={{ type: 'spring', stiffness: 300, delay: 1.8 }}
-                                animate={{ y: 0, opacity: 1 }}>
+                                animate={{ y: 0, opacity: 1 }}
+                                style={{ backgroundColor: `${theme.light ? '#f9f9f9' : '#0b0d14'}`, }}
+                            >
                                 <div>
                                     <div
                                         className={styles.cardDetails}
@@ -48,6 +67,7 @@ const Project = () => {
                                             initial={{ y: '10vh', opacity: 0 }}
                                             transition={{ type: 'spring', stiffness: 300, delay: 2 }}
                                             animate={{ y: 0, opacity: 1 }}
+                                            style={{ color: `${!theme.light ? '#f9f9f9' : '#0b0d14'}`, }}
                                         >
                                             I Design <br /> Stunning Stuff.
                                         </motion.h1>
@@ -93,7 +113,9 @@ const Project = () => {
 
                             <motion.div className={`col-md-6 ${styles.card}`} initial={{ y: '10vh', opacity: 0 }}
                                 transition={{ type: 'spring', stiffness: 300, delay: 2 }}
-                                animate={{ y: 0, opacity: 1 }}>
+                                animate={{ y: 0, opacity: 1 }}
+                                style={{ backgroundColor: `${theme.light ? '#f9f9f9' : '#0b0d14'}`, }}
+                            >
                                 <div>
                                     <div
                                         className={styles.cardDetails}
@@ -102,6 +124,7 @@ const Project = () => {
                                             initial={{ y: '10vh', opacity: 0 }}
                                             transition={{ type: 'spring', stiffness: 300, delay: 2.2 }}
                                             animate={{ y: 0, opacity: 1 }}
+                                            style={{ color: `${!theme.light ? '#f9f9f9' : '#0b0d14'}`, }}
                                         >
                                             I Code & <br /> Build Stuff.
                                         </motion.h1>
