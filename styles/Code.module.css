@@ -204,7 +204,7 @@
 
 .links {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
 	width: 100%;
 	height: 100%;
@@ -213,7 +213,7 @@
 
 .linksLight {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
 	width: 100%;
 	height: 100%;
@@ -305,4 +305,15 @@
 .linksLight svg:hover .svg_light {
 	fill: #e45447;
 	transition: all 200ms;
+}
+
+.btn {
+	/* border-radius: 0; */
+	background-color: #e45447;
+	border: 0;
+	color: white;
+}
+.btn:hover {
+	background-color: #0b0d14;
+	color: white;
 }
