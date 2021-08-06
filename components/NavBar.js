@@ -210,9 +210,9 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 						</a>
 					</Link>
 					<motion.div
-						initial={{ x: '10vw', opacity: 0 }}
-						transition={{ delay: 0.5 }}
-						animate={{ x: 0, opacity: 1 }}
+						initial={{ y: '-10vw', opacity: 0 }}
+						transition={{ delay: 1.8 }}
+						animate={{ y: 0, opacity: 1 }}
 						onClick={() => dispatch({ type: 'setTheme' })}
 						className={`inline-flex items-center ${styles.theme}`}>
 						<img className={styles.theme_icon} src={`${!theme.light ? '/images/light-mode.png' : '/images/night-mode.png'}`} alt="" />
