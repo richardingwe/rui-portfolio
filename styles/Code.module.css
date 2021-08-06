@@ -251,10 +251,7 @@
 	width: 22px;
 	margin-right: 15px;
 }
-.links svg:hover .st0 {
-	fill: #e45447;
-	transition: all 200ms;
-}
+
 .links a {
 	color: white;
 	font-size: 1.3rem;
@@ -271,10 +268,7 @@
 	width: 22px;
 	margin-right: 15px;
 }
-.linksLight svg:hover .st0 {
-	fill: #e45447;
-	transition: all 200ms;
-}
+
 .linksLight a {
 	color: white;
 	font-size: 1.3rem;
@@ -286,4 +280,29 @@
 .linksLight i {
 	margin-top: 10px;
 	/* color: white; */
+}
+
+.svg_light {
+	fill: #fff;
+}
+
+.svg_dark {
+	fill: #11161f;
+}
+
+.links svg:hover .svg_dark {
+	fill: #e45447;
+	transition: all 200ms;
+}
+.links svg:hover .svg_light {
+	fill: #e45447;
+	transition: all 200ms;
+}
+.linksLight svg:hover .svg_dark {
+	fill: #e45447;
+	transition: all 200ms;
+}
+.linksLight svg:hover .svg_light {
+	fill: #e45447;
+	transition: all 200ms;
 }
