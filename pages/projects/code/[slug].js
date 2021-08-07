@@ -139,15 +139,40 @@ const CodeDetails = ({ codeDetails }) => {
                     </div>
                     {
                         codeDetails.imagesGallery && (
-                            <div className={`${styles.slider} container`}>
+                            <motion.div
+                                initial={{ y: "10vh", opacity: 0 }}
+                                transition={{ type: "spring", stiffness: 300, delay: 1.5 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                className={`${styles.slider} container`}>
                                 <Slider {...settings}>
                                     {codeDetails.imagesGallery.map(image => (
                                         <img src={image.asset.url} alt={image.asset._id} key={image.asset._id} />
                                     ))}
                                 </Slider>
-                            </div>
+                            </motion.div>
                         )
                     }
+                    <div className="container py-5">
+                        <div className="row">
+                            <div className="col-lg-4" style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }}>
+                                <h2><strong>Project</strong></h2>
+                                <ul className='ml-3'>
+                                    <li><strong>Title: </strong>{codeDetails.title}</li>
+                                    <li className='text-capitalize'><strong>Type: </strong>{codeDetails.projectType}</li>
+                                    <li><strong>Stack: </strong>{codeDetails.technologiesUsed.map((tech, i) => (
+                                        `${tech[i] !== tech[codeDetails.technologiesUsed.length - 1] ? `${tech}, ` : `${tech}... `}`
+                                    ))}</li>
+                                </ul>
+                            </div>
+                            <div className="col-lg-8" style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }}>
+                                <h2><strong>Info</strong></h2>
+                                <div style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }} className={styles.excert}>
+                                    <BlockContent blocks={codeDetails.body} imageOptions={{ w: 320, h: 240, fit: 'max' }} projectId="y0xdnwwh" dataset="production" />
+                                </div>
+                                {/* <p>{codeDetails.description}</p> */}
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
         </Layout>
@@ -157,33 +182,27 @@ const CodeDetails = ({ codeDetails }) => {
 export default CodeDetails;
 
 
-export const getStaticPaths = async () => {
-    const res = await sanityClient.fetch(
-        `*[_type == "CodeProject"]{
-                slug,
-            }`);
+// export const getStaticPaths = async () => {
+//     const res = await sanityClient.fetch(
+//         `*[_type == "CodeProject"]{
+//                 slug,
+//             }`);
+
+//     const paths = res.map((code) => {
+//         return {
+//             params: { slug: code.slug?.current },
+//         };
+//     });
+
+//     return {
+//         paths,
+//         fallback: true,
+//     };
+// };
 
 
 
-    res.map((code) => {
-        console.log(code.slug.current);
-    });
-
-    const paths = res.map((code) => {
-        return {
-            params: { slug: code.slug?.current },
-        };
-    });
-
-    return {
-        paths: paths,
-        fallback: true,
-    };
-};
-
-
-
-export async function getStaticProps({ params: { slug } }) {
+export async function getServerSideProps({ params: { slug } }) {
     try {
         const data = await sanityClient.fetch(
             `*[slug.current == "${slug}"]{
@@ -192,14 +211,15 @@ export async function getStaticProps({ params: { slug } }) {
                 date,
                 place,
                 description,
+                body,
                 projectType,
                 link,
                 githubLink,
   				imagesGallery[]{
-                  asset->{
-                  _id,
-                  url
-                }
+                    asset->{
+                    _id,
+                    url
+                    }
                 },
                 technologiesUsed,
                 projectImage{
