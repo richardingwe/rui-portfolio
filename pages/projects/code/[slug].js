@@ -21,7 +21,7 @@ function urlFor(source) {
 }
 
 const CodeDetails = ({ codeDetails }) => {
-    console.log(codeDetails);
+    // console.log(codeDetails);
     const location = useRouter();
     const { theme } = useThemeContext();
 
@@ -157,27 +157,33 @@ const CodeDetails = ({ codeDetails }) => {
 export default CodeDetails;
 
 
-// export const getStaticPaths = async () => {
-//     const res = await sanityClient.fetch(
-//         `*[_type == "CodeProject"]{
-//                 slug,
-//             }`);
-
-//     const paths = res.map((code) => {
-//         return {
-//             params: { slug: code.slug?.current },
-//         };
-//     });
-
-//     return {
-//         paths,
-//         fallback: true,
-//     };
-// };
+export const getStaticPaths = async () => {
+    const res = await sanityClient.fetch(
+        `*[_type == "CodeProject"]{
+                slug,
+            }`);
 
 
 
-export async function getServerSideProps({ params: { slug } }) {
+    res.map((code) => {
+        console.log(code.slug.current);
+    });
+
+    const paths = res.map((code) => {
+        return {
+            params: { slug: code.slug?.current },
+        };
+    });
+
+    return {
+        paths: paths,
+        fallback: true,
+    };
+};
+
+
+
+export async function getStaticProps({ params: { slug } }) {
     try {
         const data = await sanityClient.fetch(
             `*[slug.current == "${slug}"]{
