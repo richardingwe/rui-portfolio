@@ -63,10 +63,10 @@ const CodeDetails = ({ codeDetails }) => {
 
     return (
         <Layout
-            title={`Rui | Projects | Code ${codeDetails ? `| ${codeDetails.title}` : " "}`}
-            description={`${codeDetails ? `${codeDetails.description}` : " "}`}
-            currentUrl={`https://ruingwe.com${location.asPath}`}
-            image_alt={codeDetails?.title}
+        // title={`Rui | Projects | Code ${codeDetails ? `| ${codeDetails.title}` : " "}`}
+        // description={`${codeDetails ? `${codeDetails.description}` : " "}`}
+        // currentUrl={`https://ruingwe.com${location.asPath}`}
+        // image_alt={codeDetails?.title}
         >
             <main className={styles.main} style={{ backgroundColor: `${theme.light ? '#fff' : '#11161f'}` }}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
