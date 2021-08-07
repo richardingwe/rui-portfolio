@@ -63,10 +63,11 @@ const CodeDetails = ({ codeDetails }) => {
 
     return (
         <Layout
-        // title={`Rui | Projects | Code ${codeDetails ? `| ${codeDetails.title}` : " "}`}
-        // description={`${codeDetails ? `${codeDetails.description}` : " "}`}
-        // currentUrl={`https://ruingwe.com${location.asPath}`}
-        // image_alt={codeDetails?.title}
+            title={`Rui | Projects | Code ${codeDetails ? `| ${codeDetails.title}` : " "}`}
+            description={`${codeDetails ? `${codeDetails.description}` : " "}`}
+            currentUrl={`https://ruingwe.com${location.asPath}`}
+            imageUrl={urlFor(codeDetails.mainImage?.asset.url).width(1200).url()}
+            image_alt={codeDetails?.title}
         >
             <main className={styles.main} style={{ backgroundColor: `${theme.light ? '#fff' : '#11161f'}` }}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
@@ -156,27 +157,27 @@ const CodeDetails = ({ codeDetails }) => {
 export default CodeDetails;
 
 
-export const getStaticPaths = async () => {
-    const res = await sanityClient.fetch(
-        `*[_type == "CodeProject"]{
-                slug,
-            }`);
+// export const getStaticPaths = async () => {
+//     const res = await sanityClient.fetch(
+//         `*[_type == "CodeProject"]{
+//                 slug,
+//             }`);
 
-    const paths = res.map((code) => {
-        return {
-            params: { slug: code.slug?.current },
-        };
-    });
+//     const paths = res.map((code) => {
+//         return {
+//             params: { slug: code.slug?.current },
+//         };
+//     });
 
-    return {
-        paths,
-        fallback: true,
-    };
-};
+//     return {
+//         paths,
+//         fallback: true,
+//     };
+// };
 
 
 
-export async function getStaticProps({ params: { slug } }) {
+export async function getServerSideProps({ params: { slug } }) {
     try {
         const data = await sanityClient.fetch(
             `*[slug.current == "${slug}"]{
