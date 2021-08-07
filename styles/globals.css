@@ -105,3 +105,67 @@ a:hover {
 	text-decoration: none;
 	outline: 0;
 }
+
+.slick-slider .slick-dots li button {
+	width: 30px;
+	height: 1px;
+	padding: 1.5px;
+	content: '';
+	background: #7e7e7e;
+}
+.slick-slider .slick-dots li button {
+	width: 30px;
+	height: 1px;
+	padding: 1.5px;
+	margin: 10px 0;
+	content: '';
+	background: #7e7e7e;
+}
+.slick-slider .slick-dots li.slick-active button {
+	background: #e45447;
+}
+
+.slick-slider .slick-dots li button:before {
+	content: '';
+}
+
+.slick-slider .slick-dots li {
+	position: relative;
+	display: inline-block;
+	width: 30px;
+	height: 20px;
+	margin: 0 5px;
+	padding: 0;
+	cursor: pointer;
+}
+
+.slick-slider .slick-dots {
+	bottom: -65px;
+}
+
+.slick-slider .slick-next {
+	right: 50px;
+}
+.slick-slider .slick-prev {
+	left: 50px;
+}
+
+.slick-slider .slick-prev,
+.slick-slider .slick-next {
+	top: 105%;
+}
+
+@media (max-width: 767px) {
+	.slick-slider .slick-prev,
+	.slick-slider .slick-next {
+		top: 113%;
+	}
+}
+
+.slick-slider .slick-prev:before,
+.slick-slider .slick-next:before {
+	font-family: none;
+	font-size: 35px;
+	font-weight: bold;
+	color: tomato;
+}

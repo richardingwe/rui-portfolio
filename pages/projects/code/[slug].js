@@ -4,13 +4,16 @@ import { motion } from "framer-motion";
 import sanityClient from "@/sanity/client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
-import { DiscussionEmbed } from 'disqus-react';
 import AOS from "aos";
 import { useRouter } from 'next/router';
 import "aos/dist/aos.css";
-import styles from "@/styles/SingleBlog.module.css";
+import styles from "@/styles/CodeDetails.module.css";
 import Layout from '@/components/Layout';
 import { useThemeContext } from '@/context/state';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -18,7 +21,7 @@ function urlFor(source) {
 }
 
 const CodeDetails = ({ codeDetails }) => {
-
+    console.log(codeDetails);
     const location = useRouter();
     const { theme } = useThemeContext();
 
@@ -27,6 +30,36 @@ const CodeDetails = ({ codeDetails }) => {
         AOS.refresh();
     }, []);
 
+    var settings = {
+        dots: true,
+        infinite: true,
+        autoplay: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        // centerMode: true,
+        // centerPadding: '30px',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    // centerMode: true,
+                    // centerPadding: '30px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    // centerMode: true,
+                    // centerPadding: '30px',
+                    slidesToShow: 1
+                }
+            }
+        ]
+    };
 
     return (
         <Layout
@@ -91,7 +124,31 @@ const CodeDetails = ({ codeDetails }) => {
                         </div>
                     </div>
                 </section>
-
+                <section>
+                    <div className="mt-5">
+                        <motion.div
+                            initial={{ y: "10vh", opacity: 0 }}
+                            transition={{ type: "spring", stiffness: 300, delay: 1.5 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            className="col-12">
+                            {/* Section Heading  */}
+                            <div className={`text-center`} style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }}>
+                                <h2 className="text-capitalize">{codeDetails.title}</h2>
+                            </div>
+                        </motion.div>
+                    </div>
+                    {
+                        codeDetails.imagesGallery && (
+                            <div className={`${styles.slider} container`}>
+                                <Slider {...settings}>
+                                    {codeDetails.imagesGallery.map(image => (
+                                        <img src={image.asset.url} alt={image.asset._id} key={image.asset._id} />
+                                    ))}
+                                </Slider>
+                            </div>
+                        )
+                    }
+                </section>
             </main>
         </Layout>
     );
@@ -124,25 +181,29 @@ export async function getStaticProps({ params: { slug } }) {
     try {
         const data = await sanityClient.fetch(
             `*[slug.current == "${slug}"]{
-             title,
+                title,
                 slug,
                 date,
                 place,
                 description,
-                body,
                 projectType,
                 link,
                 githubLink,
+  				imagesGallery[]{
+                  asset->{
+                  _id,
+                  url
+                }
+                },
                 technologiesUsed,
                 projectImage{
                 asset->{
                     _id,
                     url
                 },
-                imagesGallery,
                 alt
                 }
-        }`);
+            }`);
         return {
             props: {
                 codeDetails: data[0],

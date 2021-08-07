@@ -1,0 +1,98 @@
+.main {
+	/* background-color: rgb(11, 13, 20); */
+	background-color: #11161f;
+	min-height: 100vh;
+	/* background-color: #1f2937; */
+}
+.bannerArea {
+	background: inherit;
+}
+.relative {
+	position: relative;
+}
+
+.aboutContent {
+	margin-top: 190px;
+	text-align: center;
+}
+.aboutContent h1 {
+	margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+	.aboutContent {
+		margin-top: 150px;
+	}
+}
+.aboutContent h1 {
+	font-size: 60px;
+	font-weight: 700;
+}
+@media (max-width: 767px) {
+	.aboutContent h1 {
+		font-size: 35px;
+	}
+}
+.aboutContent .box {
+	border: 2px solid #fff;
+	padding: 10px 18px;
+	border-radius: 25px;
+	display: inline-block;
+}
+@media (max-width: 767px) {
+	.aboutContent .box {
+		padding: 7px 15px;
+	}
+}
+.aboutContent .box a {
+	color: inherit;
+	font-size: 15px;
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	padding-left: 16px;
+	padding-right: 16px;
+	border-right: 2px solid #fff;
+}
+@media (max-width: 380px) {
+	.aboutContent .box a {
+		font-size: 13px;
+	}
+}
+.aboutContent .box a:first-child {
+	padding-left: 0;
+}
+.aboutContent .box a:last-child {
+	border-right: 0;
+	padding-right: 0;
+}
+.aboutContent .box a:hover {
+	color: #e45447;
+}
+
+.aboutArea .sectionTitle {
+	margin-bottom: 0;
+}
+@media (max-width: 1024px) {
+	.aboutArea .sectionTitle {
+		padding-bottom: 0px;
+	}
+}
+@media (max-width: 991px) {
+	.aboutArea .sectionTitle {
+		margin-top: 1rem;
+	}
+}
+
+.sectionGap {
+	padding: 150px 0;
+}
+@media (max-width: 1024px) {
+	.sectionGap {
+		padding: 60px 0;
+	}
+}
+
+.slider {
+	padding: 4rem 0 6rem 0;
+}
