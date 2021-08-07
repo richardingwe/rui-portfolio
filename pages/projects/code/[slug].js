@@ -66,7 +66,6 @@ const CodeDetails = ({ codeDetails }) => {
             title={`Rui | Projects | Code ${codeDetails ? `| ${codeDetails.title}` : " "}`}
             description={`${codeDetails ? `${codeDetails.description}` : " "}`}
             currentUrl={`https://ruingwe.com${location.asPath}`}
-            imageUrl={urlFor(codeDetails.mainImage?.asset.url).width(1200).url()}
             image_alt={codeDetails?.title}
         >
             <main className={styles.main} style={{ backgroundColor: `${theme.light ? '#fff' : '#11161f'}` }}>
