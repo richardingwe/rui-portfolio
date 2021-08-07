@@ -152,9 +152,9 @@ const CodeDetails = ({ codeDetails }) => {
                             </motion.div>
                         )
                     }
-                    <div className="container py-5">
+                    <div className="container py-5" >
                         <div className="row">
-                            <div className="col-lg-4" style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }}>
+                            <div className="col-lg-4" style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }} data-aos='fade-up' data-aos-delay='300'>
                                 <h2><strong>Project</strong></h2>
                                 <ul className='ml-3'>
                                     <li><strong>Title: </strong>{codeDetails.title}</li>
@@ -164,7 +164,7 @@ const CodeDetails = ({ codeDetails }) => {
                                     ))}</li>
                                 </ul>
                             </div>
-                            <div className="col-lg-8" style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }}>
+                            <div className="col-lg-8" style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }} data-aos='fade-up' data-aos-delay='350'>
                                 <h2><strong>Info</strong></h2>
                                 {
                                     codeDetails.body ? (
