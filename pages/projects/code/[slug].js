@@ -166,10 +166,15 @@ const CodeDetails = ({ codeDetails }) => {
                             </div>
                             <div className="col-lg-8" style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }}>
                                 <h2><strong>Info</strong></h2>
-                                <div style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }} className={styles.excert}>
-                                    <BlockContent blocks={codeDetails.body} imageOptions={{ w: 320, h: 240, fit: 'max' }} projectId="y0xdnwwh" dataset="production" />
-                                </div>
-                                {/* <p>{codeDetails.description}</p> */}
+                                {
+                                    codeDetails.body ? (
+                                        <div style={{ color: `${!theme.light ? '#fff' : '#11161f'}` }} className={styles.excert}>
+                                            <BlockContent blocks={codeDetails.body} imageOptions={{ w: 320, h: 240, fit: 'max' }} projectId="y0xdnwwh" dataset="production" />
+                                        </div>
+                                    ) : (
+                                        <p>{codeDetails.description}</p>
+                                    )
+                                }
                             </div>
                         </div>
                     </div>
