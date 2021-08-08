@@ -203,3 +203,114 @@
 	fill: #e45447;
 	transition: all 200ms;
 }
+
+/* ******************************
+:: 25.0 CONTACT AREA CSS
+****************************** */
+.contact_us .social_icon {
+	display: inline-block;
+	height: 45px;
+	width: 45px;
+	line-height: 45px;
+	font-size: 18px;
+	text-align: center;
+	background-color: #e45447;
+	color: #fff;
+	border-radius: 4px;
+}
+
+.contact_us ol li,
+.contact_us ul li {
+	list-style: none;
+}
+.contact_us ol li a,
+.contact_us ul li a {
+	color: white;
+}
+.contact_us ol li a:hover,
+.contact_us ul li a:hover {
+	color: #e45447;
+}
+
+.contact_box input,
+.contact_box textarea {
+	font-size: 14px;
+	height: 50px;
+	padding: 0 15px;
+	border: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border-radius: 0;
+	-webkit-box-shadow: 0 5px 10px #0000001f;
+	box-shadow: 0 5px 10px #0000001f;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.borderLeft {
+	border-left: 2px solid #e45447;
+}
+
+.contact_box input::-webkit-input-placeholder,
+.contact_box textarea::-webkit-input-placeholder {
+	color: rgba(68, 68, 68, 0.6);
+}
+
+.contact_box input:-ms-input-placeholder,
+.contact_box textarea:-ms-input-placeholder {
+	color: rgba(68, 68, 68, 0.6);
+}
+
+.contact_box input::-ms-input-placeholder,
+.contact_box textarea::-ms-input-placeholder {
+	color: rgba(68, 68, 68, 0.6);
+}
+
+.contact_box input::placeholder,
+.contact_box textarea::placeholder {
+	color: rgba(68, 68, 68, 0.6);
+}
+
+.contact_box textarea {
+	height: 160px;
+	padding: 15px;
+}
+
+.contact_box button {
+	height: 60px;
+	border-radius: 8px;
+	background: #dd4a3c !important;
+}
+.contact_box button:hover {
+	background: #703737;
+}
+
+.map-area {
+	height: 550px;
+	width: 100%;
+}
+
+@media (max-width: 575px) {
+	.map-area {
+		height: 450px;
+	}
+}
+
+.map-area iframe {
+	height: 100%;
+	width: 100%;
+}
+
+.svg_plane {
+	width: 20px;
+}
+
+.svg_body {
+	position: relative;
+}
+.svg2 {
+	position: absolute;
+	width: 130px;
+	right: 1.1rem;
+	bottom: 7.2rem;
+}

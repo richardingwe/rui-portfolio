@@ -89,37 +89,6 @@ const Post = () => {
                             <div className="col-12 col-md-5">
                                 {/* Contact Us  */}
                                 <div className={styles.contact_us}>
-                                    {/* <p className="mb-3">Covering everything from your servers and network infrastructure, to cloud, to your computers, workstations and mobile devices, we provide end-to-end solutions for all of your technology needs.</p>
-                                    <p>Please send us a message</p> */}
-                                    {/* <ul>
-                                        <li className="py-2" data-aos='fade-up'
-                                            data-aos-delay='300'>
-                                            <a className="media" href="#">
-                                                <div className={`${styles.social_icon} mr-3`}>
-                                                    <i className="fas fa-home" aria-hidden="true"></i>
-                                                </div>
-                                                <span className="media-body align-self-center">8 Pebblestone Circle Brampton, Ontario L6X 4M8</span>
-                                            </a>
-                                        </li>
-                                        <li className="py-2" data-aos='fade-up'
-                                            data-aos-delay='350'>
-                                            <a className="media" href="tel:+1 905 226 9774">
-                                                <div className={`${styles.social_icon} mr-3`}>
-                                                    <i className="fas fa-phone-alt" aria-hidden="true"></i>
-                                                </div>
-                                                <span className="media-body align-self-center">+1 905 226 9774</span>
-                                            </a>
-                                        </li>
-                                        <li className="py-2" data-aos='fade-up'
-                                            data-aos-delay='400'>
-                                            <a className="media" href="mailto:info@greeneyeit.com">
-                                                <div className={`${styles.social_icon} mr-3`}>
-                                                    <i className="fas fa-envelope" aria-hidden="true"></i>
-                                                </div>
-                                                <span className="media-body align-self-center">info@greeneyeit.com</span>
-                                            </a>
-                                        </li>
-                                    </ul> */}
                                     <div data-aos='fade-up'
                                         data-aos-delay='300' className={`${styles.svg_body} d-none d-sm-block mt-5`}>
                                         <img src="/images/contact2.svg" alt="" />
