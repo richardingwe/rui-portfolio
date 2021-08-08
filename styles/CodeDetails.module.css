@@ -96,3 +96,110 @@
 .slider {
 	padding: 4rem 0 6rem 0;
 }
+
+.links {
+	display: inline;
+	margin-left: 5px;
+	/* justify-content: space-between; */
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.linksLight {
+	display: inline;
+	margin-left: 5px;
+	/* justify-content: space-between; */
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.links::after {
+	content: '';
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	height: 2px;
+	/* border-bottom: 1px solid #fff; */
+}
+.linksLight::after {
+	content: '';
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	height: 2px;
+	/* border-bottom: 1px solid #11161f; */
+}
+
+.links svg {
+	width: 22px;
+	margin-right: 15px;
+}
+
+.links a {
+	color: white;
+	font-size: 1.3rem;
+}
+.links a:hover {
+	transition: all 200ms;
+	color: #e45447;
+}
+.links i {
+	margin-top: 10px;
+	/* color: white; */
+}
+.linksLight svg {
+	width: 22px;
+	margin-right: 15px;
+}
+
+.linksLight a {
+	color: white;
+	font-size: 1.3rem;
+}
+.linksLight a:hover {
+	transition: all 200ms;
+	color: #e45447;
+}
+.linksLight i {
+	margin-top: 10px;
+	/* color: white; */
+}
+
+.svg_light {
+	fill: #fff;
+}
+
+.svg_dark {
+	fill: #11161f;
+}
+
+.links svg:hover .svg_dark {
+	fill: #e45447;
+	transition: all 200ms;
+}
+.links svg:hover .svg_light {
+	fill: #e45447;
+	transition: all 200ms;
+}
+.linksLight svg:hover .svg_dark {
+	fill: #e45447;
+	transition: all 200ms;
+}
+.linksLight svg:hover .svg_light {
+	fill: #e45447;
+	transition: all 200ms;
+}
