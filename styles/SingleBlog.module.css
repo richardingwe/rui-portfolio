@@ -228,6 +228,18 @@
 .postContentArea .singlePost .excert {
 	margin-bottom: 20px;
 }
+.postContentArea .singlePost .excert ul {
+	margin-left: 20px;
+}
+.postContentArea .singlePost .excert ul li {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.postContentArea .singlePost .excert blockquote {
+	margin-left: 20px;
+	padding-left: 12px;
+	border-left: 4px solid gray;
+}
 .postContentArea .singlePost .primary-btn {
 	background: #fff !important;
 	color: #222222;
