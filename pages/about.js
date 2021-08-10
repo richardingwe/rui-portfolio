@@ -119,7 +119,7 @@ const About = ({ author }) => {
                                             <span>e</span>
                                             <span>.</span>
                                         </a>
-                                        <Link href='/resume'>
+                                        <Link href='https://docs.google.com/document/d/1xZCuXL-igFCgDNnR7lRylyK4-aBuu1RCTn29OMmQqYI'>
                                             <a
                                                 // onClick={download}
                                                 data-aos='fade-up'

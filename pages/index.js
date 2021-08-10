@@ -92,7 +92,7 @@ export default function Home() {
                   <span>.</span>
                 </a>
                 <Link
-                  href='/resume'
+                  href='https://docs.google.com/document/d/1xZCuXL-igFCgDNnR7lRylyK4-aBuu1RCTn29OMmQqYI'
                 >
                   <a
                     target='_blank'
@@ -301,7 +301,7 @@ export default function Home() {
                   <span>.</span>
                 </a>
                 <Link
-                  href='/resume'
+                  href='https://docs.google.com/document/d/1xZCuXL-igFCgDNnR7lRylyK4-aBuu1RCTn29OMmQqYI'
                 >
                   <a
                     target='_blank'
