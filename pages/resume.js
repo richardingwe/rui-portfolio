@@ -1168,7 +1168,9 @@ const resume = () => {
                                 <p>
                                     I build powerful swift web applications for the company.
                                     <br />
+                                    <br />
                                     - Improved the usability of the existing workflows by fixing several workflow bugs and UI issues based on user interviews, contextual inquiry and observations apart from user-reported bugs.
+                                    <br />
                                     <br />
                                     - Responsible for maintaining  Quality Assurance in the company.
                                 </p>
