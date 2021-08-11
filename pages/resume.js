@@ -154,6 +154,427 @@ const resume = () => {
                                 </p>
                             </div>
                         </div>
+                        <div className={styles.skills}>
+                            <h2>SKILLS</h2>
+                            <div className={styles.apps}>
+                                <div className={styles.app}>
+                                    <div className={styles.appName}>Web Development</div>
+                                    <div className={styles.appRating}>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div className={styles.app}>
+                                    <div className={styles.appName}>Graphic Design</div>
+                                    <div className={styles.appRating}>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div className={styles.app}>
+                                    <div className={styles.appName}>UI/UX Design</div>
+                                    <div className={styles.appRating}>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls2}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls2}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div className={styles.app}>
+                                    <div className={styles.appName}>Communication</div>
+                                    <div className={styles.appRating}>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls2}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div className={styles.app}>
+                                    <div className={styles.appName}>Marketting</div>
+                                    <div className={styles.appRating}>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls1}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls2}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className={styles.cls2}
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div className={styles.software}>
                             <h2>SOFTWARES</h2>
                             <div className={styles.apps}>
@@ -542,427 +963,6 @@ const resume = () => {
                                             </defs>
                                             <path
                                                 className={styles.cls2}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls2}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls2}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={styles.skills}>
-                            <h2>SKILLS</h2>
-                            <div className={styles.apps}>
-                                <div className={styles.app}>
-                                    <div className={styles.appName}>Graphic Design</div>
-                                    <div className={styles.appRating}>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div className={styles.app}>
-                                    <div className={styles.appName}>UI/UX Design</div>
-                                    <div className={styles.appRating}>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls2}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls2}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div className={styles.app}>
-                                    <div className={styles.appName}>Web Development</div>
-                                    <div className={styles.appRating}>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div className={styles.app}>
-                                    <div className={styles.appName}>Communication</div>
-                                    <div className={styles.appRating}>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls2}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div className={styles.app}>
-                                    <div className={styles.appName}>Marketting</div>
-                                    <div className={styles.appRating}>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                className={styles.cls1}
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
