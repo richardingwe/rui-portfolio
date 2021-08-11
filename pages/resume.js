@@ -1166,10 +1166,11 @@ const resume = () => {
                                 <h3>RUI CREATIVE</h3>
                                 <div>2018 - 2021</div>
                                 <p>
-                                    I currently work in Rui Creative as a Web developer and Graphic
-                                    designer. I am also the lead designer in Rui Creative, so I am
-                                    responsible for the awesomeness and creativity that comes out of
-                                    Rui Creative.
+                                    I build powerful swift web applications for the company.
+                                    <br />
+                                    - Improved the usability of the existing workflows by fixing several workflow bugs and UI issues based on user interviews, contextual inquiry and observations apart from user-reported bugs.
+                                    <br />
+                                    - Responsible for maintaining  Quality Assurance in the company.
                                 </p>
                             </div>
                         </div>
@@ -1200,6 +1201,64 @@ const resume = () => {
                             <rect className={styles.cls1} x="3" y="3.81" width="1.6" height="123.71" />
                         </svg>
                         <div className={styles.edu}>
+                            <h2 className={styles.heading}>PROJECTS</h2>
+                            <div className={styles.row}>
+                                <h3>Rui portfolio</h3>
+                                <div>
+                                    <a target='_blank' href='https://ruingwe.com'>ruingwe.com</a>
+                                </div>
+                                <p>
+                                    Portfolio website for me.  Built with Next.js, and Sanity.
+                                </p>
+                            </div>
+                            <div className={styles.row}>
+                                <h3>Disney Website Clone</h3>
+                                <div>
+                                    <a target='_blank' href='https://rui-disneyplus.netlify.app'>rui-disneyplus.netlify.app</a>
+                                </div>
+                                <p>
+                                    Disney website clone built with react.js, styled components, and firebase.
+                                </p>
+                            </div>
+                            <div className={styles.row}>
+                                <h3>Hulu Website Clone</h3>
+                                <div>
+                                    <a target='_blank' href='https://hulu-clone-ochre.vercel.app'>hulu-clone-ochre.vercel.app</a>
+                                </div>
+                                <p>
+                                    Hulu website clone built with next.js, and tailwind.css
+                                </p>
+                            </div>
+                            <div className={styles.row}>
+                                <h3>AKOCDS UI</h3>
+                                <div>
+                                    <a target='_blank' href='https://richardingwe.github.io/akocds'>richardingwe.github.io/akocds</a>
+                                </div>
+                                <p>
+                                    I designed and built the UI for a Procurement system/database for Akwa Ibom state.
+                                </p>
+                            </div>
+                            <div className={styles.row}>
+                                <h3>Color Palette Generator</h3>
+                                <div>
+                                    <a target='_blank' href='https://lucid-clarke-3e240e.netlify.app'>lucid-clarke-3e240e.netlify.app/</a>
+                                </div>
+                                <p>
+                                    A color palette generator built with React.js, that generates different shades of colors from a picked color.
+                                </p>
+                            </div>
+                            <div className={styles.row}>
+                                <h3>Nabitec Medical Technologies Website</h3>
+                                {/* <div>
+                                    <a target='_blank' href='https://lucid-clarke-3e240e.netlify.app'>lucid-clarke-3e240e.netlify.app/</a>
+                                </div> */}
+                                <p>
+                                    A website for a medical engineering company,  a young leading supplier of medical imaging equipment precisely to Nigeria and Cameroon as well as project management and a financing corporation. It is a first-class international corporation with branches in west Africa, (Nigeria and Cameroon).
+                                </p>
+                            </div>
+
+                        </div>
+                        {/* <div className={styles.edu}>
                             <h2 className={styles.heading}>EDUCATION</h2>
                             <div className={styles.row}>
                                 <h3>FSLC</h3>
@@ -1221,7 +1280,7 @@ const resume = () => {
                                 <div>2020</div>
                                 <p>CROSSRIVER UNIVERSITY OF TECHNOLOGY, NIGERIA.</p>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                     <div className={styles.aboutMe}>
                         <div className={styles.about}>
