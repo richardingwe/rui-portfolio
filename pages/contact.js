@@ -11,7 +11,7 @@ import { useForm, ValidationError } from '@formspree/react';
 import { useThemeContext } from '../context/state';
 import Success from '@/components/Success';
 
-const Post = () => {
+const Contact = () => {
 
     const [state, handleSubmit] = useForm("xknkqwpq");
 
@@ -165,5 +165,5 @@ const Post = () => {
     );
 };
 
-export default Post;
+export default Contact;
 
