@@ -13,3 +13,7 @@
 .main img {
 	width: 50px;
 }
+
+.main a {
+	opacity: 0;
+}
