@@ -26,7 +26,7 @@ const Post = () => {
     }, []);
 
     if (state.succeeded) {
-        location.push('/success');
+        return <Success />;
     }
 
 
