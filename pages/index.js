@@ -14,30 +14,33 @@ export default function Home() {
   const showContents = () => {
     setTimeout(() => {
       setLoad(false);
-    }, 3800);
+    }, 4000);
   };
 
   useEffect(() => {
     showContents();
   }, []);
 
-  if (load)
-    return (
-      <Loader />
-    );
+  // if (load)
+  //   return (
+  //     <Loader />
+  //   );
 
   return (
     <Layout title='Rui | Software Developer & Brand Identity Designer' description='Richard Unimke Ingwe Creates Beautiful Experiences, That Could Keep Potential Customers Glued and Loyal To Your Businesses, Brands And Websites.'>
       <Head>
         <meta name="google-site-verification" content="w31_gCqMJnNbzIL-ENdtt90gIVc75fMw8T0LJ4mOvKk" />
       </Head>
+      {load &&
+        <Loader />
+      }
       <Carousel pause={false} interval={7000}>
         <Carousel.Item>
           <main className={styles.Main}>
             <section className={`container ${styles.headingText}`}>
               <motion.h1
                 initial={{ x: '-10vw', opacity: 0 }}
-                transition={{ type: 'spring', delay: 1, stiffness: 300 }}
+                transition={{ type: 'spring', delay: 5, stiffness: 300 }}
                 animate={{ x: 0, opacity: 1 }}
                 className='text-white font-bold'
                 className={`text-white font-bold ${styles.playfair} ${styles.homeName}`}
@@ -47,7 +50,7 @@ export default function Home() {
               </motion.h1>
               <motion.div
                 initial={{ x: '-10vw', opacity: 0 }}
-                transition={{ type: 'spring', delay: 1.2, stiffness: 300 }}
+                transition={{ type: 'spring', delay: 5.2, stiffness: 300 }}
                 animate={{ x: 0, opacity: 1 }}
                 className={styles.title}
               >
@@ -56,7 +59,7 @@ export default function Home() {
               </motion.div>
               <motion.div
                 initial={{ x: '-10vw', opacity: 0 }}
-                transition={{ type: 'spring', delay: 1.4, stiffness: 300 }}
+                transition={{ type: 'spring', delay: 5.4, stiffness: 300 }}
                 animate={{ x: 0, opacity: 1 }}
                 className={styles.title}
               >
@@ -65,7 +68,7 @@ export default function Home() {
               </motion.div>
               <motion.p
                 initial={{ x: '10vw', opacity: 0 }}
-                transition={{ type: 'spring', delay: 1.6, stiffness: 200 }}
+                transition={{ type: 'spring', delay: 5.6, stiffness: 200 }}
                 animate={{ x: 0, opacity: 1 }}
               >
                 I Create Beautiful Experiences, That Could Keep Potential
@@ -73,7 +76,7 @@ export default function Home() {
               </motion.p>
               <motion.div
                 initial={{ y: '10vh', opacity: 0 }}
-                transition={{ type: 'spring', stiffness: 300, delay: 2 }}
+                transition={{ type: 'spring', stiffness: 300, delay: 6 }}
                 animate={{ y: 0, opacity: 1 }}
                 className={`${styles.action} ${styles.aboutArea}`}
               >
@@ -113,7 +116,7 @@ export default function Home() {
             {/* <Footer /> */}
             <motion.div
               initial={{ y: '10vh', opacity: 0 }}
-              transition={{ delay: 2.3 }}
+              transition={{ delay: 6.3 }}
               animate={{ y: 0, opacity: 1 }}
               className={styles.socials}
             >

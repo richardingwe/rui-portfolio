@@ -80,7 +80,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 									onClick={handleLogoClick}
 									initial={{ x: '-10vw', opacity: 0 }}
 									animate={{ x: 0, opacity: 1 }}
-									transition={{ delay: 0.5, when: 'beforeChildren' }}
+									transition={{ delay: `${location.pathname == '/' ? 4.5 : 0.5}`, when: 'beforeChildren' }}
 									version='1.1'
 									id='Layer_1'
 									xmlns='http://www.w3.org/2000/svg'
@@ -101,7 +101,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 											variants={icon2}
 											initial='hidden'
 											animate='visible'
-											transition={{ delay: 2, duration: 0.5 }}
+											transition={{ delay: `${location.pathname == '/' ? 6 : 2}`, duration: 0.5 }}
 											className={styles.st1}
 											d='M566,431.9c-6.7,3.2-14.2,5-22.1,5h-47.8l93.6,94c17.9-5.7,34.4-14.6,48.8-26.2c9.3-7.5,17.8-16.1,25.1-25.5
                                     c9.8-12.6,17.7-26.9,23.1-42.2c5.7-16,8.8-33.2,8.8-51.2s-3.1-35.2-8.8-51.2c-20.9-58.9-77-101-142.9-101H293.4l100.7,101H544
@@ -112,7 +112,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 												variants={icon2}
 												initial='hidden'
 												animate='visible'
-												transition={{ delay: 2, duration: 0.5 }}
+												transition={{ delay: `${location.pathname == '/' ? 6 : 2}`, duration: 0.5 }}
 												className={styles.st1}
 												points='772.4,814.7 630,814.7 227.6,410.9 370,410.9 711.5,753.6 		'
 											/>
@@ -124,7 +124,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 										onClick={handleLogoClick}
 										initial={{ x: '-10vw', opacity: 0 }}
 										animate={{ x: 0, opacity: 1 }}
-										transition={{ delay: 0.5, when: 'beforeChildren' }}
+										transition={{ delay: `${location.pathname == '/' ? 4.5 : 0.5}`, when: 'beforeChildren' }}
 										version='1.1'
 										id='Layer_1'
 										xmlns='http://www.w3.org/2000/svg'
@@ -145,7 +145,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 												variants={icon2}
 												initial='hidden'
 												animate='visible'
-												transition={{ delay: 2, duration: 0.5 }}
+												transition={{ delay: `${location.pathname == '/' ? 6 : 2}`, duration: 0.5 }}
 												className={styles.st1}
 												d='M566,431.9c-6.7,3.2-14.2,5-22.1,5h-47.8l93.6,94c17.9-5.7,34.4-14.6,48.8-26.2c9.3-7.5,17.8-16.1,25.1-25.5
                                     c9.8-12.6,17.7-26.9,23.1-42.2c5.7-16,8.8-33.2,8.8-51.2s-3.1-35.2-8.8-51.2c-20.9-58.9-77-101-142.9-101H293.4l100.7,101H544
@@ -156,7 +156,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 													variants={icon2}
 													initial='hidden'
 													animate='visible'
-													transition={{ delay: 2, duration: 0.5 }}
+													transition={{ delay: `${location.pathname == '/' ? 6 : 2}`, duration: 0.5 }}
 													className={styles.st1}
 													points='772.4,814.7 630,814.7 227.6,410.9 370,410.9 711.5,753.6 		'
 												/>
@@ -167,7 +167,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 										onClick={handleLogoClick}
 										initial={{ x: '-10vw', opacity: 0 }}
 										animate={{ x: 0, opacity: 1 }}
-										transition={{ delay: 0.5, when: 'beforeChildren' }}
+										transition={{ delay: `${location.pathname == '/' ? 4.5 : 0.5}`, when: 'beforeChildren' }}
 										version='1.1'
 										id='Layer_1'
 										xmlns='http://www.w3.org/2000/svg'
@@ -188,7 +188,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 												variants={icon2}
 												initial='hidden'
 												animate='visible'
-												transition={{ delay: 2, duration: 0.5 }}
+												transition={{ delay: `${location.pathname == '/' ? 6 : 2}`, duration: 0.5 }}
 												className={styles.st3}
 												d='M566,431.9c-6.7,3.2-14.2,5-22.1,5h-47.8l93.6,94c17.9-5.7,34.4-14.6,48.8-26.2c9.3-7.5,17.8-16.1,25.1-25.5
                                     c9.8-12.6,17.7-26.9,23.1-42.2c5.7-16,8.8-33.2,8.8-51.2s-3.1-35.2-8.8-51.2c-20.9-58.9-77-101-142.9-101H293.4l100.7,101H544
@@ -199,7 +199,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 													variants={icon2}
 													initial='hidden'
 													animate='visible'
-													transition={{ delay: 2, duration: 0.5 }}
+													transition={{ delay: `${location.pathname == '/' ? 6 : 2}`, duration: 0.5 }}
 													className={styles.st3}
 													points='772.4,814.7 630,814.7 227.6,410.9 370,410.9 711.5,753.6 		'
 												/>
@@ -211,7 +211,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 					</Link>
 					<motion.div
 						initial={{ y: '-10vw', opacity: 0 }}
-						transition={{ delay: 1.8 }}
+						transition={{ delay: `${location.pathname == '/' ? 5.8 : 1.8}` }}
 						animate={{ y: 0, opacity: 1 }}
 						onClick={() => dispatch({ type: 'setTheme' })}
 						className={`inline-flex items-center ${styles.theme}`}>
@@ -219,7 +219,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 					</motion.div>
 					<motion.div
 						initial={{ x: '10vw', opacity: 0 }}
-						transition={{ delay: 0.5 }}
+						transition={{ delay: `${location.pathname == '/' ? 4.5 : 0.5}` }}
 						animate={{ x: 0, opacity: 1 }}
 						className={styles.NavLinks}
 					>
@@ -289,7 +289,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 					>
 						<motion.img
 							initial={{ x: '10vw', opacity: 0 }}
-							transition={{ delay: 1.5 }}
+							transition={{ delay: `${location.pathname == '/' ? 5.5 : 1.5}` }}
 							animate={{ x: 0, opacity: 1 }}
 							src={location.pathname === '/' && navOpen ? '/images/hamburgerClose.svg' : location.pathname === '/' && !navOpen ? '/images/hamburger.svg' : theme.light && navOpen ? '/images/hamburgerCloseDark.svg' : !theme.light && navOpen ? '/images/hamburgerClose.svg' : theme.light && !navOpen ? '/images/hamburgerDark.svg' : '/images/hamburger.svg'}
 							className={`${styles.svg}`}
