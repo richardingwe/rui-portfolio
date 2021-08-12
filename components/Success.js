@@ -8,7 +8,7 @@ const Success = () => {
     const { theme } = useThemeContext();
 
     setTimeout(() => {
-        location.prefetch('/contact');
+        location.reload();
     }, 3000);
 
     return (
