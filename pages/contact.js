@@ -15,6 +15,9 @@ const Post = () => {
 
     const [state, handleSubmit] = useForm("xknkqwpq");
 
+    const location = useRouter();
+    const { theme } = useThemeContext();
+
     useEffect(() => {
         AOS.init({
             delay: 200
@@ -23,11 +26,10 @@ const Post = () => {
     }, []);
 
     if (state.succeeded) {
-        return <Success />;
+        // return <Success />;
+        location.push('/success');
     }
 
-    const location = useRouter();
-    const { theme } = useThemeContext();
 
     return (
         <Layout title='Rui | Contact Me' currentUrl={`https://ruingwe.com${location.asPath}`}>
