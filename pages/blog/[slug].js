@@ -133,7 +133,7 @@ const SingleBlog = ({ singleBlog }) => {
 
                             {theme.light ?
                                 <DiscussionEmbed
-                                    shortname='Rui'
+                                    shortname='ruingwe'
                                     config={
                                         {
                                             url: `https://ruingwe.com/blog/${singleBlog.slug}`,
@@ -146,7 +146,7 @@ const SingleBlog = ({ singleBlog }) => {
                                 :
                                 <div>
                                     <DiscussionEmbed
-                                        shortname='Rui'
+                                        shortname='ruingwe'
                                         config={
                                             {
                                                 url: `https://ruingwe.com/blog/${singleBlog.slug}`,
