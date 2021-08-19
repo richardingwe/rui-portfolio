@@ -134,7 +134,7 @@ export async function getStaticProps() {
         return {
             props: {
                 designData: data,
-                revalidate: 1,
+                revalidate: 60,
             },
         };
     } catch (error) {
