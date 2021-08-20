@@ -317,6 +317,23 @@ const About = ({ author }) => {
                             >
                                 <div
                                     className={`${styles.teamContentArea} text-center ${styles.mb30}`}
+                                    data-wow-delay='100ms'
+                                >
+                                    <div className={styles.memberThumb}>
+                                        <Image width='500' height='500' src='/images/ts.jpg' alt='typescript' />
+                                    </div>
+                                    <h5>Typescript</h5>
+                                </div>
+                            </div>
+
+                            <div
+                                data-aos='fade-up'
+                                data-aos-delay='300'
+                                data-aos-offset='200'
+                                className='col-4 col-sm-4 col-md-3 col-xl-2'
+                            >
+                                <div
+                                    className={`${styles.teamContentArea} text-center ${styles.mb30}`}
                                     data-wow-delay='300ms'
                                 >
                                     <div className={styles.memberThumb}>
@@ -351,12 +368,80 @@ const About = ({ author }) => {
                             >
                                 <div
                                     className={`${styles.teamContentArea} text-center ${styles.mb30}`}
+                                    data-wow-delay='300ms'
+                                >
+                                    <div className={styles.memberThumb}>
+                                        <Image width='500' height='500' src='/images/gatsby.jpg' alt='gatsby' />
+                                    </div>
+                                    <h5>Gatsby</h5>
+                                </div>
+                            </div>
+
+                            <div
+                                data-aos='fade-up'
+                                data-aos-delay='300'
+                                data-aos-offset='200'
+                                className='col-4 col-sm-4 col-md-3 col-xl-2'
+                            >
+                                <div
+                                    className={`${styles.teamContentArea} text-center ${styles.mb30}`}
                                     data-wow-delay='500ms'
                                 >
                                     <div className={styles.memberThumb}>
                                         <Image width='500' height='500' src='/images/vue.jpg' alt='vue.js' />
                                     </div>
                                     <h5>Vue.js</h5>
+                                </div>
+                            </div>
+
+                            <div
+                                data-aos='fade-up'
+                                data-aos-delay='300'
+                                data-aos-offset='200'
+                                className='col-4 col-sm-4 col-md-3 col-xl-2'
+                            >
+                                <div
+                                    className={`${styles.teamContentArea} text-center ${styles.mb30}`}
+                                    data-wow-delay='500ms'
+                                >
+                                    <div className={styles.memberThumb}>
+                                        <Image width='500' height='500' src='/images/nuxt.jpg' alt='nuxt.js' />
+                                    </div>
+                                    <h5>Nuxt.js</h5>
+                                </div>
+                            </div>
+
+                            <div
+                                data-aos='fade-up'
+                                data-aos-delay='300'
+                                data-aos-offset='200'
+                                className='col-4 col-sm-4 col-md-3 col-xl-2'
+                            >
+                                <div
+                                    className={`${styles.teamContentArea} text-center ${styles.mb30}`}
+                                    data-wow-delay='500ms'
+                                >
+                                    <div className={styles.memberThumb}>
+                                        <Image width='500' height='500' src='/images/flutter.jpg' alt='flutter' />
+                                    </div>
+                                    <h5>Flutter</h5>
+                                </div>
+                            </div>
+
+                            <div
+                                data-aos='fade-up'
+                                data-aos-delay='300'
+                                data-aos-offset='200'
+                                className='col-4 col-sm-4 col-md-3 col-xl-2'
+                            >
+                                <div
+                                    className={`${styles.teamContentArea} text-center ${styles.mb30}`}
+                                    data-wow-delay='500ms'
+                                >
+                                    <div className={styles.memberThumb}>
+                                        <Image width='500' height='500' src='/images/dart.jpg' alt='dart' />
+                                    </div>
+                                    <h5>Dart</h5>
                                 </div>
                             </div>
 
