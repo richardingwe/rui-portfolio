@@ -4,8 +4,20 @@
 	min-height: 100vh;
 	/* background-color: #1f2937; */
 }
+
+.main2 {
+	/* background-color: rgb(11, 13, 20); */
+	background-color: #11161f;
+	min-height: 100vh;
+	position: relative;
+	z-index: 5;
+	background: url(../public/images/pattern.svg) 50% repeat;
+	background-size: contain;
+	/* background-color: #1f2937; */
+}
+
 .bannerArea {
-	background: inherit;
+	/* background: inherit; */
 }
 .relative {
 	position: relative;

@@ -32,7 +32,7 @@ const Contact = () => {
 
     return (
         <Layout title='Rui | Contact Me' currentUrl={`https://ruingwe.com${location.asPath}`}>
-            <main className={styles.main} style={{ backgroundColor: `${theme.light ? '#fff' : '#11161f'}` }}>
+            <main className={` ${theme.light ? styles.main : styles.main2}`} style={{ backgroundColor: `${theme.light ? '#fff' : '#11161f'}` }}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
                     <div className="container">
                         <div className="row d-flex align-items-center justify-content-center">
