@@ -37,7 +37,8 @@ const SingleBlog = ({ singleBlog }) => {
             imageUrl={urlFor(singleBlog.mainImage?.asset.url).width(1200).url()}
             image_alt={singleBlog?.title}
         >
-            <main className={styles.main} style={{ backgroundColor: `${theme.light ? '#fff' : '#11161f'}` }}>
+            <main className={` ${theme.light ? styles.main : styles.main2}`} style={{ backgroundColor: `${theme.light ? '#fff' : '#11161f'}` }}>
+                {/* <div className={styles.pattern} style={{ opacity: `${theme.light ? '1' : '0.07'}` }} /> */}
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
                     <div className="container">
                         <div className="row d-flex align-items-center justify-content-center">
@@ -144,7 +145,7 @@ const SingleBlog = ({ singleBlog }) => {
                                     }
                                 />
                                 :
-                                <div>
+                                <div style={{ zIndex: 999999 }}>
                                     <DiscussionEmbed
                                         shortname='ruingwe'
                                         config={
