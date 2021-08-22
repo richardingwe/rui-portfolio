@@ -21,8 +21,7 @@ const Code = ({ codeData }) => {
 
     return (
         <Layout title='Rui | Code Projects' currentUrl={`https://ruingwe.com${location.asPath}`}>
-            <main className={styles.main} style={{ backgroundColor: `${theme.light ? '#fff' : '#11161f'}` }} className={styles.main}>
-                <div className={styles.pattern} style={{ opacity: `${theme.light ? '1' : '0.07'}` }} />
+            <main className={` ${theme.light ? styles.main : styles.main2}`} style={{ backgroundColor: `${theme.light ? '#fff' : '#11161f'}` }}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
                     <div className='container'>
                         <div className='row d-flex align-items-center justify-content-center'>

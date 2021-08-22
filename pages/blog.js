@@ -24,8 +24,7 @@ const Post = ({ blogData }) => {
 
     return (
         <Layout title='Rui | Blog' currentUrl={`https://ruingwe.com${location.asPath}`}>
-            <main className={styles.main} style={{ backgroundColor: `${theme.light ? '#fff' : '#11161f'}` }}>
-                <div className={styles.pattern} style={{ opacity: `${theme.light ? '1' : '0.07'}` }} />
+            <main className={` ${theme.light ? styles.main : styles.main2}`} style={{ backgroundColor: `${theme.light ? '#fff' : '#11161f'}` }}>
                 <section className={`${styles.bannerArea} ${styles.relative}`}>
                     <div className="container">
                         <div className="row d-flex align-items-center justify-content-center">
