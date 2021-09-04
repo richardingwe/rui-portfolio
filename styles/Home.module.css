@@ -6,7 +6,7 @@
 .Main {
 	width: 100%;
 	height: 100%;
-	background: url('/images/bg-111.jpg');
+	background: url('/images/bg-new.jpg');
 	background-position: center; /* Center the image */
 	background-repeat: no-repeat; /* Do not repeat the image */
 	background-size: cover;
@@ -19,7 +19,7 @@
 .Main2 {
 	width: 100%;
 	height: 100%;
-	background: url('/images/bg-2.jpg');
+	background: url('/images/bg-111.jpg');
 	background-position: center; /* Center the image */
 	background-repeat: no-repeat; /* Do not repeat the image */
 	background-size: cover;
@@ -129,7 +129,9 @@
 .socials {
 	position: fixed;
 	left: 2.3rem;
-	bottom: 0;
+	/* bottom: 50%; */
+	top: 50%;
+	transform: translate(-50%, -50%);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -137,24 +139,31 @@
 	z-index: 15;
 }
 .socials a {
-	color: white;
+	color: #fff;
 	font-size: 1.2rem;
-	margin-bottom: 5px;
+	margin-bottom: 20px;
 	transition: 500ms;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background-color: #0b0d14;
+	display: flex;
+	place-items: center;
+	place-content: center;
 }
 .socials a:hover {
 	color: #e45447;
 }
 
 .socials svg {
-	width: 20px;
+	width: 16px;
 }
-.socials .Line {
+/* .socials .Line {
 	height: 100px;
 	border-left: 1px solid white;
-}
+} */
 .facebook {
-	height: 22px;
+	height: 16px;
 }
 @media (max-width: 991px) {
 	.homeName {
@@ -175,6 +184,7 @@
 	}
 	.socials {
 		left: 1rem;
+		display: none;
 	}
 	.socials svg {
 		width: 15px;
@@ -193,6 +203,9 @@
 	}
 }
 @media (max-width: 400px) {
+	.socials a {
+		display: none !important;
+	}
 	.headingText {
 		padding-top: 9rem;
 		padding-bottom: 3rem;
