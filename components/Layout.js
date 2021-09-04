@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import styles from '../styles/Layout.module.css';
 import Footer from './Footer';
 import Navbar from './NavBar';
@@ -8,6 +9,7 @@ import WhatsApp from './WhatsApp';
 
 import dynamic from 'next/dynamic';
 import Email from './Email';
+import Socials from './Socials';
 
 const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
     ssr: false
@@ -15,6 +17,7 @@ const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
 
 const Layout = ({ title, keywords, description, children, currentUrl, imageUrl, image_alt }) => {
     const [navOpen, setNavOpen] = useState(false);
+    const location = useRouter();
 
     const handleClick = () => {
         setNavOpen(!navOpen);
@@ -52,6 +55,7 @@ const Layout = ({ title, keywords, description, children, currentUrl, imageUrl, 
                 setNavOpen={setNavOpen}
             />
             <Email />
+            {location.pathname === '/' && <Socials />}
             {navOpen && <MiniNavBar handleClick={handleClick} />}
             <WhatsApp />
             <div>
