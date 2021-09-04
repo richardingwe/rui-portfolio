@@ -19,6 +19,8 @@
 	display: flex;
 	place-items: center;
 	place-content: center;
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+	transition: 0.5s;
 }
 
 .socials a:nth-of-type(4) {
@@ -27,6 +29,7 @@
 
 .socials a:hover {
 	color: #e45447;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .socials div {
