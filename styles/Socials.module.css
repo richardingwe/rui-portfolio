@@ -11,10 +11,11 @@
 	font-size: 1.2rem;
 	transition: 500ms;
 	margin-bottom: 20px;
-	width: 35px;
-	height: 35px;
+	width: 40px;
+	height: 40px;
 	border-radius: 50%;
-	background-color: #0b0d14;
+	/* background-color: #0b0d14; */
+	background: linear-gradient(0deg, #0b0d14, #393a42);
 	display: flex;
 	place-items: center;
 	place-content: center;
@@ -28,8 +29,18 @@
 	color: #e45447;
 }
 
+.socials div {
+	width: 30px;
+	height: 30px;
+	background: linear-gradient(0deg, #393a42, #0b0d14);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .socials svg {
-	width: 16px;
+	width: 15px;
 }
 /* .socials .Line {
 	height: 100px;
@@ -91,6 +102,15 @@
 		background-color: #0b0d14;
 		border-radius: 0 8px 8px 0;
 		padding: 10px 2px;
+	}
+	.socials div {
+		width: 30px;
+		height: 30px;
+		background: transparent;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	.socials a {
 		color: #fff;
