@@ -7,7 +7,7 @@
 	justify-content: center;
 	align-items: center;
 
-	transition: 150ms ease;
+	transition: transform 200ms ease-in-out;
 }
 .hamburger {
 	display: none;

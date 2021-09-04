@@ -169,3 +169,7 @@ a:hover {
 	font-weight: bold;
 	color: tomato;
 }
+
+header.nav-bar--hidden {
+	transform: translateY(-100%);
+}

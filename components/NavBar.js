@@ -5,11 +5,10 @@ import { useRouter } from 'next/router';
 import { debounce } from '../utilities/helpers';
 import styles from '../styles/NavBar.module.css';
 import { useThemeContext } from '../context/state';
+import useScrollListener from 'hooks';
 
 const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 	const [rotate, setRotate] = useState(false);
-	const [prevScrollPos, setPrevScrollPos] = useState(0);
-	const [visible, setVisible] = useState(true);
 	const location = useRouter();
 
 
@@ -39,30 +38,24 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 		},
 	};
 
-	const handleScroll = debounce(() => {
-		const currentScrollPos = window.pageYOffset;
+	const [navClassList, setNavClassList] = useState([]);
+	const scroll = useScrollListener();
 
-		!navOpen &&
-			setVisible(
-				(prevScrollPos > currentScrollPos &&
-					prevScrollPos - currentScrollPos > 70) ||
-				currentScrollPos < 10
-			);
-
-		setPrevScrollPos(currentScrollPos);
-	}, 100);
-
+	// update classList of nav on scroll
 	useEffect(() => {
-		window.addEventListener('scroll', handleScroll);
+		const _classList = [];
 
-		return () => window.removeEventListener('scroll', handleScroll);
-	}, [prevScrollPos, visible, handleScroll]);
+		if (scroll.y > 150 && scroll.y - scroll.lastY > 0)
+			_classList.push("nav-bar--hidden");
+
+		setNavClassList(_classList);
+	}, [scroll.y, scroll.lastY]);
+
 
 	return (
 		<header
-			className={styles.NavBar}
+			className={`${styles.NavBar} ${navClassList.join(" ")}`}
 			style={{
-				transform: `${visible ? 'translateY(0)' : 'translateY(-20vh)'}`,
 				backgroundColor: `${theme.light || (navOpen || location.pathname === '/')
 					? 'transparent'
 					: 'rgba(17, 22, 31, 0.759)'
