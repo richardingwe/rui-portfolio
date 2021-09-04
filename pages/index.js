@@ -7,9 +7,12 @@ import Carousel from 'react-bootstrap/Carousel';
 import Layout from '../components/Layout';
 import styles from '../styles/Home.module.css';
 import Loader from '@/components/Loader';
+import Socials from '@/components/Socials';
+import { useRouter } from 'next/router';
 
 export default function Home() {
   const [load, setLoad] = useState(true);
+  const location = useRouter();
 
   const showContents = () => {
     setTimeout(() => {
@@ -21,10 +24,6 @@ export default function Home() {
     showContents();
   }, []);
 
-  // if (load)
-  //   return (
-  //     <Loader />
-  //   );
 
   return (
     <Layout title='Rui | Software Developer & Brand Identity Designer' description='Richard Unimke Ingwe Creates Beautiful Experiences, That Could Keep Potential Customers Glued and Loyal To Your Businesses, Brands And Websites.'>
@@ -196,6 +195,7 @@ export default function Home() {
           </main>
         </Carousel.Item>
       </Carousel>
+      {location.pathname === '/' && <Socials />}
     </Layout >
   );
 }

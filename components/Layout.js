@@ -55,7 +55,7 @@ const Layout = ({ title, keywords, description, children, currentUrl, imageUrl, 
                 setNavOpen={setNavOpen}
             />
             <Email />
-            {location.pathname === '/' && <Socials />}
+            {/* {location.pathname === '/' && <Socials />} */}
             {navOpen && <MiniNavBar handleClick={handleClick} />}
             <WhatsApp />
             <div>
