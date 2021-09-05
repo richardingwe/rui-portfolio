@@ -24,7 +24,7 @@ const Slides = ({ caption, mainStyle }) => {
                     className={styles.title}
                 >
                     <div />
-                    <p>Software Developer.</p>
+                    <p>Frontend Developer.</p>
                 </motion.div>
                 <motion.div
                     initial={{ x: '-10vw', opacity: 0 }}
