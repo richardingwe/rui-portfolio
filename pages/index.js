@@ -38,14 +38,14 @@ export default function Home() {
         <Carousel.Item>
           <Slides
             caption='I Create Beautiful Experiences, That Could Keep Potential
-                    Customers Glued && Loyal To Your Businesses, Brands And Websites.'
+                    Customers Glued & Loyal To Your Businesses, Brands And Websites.'
             mainStyle={styles.Main}
           />
         </Carousel.Item>
 
         <Carousel.Item>
           <Slides
-            caption='I Create "Exquisite/Professional" Designs && Illustrations, That
+            caption='I Create "Exquisite/Professional" Designs & Illustrations, That
                 Keep Brands && Businesses Appealing To Their Customers.'
             mainStyle={styles.Main2}
           />
