@@ -411,7 +411,7 @@ const About = ({ author }) => {
                                 </div>
                             </div>
 
-                            <div
+                            {/* <div
                                 data-aos='fade-up'
                                 data-aos-delay='300'
                                 data-aos-offset='200'
@@ -443,7 +443,7 @@ const About = ({ author }) => {
                                     </div>
                                     <h5>Dart</h5>
                                 </div>
-                            </div>
+                            </div> */}
 
                             <div
                                 data-aos='fade-up'
