@@ -484,6 +484,22 @@ const About = ({ author }) => {
                             >
                                 <div
                                     className={`${styles.teamContentArea} text-center ${styles.mb30}`}
+                                    data-wow-delay='500ms'
+                                >
+                                    <div className={styles.memberThumb}>
+                                        <Image width='500' height='500' src='/images/tailwind.jpg' alt='tailwind' />
+                                    </div>
+                                    <h5>Tailwind</h5>
+                                </div>
+                            </div>
+
+                            <div
+                                data-aos='fade-up'
+                                data-aos-delay='300'
+                                className='col-4 col-sm-4 col-md-3 col-xl-2'
+                            >
+                                <div
+                                    className={`${styles.teamContentArea} text-center ${styles.mb30}`}
                                     data-wow-delay='700ms'
                                 >
                                     <div className={styles.memberThumb}>
@@ -618,6 +634,22 @@ const About = ({ author }) => {
                                         <Image width='500' height='500' src='/images/sanity.jpg' alt='sanity' />
                                     </div>
                                     <h5>Sanity</h5>
+                                </div>
+                            </div>
+
+                            <div
+                                data-aos='fade-up'
+                                data-aos-delay='300'
+                                className='col-4 col-sm-4 col-md-3 col-xl-2'
+                            >
+                                <div
+                                    className={`${styles.teamContentArea} text-center ${styles.mb30}`}
+                                    data-wow-delay='700ms'
+                                >
+                                    <div className={styles.memberThumb}>
+                                        <Image width='500' height='500' src='/images/figma.jpg' alt='figma' />
+                                    </div>
+                                    <h5>Figma</h5>
                                 </div>
                             </div>
 
