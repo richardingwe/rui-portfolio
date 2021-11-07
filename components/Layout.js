@@ -72,7 +72,7 @@ Layout.defaultProps = {
     currentUrl: 'https://ruingwe.com',
     description: 'Richard Unimke Ingwe Creates Beautiful Experiences, That Could Keep Potential Customers Glued & Loyal To Your Businesses, Brands & Websites.',
     keywords: 'rui, frontend developer, web developer, brand identiy designer, graphic designer, richard ingwe, ruingwe, ruingwe.com, Richard Ingwe, Rui, Richard Unimke Ingwe, Rui Creative, Ruitech, ru_ingwe',
-    imageUrl: 'https://ruingwe.com/logo512.png',
+    imageUrl: 'https://ruingwe.com/rui.jpg',
     image_alt: 'Rui logo'
 };
 
