@@ -17,8 +17,9 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 
 	const handleChangeTheme = () => {
 		dispatch({ type: 'setTheme' });
-		// console.log(theme.light);
-		Cookies.set('LightTheme', theme.light, { expires: 365 }, { domain: 'ruingwe.com' });
+		console.log(theme.light);
+		Cookies.set('LightTheme', theme.light, { expires: 365 });
+		console.log(Cookies.get('LightTheme'));
 	};
 
 	const handleNavClick = () => {
