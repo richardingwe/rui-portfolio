@@ -6,7 +6,6 @@ import { debounce } from '../utilities/helpers';
 import styles from '../styles/NavBar.module.css';
 import { useThemeContext } from '../context/state';
 import useScrollListener from 'hooks';
-import Cookies from 'js-cookie';
 
 const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 	const [rotate, setRotate] = useState(false);
@@ -17,9 +16,6 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 
 	const handleChangeTheme = () => {
 		dispatch({ type: 'setTheme' });
-		console.log(theme.light);
-		Cookies.set('LightTheme', theme.light, { expires: 365 });
-		console.log(Cookies.get('LightTheme'));
 	};
 
 	const handleNavClick = () => {
