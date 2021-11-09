@@ -6,6 +6,7 @@ import { debounce } from '../utilities/helpers';
 import styles from '../styles/NavBar.module.css';
 import { useThemeContext } from '../context/state';
 import useScrollListener from 'hooks';
+import Cookies from 'js-cookie';
 
 const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 	const [rotate, setRotate] = useState(false);
@@ -13,6 +14,12 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 
 
 	const { theme, dispatch } = useThemeContext();
+
+	const handleChangeTheme = () => {
+		dispatch({ type: 'setTheme' });
+		// console.log(theme.light);
+		Cookies.set('LightTheme', theme.light, { expires: 365 }, { domain: 'ruingwe.com' });
+	};
 
 	const handleNavClick = () => {
 		handleClick();
@@ -206,7 +213,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 						initial={{ y: '-10vw', opacity: 0 }}
 						transition={{ delay: `${location.pathname == '/' ? 5.8 : 1.8}` }}
 						animate={{ y: 0, opacity: 1 }}
-						onClick={() => dispatch({ type: 'setTheme' })}
+						onClick={handleChangeTheme}
 						className={`inline-flex items-center ${styles.theme}`}>
 						<img className={styles.theme_icon} src={`${!theme.light ? '/images/light-mode.png' : '/images/night-mode.png'}`} alt="" />
 					</motion.div>
