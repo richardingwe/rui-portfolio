@@ -107,22 +107,22 @@ a:hover {
 }
 
 .slick-slider .slick-dots li button {
-	width: 30px;
-	height: 1px;
-	padding: 1.5px;
-	content: '';
-	background: #7e7e7e;
-}
-.slick-slider .slick-dots li button {
-	width: 30px;
-	height: 1px;
+	width: 15px;
+	height: 6px;
 	padding: 1.5px;
 	margin: 10px 0;
 	content: '';
 	background: #7e7e7e;
+	border-radius: 5px;
 }
 .slick-slider .slick-dots li.slick-active button {
 	background: #e45447;
+	transform: translateY(-5px);
+	transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.slick-slider .slick-dots li.slick-active {
+	transform: translateY(-5px);
+	transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .slick-slider .slick-dots li button:before {
@@ -132,7 +132,7 @@ a:hover {
 .slick-slider .slick-dots li {
 	position: relative;
 	display: inline-block;
-	width: 30px;
+	width: 15px;
 	height: 20px;
 	margin: 0 5px;
 	padding: 0;
