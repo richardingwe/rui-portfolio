@@ -72,72 +72,15 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 				<nav className={styles.navItems} style={{ color: `${location.pathname === '/' ? '#fff' : !theme.light ? '#fff' : '#000'}` }}>
 					<Link href='/'>
 						<a className='mx-0'>
-							{location.pathname === '/' ?
-								<motion.img
-									src='/rui-svg.svg'
-									alt=''
-									className={styles.logo}
-									initial={{ x: '-10vw', opacity: 0 }}
-									animate={{ x: 0, opacity: 1 }}
-									transition={{ delay: `${location.pathname == '/' ? 4.5 : 0.5}`, when: 'beforeChildren' }}
-								/>
-								: !theme.light ?
-									<motion.img
-										src='/rui-svg.svg'
-										alt=''
-										className={styles.logo}
-										initial={{ x: '-10vw', opacity: 0 }}
-										animate={{ x: 0, opacity: 1 }}
-										transition={{ delay: `${location.pathname == '/' ? 4.5 : 0.5}`, when: 'beforeChildren' }}
-									/>
-									: <motion.svg className={styles.svg}
-										onClick={handleLogoClick}
-										initial={{ x: '-10vw', opacity: 0 }}
-										animate={{ x: 0, opacity: 1 }}
-										transition={{ delay: `${location.pathname == '/' ? 4.5 : 0.5}`, when: 'beforeChildren' }}
-										version='1.1'
-										id='Layer_1'
-										xmlns='http://www.w3.org/2000/svg'
-										x='0px'
-										y='0px'
-										viewBox='0 0 1000 1000'
-									>
-										<motion.path
-											className={styles.st4}
-											d='M961.2,305.2c-25.2-59.6-61.3-113.1-107.3-159.1c-46-46-99.5-82.1-159.1-107.3C633.1,12.7,567.6-0.5,500-0.5
-                                c-67.6,0-133.1,13.2-194.8,39.3C245.6,64,192.1,100.1,146.1,146.1c-46,46-82.1,99.5-107.3,159.1C12.7,366.9-0.5,432.4-0.5,500
-                                c0,67.6,13.2,133.1,39.3,194.8c25.2,59.6,61.3,113.1,107.3,159.1c46,46,99.5,82.1,159.1,107.3c61.7,26.1,127.3,39.3,194.8,39.3
-                                c67.6,0,133.1-13.2,194.8-39.3c59.6-25.2,113.1-61.3,159.1-107.3s82.1-99.5,107.3-159.1c26.1-61.7,39.3-127.3,39.3-194.8
-                                C1000.5,432.4,987.3,366.9,961.2,305.2z'
-										/>
-										<g>
-											<motion.path
-												variants={icon2}
-												initial='hidden'
-												animate='visible'
-												transition={{ delay: `${location.pathname == '/' ? 6 : 2}`, duration: 0.5 }}
-												className={styles.st3}
-												d='M566,431.9c-6.7,3.2-14.2,5-22.1,5h-47.8l93.6,94c17.9-5.7,34.4-14.6,48.8-26.2c9.3-7.5,17.8-16.1,25.1-25.5
-                                    c9.8-12.6,17.7-26.9,23.1-42.2c5.7-16,8.8-33.2,8.8-51.2s-3.1-35.2-8.8-51.2c-20.9-58.9-77-101-142.9-101H293.4l100.7,101H544
-                                    c28.2,0,51.1,22.9,51.1,51.2c0,7.2-1.5,14.1-4.2,20.3C586,417.3,577.1,426.6,566,431.9z'
-											/>
-											<g>
-												<motion.polygon
-													variants={icon2}
-													initial='hidden'
-													animate='visible'
-													transition={{ delay: `${location.pathname == '/' ? 6 : 2}`, duration: 0.5 }}
-													className={styles.st3}
-													points='772.4,814.7 630,814.7 227.6,410.9 370,410.9 711.5,753.6 		'
-												/>
-											</g>
-										</g>
-									</motion.svg>
-							}
+							<motion.img
+								src='/rui-svg.svg'
+								alt=''
+								className={styles.logo}
+								initial={{ x: '-10vw', opacity: 0 }}
+								animate={{ x: 0, opacity: 1 }}
+								transition={{ delay: `${location.pathname == '/' ? 4.5 : 0.5}`, when: 'beforeChildren' }}
+							/>
 						</a>
-						{/* <a className='mx-0'>
-							<img src='/rui-svg.svg' alt='' className={styles.logo} />
-						</a> */}
 					</Link>
 					<motion.div
 						initial={{ y: '-10vw', opacity: 0 }}
