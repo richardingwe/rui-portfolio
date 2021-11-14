@@ -164,7 +164,8 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 							initial={{ x: '10vw', opacity: 0 }}
 							transition={{ delay: `${location.pathname == '/' ? 5.5 : 1.5}` }}
 							animate={{ x: 0, opacity: 1 }}
-							src={location.pathname === '/' && navOpen ? '/images/hamburgerClose.svg' : location.pathname === '/' && !navOpen ? '/images/hamburger.svg' : theme.light && navOpen ? '/images/hamburgerCloseDark.svg' : !theme.light && navOpen ? '/images/hamburgerClose.svg' : theme.light && !navOpen ? '/images/hamburgerDark.svg' : '/images/hamburger.svg'}
+							src={location.pathname === '/' && navOpen ? '/images/hamburgerClose.svg' : location.pathname === '/' && !navOpen ? '/images/hamburger.svg' : navOpen ? '/images/hamburgerClose.svg' : '/images/hamburger.svg'}
+							// src={location.pathname === '/' && navOpen ? '/images/hamburgerClose.svg' : location.pathname === '/' && !navOpen ? '/images/hamburger.svg' : theme.light && navOpen ? '/images/hamburgerCloseDark.svg' : !theme.light && navOpen ? '/images/hamburgerClose.svg' : theme.light && !navOpen ? '/images/hamburgerDark.svg' : '/images/hamburger.svg'}
 							className={`${styles.svg}`}
 							alt='hamburger'
 						/>
