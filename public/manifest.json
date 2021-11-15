@@ -1,8 +1,8 @@
 {
-	"name": "Ruingwe",
+	"name": "Richard Ingwe",
 	"short_name": "Rui",
-	"theme_color": "#1f2937",
-	"background_color": "#1f2937",
+	"theme_color": "#11161f",
+	"background_color": "#11161f",
 	"display": "standalone",
 	"scope": "/",
 	"start_url": "/",
