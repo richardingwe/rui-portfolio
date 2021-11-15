@@ -10,7 +10,7 @@ class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head>
-                    <meta name="theme-color" content="#1f2937" />
+                    <meta name="theme-color" content="#11161f" />
                     <link rel="apple-touch-icon" href="/logo192.png" />
                     <meta name='description' content='Richard Unimke Ingwe Creates Beautiful Experiences, That Could Keep Potential Customers Glued & Loyal To Your Businesses, Brands & Websites.' />
                     <link rel="manifest" href="/manifest.json" />
