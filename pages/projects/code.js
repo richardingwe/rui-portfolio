@@ -68,7 +68,7 @@ const Code = ({ codeData }) => {
                 <section className={`${styles.aboutArea} ${styles.sectionGap}`}>
                     <div className='container'>
                         {
-                            codeData?.map((code, index) => (
+                            codeData?.sort((a, b) => new Date(b.date) - new Date(a.date)).map((code, index) => (
                                 <div
                                     key={index}
                                     className='row align-items-center justify-content-between my-5'
