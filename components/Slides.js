@@ -11,7 +11,6 @@ const Slides = ({ caption, mainStyle }) => {
                     initial={{ x: '-10vw', opacity: 0 }}
                     transition={{ type: 'spring', delay: 5, stiffness: 300 }}
                     animate={{ x: 0, opacity: 1 }}
-                    className='text-white font-bold'
                     className={`text-white font-bold ${styles.playfair} ${styles.homeName}`}
                 >
                     <span className={styles.hello}>Hello,</span>
@@ -24,7 +23,7 @@ const Slides = ({ caption, mainStyle }) => {
                     className={styles.title}
                 >
                     <div />
-                    <p>Frontend Developer.</p>
+                    <p>Frontend Web Developer.</p>
                 </motion.div>
                 <motion.div
                     initial={{ x: '-10vw', opacity: 0 }}
@@ -33,7 +32,7 @@ const Slides = ({ caption, mainStyle }) => {
                     className={styles.title}
                 >
                     <div />
-                    <p>Brand Identity Designer.</p>
+                    <p>Mobile Application Developer.</p>
                 </motion.div>
                 <motion.p
                     initial={{ x: '10vw', opacity: 0 }}

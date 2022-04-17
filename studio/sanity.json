@@ -14,7 +14,8 @@
     "@sanity/default-login",
     "@sanity/desk-tool",
     "dark-theme-blue",
-    "@sanity/vision"
+    "@sanity/vision",
+    "dark-mode"
   ],
   "env": {
     "development": {

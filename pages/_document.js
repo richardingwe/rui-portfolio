@@ -10,7 +10,7 @@ class MyDocument extends Document {
                     <meta name='description' content='Richard Unimke Ingwe Creates Beautiful Experiences, That Could Keep Potential Customers Glued & Loyal To Your Businesses, Brands & Websites.' />
                     <link rel="manifest" href="/manifest.json" />
                     <meta name="author" content="Richard Ingwe" />
-                    <meta name='keywords' content='rui, frontend developer, web developer, brand identiy designer, graphic designer, richard ingwe, ruingwe, ruingwe.com, Richard Ingwe, Rui, Richard Unimke Ingwe, Rui Creative, Ruitech' />
+                    <meta name='keywords' content='rui, frontend developer, web developer, mobile developer, brand identiy designer, graphic designer, richard ingwe, ruingwe, ruingwe.com, Richard Ingwe, Rui, Richard Unimke Ingwe, Rui Creative, Ruitech' />
                     <meta name="Rui Portfolio" content="Rui Portfolio" />
                     <meta property="og:type" content="website" />
                     <meta property="og:site_name" content='Richard Ingwe Portfolio' />
