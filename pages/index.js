@@ -42,8 +42,7 @@ export default function Home() {
 
         <Carousel.Item>
           <Slides
-            caption='I Create "Exquisite/Professional" Designs & Illustrations, That
-                Keep Brands && Businesses Appealing To Their Customers.'
+            caption='I Build Beautiful Mobile Apps With Blazing Fast Speed And Incredible Performance In Record Time.'
             mainStyle={styles.Main2}
           />
         </Carousel.Item>
