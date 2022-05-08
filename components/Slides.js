@@ -14,7 +14,7 @@ const Slides = ({ caption, mainStyle }) => {
                     className={`text-white font-bold ${styles.playfair} ${styles.homeName}`}
                 >
                     <span className={styles.hello}>Hello,</span>
-                    <br /> I am Rui.
+                    <br /> I am Richard Ingwe.
                 </motion.h1>
                 <motion.div
                     initial={{ x: '-10vw', opacity: 0 }}
