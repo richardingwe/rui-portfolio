@@ -21,6 +21,7 @@
 		"next": "12",
 		"next-pwa": "^5.2.21",
 		"next-themes": "^0.0.15",
+		"nprogress": "^0.2.0",
 		"react": "^18.1.0",
 		"react-animated-cursor": "^2.1.8",
 		"react-bootstrap": "^1.6.1",
